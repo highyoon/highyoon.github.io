@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+@import url("reset.css");
+@import url("layout.css");
+@import url("common.css");
+@import url("style_pc.css") screen and (min-width:1025px);
+@import url("style_mobile.css") screen and (max-width:1024px);
+
+
+
+
+/* main */
+.main-slide {
+    background:url('/img/main/main_slide01.png') no-repeat center;
+    background-size: cover;
+}
+.main-slide .visual-box .visual-cont {
+    position: relative;
+}
+.main-slide .visual-box .visual-cont .slide-txt {
+   color:#666;
+}
+.main-slide .visual-box .visual-cont .slide-detail {
+    position: relative;
+    display: inline-block;
+    color:#111;
+}
+.main-slide .visual-box .visual-cont .slide-detail::after {
+    content: '';
+    position: absolute;
+    left:0;
+    border-radius: 2.5rem;
+    background:#a2dbdf;
+    z-index:-1;
+}
+/* dot */
+.main-slide .visual-box .slide-dots {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.main-slide .visual-box .slide-dots li {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+}
+.main-slide .visual-box .slide-dots li a {
+    display:block;
+    width:100%;
+    height:100%;
+    color:#111;
+    border:1px solid #e6e6e6;
+    border-radius:50%;
+}
+.main-slide .visual-box .slide-dots li.slick-active a, .main-slide .visual-box .slide-dots li a:hover {
+    color:#fff;
+    border-color:#383b4a;
+    background:#383b4a;
+}
+/* Arrows */
+.main-slide .visual-box .slick-prev,
+.main-slide .visual-box .slick-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    background-image:url('/img/main/main_visual_arrow.png')
+}
+.main-slide .visual-box .slick-prev{
+}
+.main-slide .visual-box .slick-next{
+    background-position: top right;
+}
+.main-slide .visual-box button:hover {
+    background-position-y: bottom;
+}
+.main-slide .visual-box .play-ctrl {
+    position:absolute;
+    top:50%;
+    left:50%;
+    text-indent:-9999em;
+    font-size: 0;
+    border:1px solid #e6e6e6;
+    border-radius:50%;
+    background-color:transparent;
+    background-image:url('/img/main/main_visual_auto.png');
+}
+
+.category {
+
+}
+.category .cate-wrap {
+    margin:0 auto;
+}
+.category .cate-wrap ul {
+}
+.category .cate-wrap ul li {
+    display: block;
+}
+.category .cate-wrap ul li a:hover {
+    text-decoration: none;
+}
+.category .cate-wrap .thumb {
+   background-image:url('/img/main/bg_category.png');
+   background-repeat: no-repeat;
+}
+
+.category .cate-wrap .thumb.grow {
+    
+}
+.category .cate-wrap .thumb.hope {
+    
+}
+.category .cate-wrap .thumb.psy {
+    
+}
+.category .cate-wrap .thumb.visit {
+    
+}
+.category .cate-wrap .thumb.fit {
+    
+}
+.category .cate-wrap a:hover .thumb {
+    
+}
+.category .cate-wrap dl {
+    line-height: 1.2;
+}
+.category .cate-wrap dt {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+.category .cate-wrap a:hover dt::after {
+    content: '';
+    position: absolute;
+    left:0;
+    width: 100%;
+    border-radius: 2.5rem;
+    background:#a2dbdf;
+    z-index:-1;
+}
+.category .cate-wrap dd {
+    display: block;
+    color:#666;
+}
+.category .cate-wrap dd > span {
+    display: block;
+}
+
+/* news */
+.news {
+   position: relative;
+}
+.news:after {
+    content: '';
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.wrap {
+    margin:0 auto;
+}
+.news .news-tab li { 
+    display:inline-block;
+}
+.news .news-tab li a {
+    position: relative;
+    display: inline-block;
+    color:#666;
+}
+.news .news-tab li.active a {
+    font-weight:bold;
+    color:#111;
+}
+.news .news-tab li.active a::after {
+    content: '';
+    position: absolute;
+    border-radius: 2.5rem;
+    background:#a2dbdf;
+    z-index:-1;
+}
+.news .news-cont {
+    
+}
+.news .news-cont .news-list {
+    display: inline-block;
+    line-height: 1.4;
+    box-sizing: border-box;
+    background:#fff;
+}
+.news .news-cont .news-list .news-tit {
+    color:#111;
+    font-weight: 600;
+}
+
+.news .news-cont .news-list .news-tit .ico-new {
+    display:inline-block;
+    color:#fff;
+    border-radius: 50%;
+    font-weight: 400;
+    vertical-align: top;
+    background:#f16b60;
+}
+.news .news-cont .news-list .news-detail {
+    color:#666;
+    font-weight: 400;
+}
+.news .news-cont .news-list .news-date {
+    text-align:right;
+    color:#666;
+    font-weight: 600;
+}
+
+.center-news {
+    background-color:#fef9e6;
+}
+.center-news .wrap {
+
+}
+.center-news .center-act {
+
+}
+.center-news .center-act .center-info {
+
+}
+.center-news .center-act .center-info .info-box {
+    overflow:hidden;
+    background: #fff;
+}
+.center-news .center-act .center-info .thumb img {
+    width: 100%;
+}
+.center-news .center-act .center-info .info-date {
+    text-align:right;
+    color:#666;
+}
+.center-news .center-act .slick-dots {
+    position: absolute;
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+.center-news .center-act .slick-dots li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.center-news .center-act .slick-dots li button {
+    display:block;
+    width: 100%;
+    color:#111;
+    border-radius: 50%;
+    background:transparent;
+}
+.center-news .center-act .slick-dots li.slick-active button, .center-news .center-act .slick-dots li button:hover {
+    background:#fff;
+}
+/* link text decoration */
+.link-deco {
+    position: relative;
+}
+.link-deco::after {
+    content: '';
+    position: absolute;
+    top:16px;
+    left:0;
+    width: 100%;
+    height:16px;
+    border-radius: 2.5rem;
+    background:#a2dbdf;
+    z-index:-1;
+}
+
+/* badge icon */
+.ico {
+    display: inline-block;
+    text-align:center;
+}
+
+@media screen and (max-height: 280px) {
+ 
+}
+
+/* Mobile Device */
+@media screen and (max-width: 320px) {
+
+}
+
+
+@media screen and (min-height: 280px) and (max-height: 414px) {
+
+}
+
+@media screen and (min-height: 280px) and (max-height: 414px) and (min-width: 768px) {
+}
+
+/* Desktop Device */
+@media screen and (max-width: 1099px) {
+
+}
+
+/* Desktop Device */
+@media screen and (max-height: 1000px) {
+
+}
