@@ -1163,7 +1163,7 @@ select {
  border: 1px solid #bbb;
  border-radius: 4px;
  background-color: #fff;
- background-image: url(/images/ico_select_arrow.png);
+/* background-image: url(/images/ico_select_arrow.png);*/
  background-repeat: no-repeat;
  background-position: calc(100% - 10px) 15px;
  line-height: 4rem;

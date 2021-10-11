@@ -497,4 +497,16 @@ a.btn-ico, button.btn-ico, span.btn-ico {
     .category {
         padding:60px 40px 80px;
     }
+    .center-news .center-act {
+        padding:0 40px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .center-news .wrap .schedule {
+        width: 100%;
+    }
+    .center-news .wrap .main-calendar {
+        margin:33px auto 16px;
+    }
 }

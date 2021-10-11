@@ -430,6 +430,10 @@ img {width:100%;}
 .main-banner .banner-cont .kakao {
     margin-top:0;
 }
+.main-banner .banner-cont .kakao > b {
+    vertical-align: top;
+    color:#111;
+}
 .main-banner .banner-cont .qrcode {
     position: absolute;
     top:145px;
@@ -454,4 +458,18 @@ img {width:100%;}
     border-radius: 2.5rem;
     background: #a2dbdf;
     z-index: -1;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .category .cate-wrap ul li {
+        width: 14%;
+    }
+    .news .news-cont {
+        width: 100%;
+    }
+    .news .news-cont .news-list {
+        width: calc(25% - 14px) ;
+    }
+    .center-news .center-act .center-info .info-box {
+        margin-right:10px;
+    }
 }

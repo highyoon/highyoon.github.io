@@ -354,6 +354,23 @@
     font-size:1.4rem;
 }
 
+/*top 버튼*/
+.btn-top {
+    display:none;
+    position:fixed; 
+    bottom:50px; 
+    right:7%;
+}
+.btn-top a {
+    display:block; 
+    width:50px; 
+    height:50px; 
+    text-indent:-999em; 
+    border-radius: 8px; 
+    background:#fff url('/img/common/bg_btn_top.png') no-repeat center;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
 /* dim */
 .dim {
     display:none;
@@ -392,7 +409,7 @@
 }
 
 /* Mobile Device  */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
  #header .header-content {
     padding:0 20px;
     height: 50px;
@@ -572,15 +589,17 @@
  #footer .footer-content .footer-top .logo {
   display: none;
  }
+ /*top 버튼*/
+ .btn-top {
+     right: 2%;
+ }
+.btn-top a {
+    width: 40px; 
+    height:40px; 
+    border-radius: 8px; 
+    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    background-size:10px;
 }
-
-/* Mobile Device (randscape mode) */
-@media screen and (min-width: 576px) and (max-width: 767px) {
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-
 }
 
 /* Desktop Device */
