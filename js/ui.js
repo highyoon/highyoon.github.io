@@ -19,12 +19,10 @@ $(function () {
     //Functions
     gnb();
     all_menu();
-    notify();
+    lnb_menu();
     tabs();
     layer_Pop();
-    acco_list();
-    datepicker();  
-    file_upload();
+    acco_list(); 
     family_site();
     gnb_search();
 
@@ -75,6 +73,14 @@ var all_menu = function () {
         }
     });
 }
+
+// Lnb menu
+var lnb_menu = function() {
+    $(document).on('click','.lnb-menu > li > a', function() {
+        $(this).toggleClass('on').next(".sub-depth").stop().slideToggle(400);
+    });
+}
+
 // btn_top
 var top_scroll_func = function() {
     $('body').scroll(function() {
@@ -112,18 +118,6 @@ var family_site = function (){
     });
 }
 
-//notify
-var notify = function () {
-    $(document).on("click", ".top-util .myaccount .alarm", function (e) {
-        $('#pop_notify2').fadeToggle();
-        $('#pop_notify2 .list-area > div').slimscroll({
-            height: 'auto',
-        });
-    });
-
-    
-}
-
 //Tabs
 var tabs = function () {
    $(".tab-cont > div").hide(); 
@@ -143,35 +137,6 @@ var tabs = function () {
    });
 }
 
-//File Control
-var file_upload = function() {
-    $(document).on('change',".frm-file input[type='file']",function(e){
-        var filename = e.target.files[0].name;
-        var filesize = e.target.files[0].size;
-        var filetext = $(this).parent().find('.file-txt');
-        var fileExt = filename.substr(filename.lastIndexOf('.')+1);
-        // 확장자제한
-        var inExt = ['jpg','gif','png','jpeg','hwp','xls','xlsx','doc','docx','ppt','pptx', 'pdf', 'zip'];
-        if( inExt.indexOf(fileExt) < 0 ) {
-            alert('허용되지않은 파일형식입니다.');
-            e.target.value = '';
-            return;
-        }
-
-        if ( filetext.length ) {
-            $(this).siblings("input[type='text']").val(filename);    
-        } else {
-            // 기존 파일정보가 있을 경우 제거
-            $(this).parent().find('span').remove();
-            $(this).parent().append('<span class="btn-file-del"><span>' + filename + '(' + filesize + 'Byte)' + '</span><button type="button">파일 삭제</button></span>');
-        }
-    });    
-
-    //File Delete
-    $(document).on('click','.btn-file-del > button', function() {
-        $(this).parent().remove();
-    })
-}
 
 //Layer Popup 
 var layer_Pop = function() {
@@ -212,46 +177,11 @@ var layer_Pop = function() {
 
 //Accodion
 var acco_list = function() {       
-    $(document).on('click','.acco-wrap > ul > li > a', function() {
-        $(this).parent().siblings().find('.cont-area').slideUp();
-        $(this).parent().siblings().find('.tit-area').removeClass('active');
-        $(this).toggleClass('active');
+    $(document).on('click','.faq-list dt', function() {
+        $(this).parent().siblings().find('dd').slideUp();
+        $(this).parent().siblings().removeClass('active');
+        $(this).parent().toggleClass('active');
         $(this).next().slideToggle();
-    });
-}   
-//Datepicker
-var datepicker = function() {
-    var datepicker_year = new Date();
-   
-    $.datepicker.setDefaults({
-     dateFormat: "yy-mm-dd",
-     prevText: "이전 달",
-     nextText: "다음 달",
-     buttonImageOnly : false,
-     monthNames: [
-      "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",
-     ],
-     monthNamesShort: [
-      "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",
-     ],
-     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
-     dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
-     dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-     showMonthAfterYear: true,
-     yearSuffix: "년",
-     changeMonth: true,
-     changeYear: true,
-     yearRange:
-      datepicker_year.getFullYear() - 90 + ":" + datepicker_year.getFullYear(),
-    });
-   
-    $(".datepicker").datepicker();
-
-    $('input.datepicker').on('focusin', function() {
-        $('#ui-datepicker-div').attr("tabindex", "0").focus();
-    });
-    $('input.datepicker').on('focusout', function() {
-        $('#ui-datepicker-div').removeAttr("tabindex"); 
     });
 }
 
