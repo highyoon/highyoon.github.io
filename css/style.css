@@ -329,15 +329,18 @@
     border:1px dotted #bde6e8;
     background:#e8f9fa;
 }
+.section-box .round-box.center {
+    text-align: center;
+}
+.section-box .round-box b {
+    vertical-align: top;
+}
 .half-box {
 
 }
 .half-box > div {
 }
 
-.half-box.info  {
-    border-bottom:1px dashed #e9e9e9;
-}
 .half-box.info:first-child  {
     padding-top:0;
 }
@@ -356,6 +359,14 @@
 }
 .half-box.info .btn {
 
+}
+/* 인사말 */
+.greeting-box {}
+.greeting-box .g-tit {
+    font-weight:600;
+}
+.greeting-box .txt {
+    color:#666;
 }
 /* 조직도 */
 .org-list {}
@@ -390,6 +401,67 @@
 }
 .org-list .org-box .half > ul > li {
 }
+/* map */
+.map-box {}
+.map-box .map-area {
+    width:100%;
+}
+.map-box .map-area .root_daum_roughmap {
+    width:100%;
+    height:100%;
+}
+.map-box .loaction-info {
+}
+.map-box .loaction-info dl {
+}
+.map-box .loaction-info dt {
+    display:inline-block;
+    text-align: justify;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.map-box .loaction-info dt:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.map-box .loaction-info dd {
+    display:inline-block;
+    color:#666;
+}
+.map-box .traffic-box {
+}
+.map-box .traffic-box .half-box {}
+.map-box .traffic-box .half-box > div {
+    border:1px solid #ececec;
+    border-radius:1.8rem;
+}
+.map-box .traffic-box .half-box h4 {
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: center;
+    border-bottom:2px solid #333;
+}
+.map-box .traffic-box .half-box h4 .ico {
+    margin-left:auto;
+}
+.map-box .traffic-box .detail-info {
+}
+.map-box .traffic-box dl {
+    border-bottom:1px solid #ececec;
+}
+.map-box .traffic-box .car-info dl {
+    border-bottom:0 none;
+}
+.map-box .traffic-box dt {
+    font-weight: 500;
+}
+.map-box .traffic-box dd {
+    color:#666;
+}
+.map-box .traffic-box dd li {
+}
+
 /* table */
 .table-box {
 }
@@ -573,11 +645,12 @@
 .s-result {
 }
 .s-result .s-head {
-    font-size:500;
+    position: relative;
+    font-weight:500;
     border-bottom:1px solid #333;
 }
 .s-result .s-head .count {
-    vertical-align: top;
+    vertical-align: baseline;
     font-weight: bold;
     color:#2f8188;
 }
@@ -585,6 +658,10 @@
 }
 .s-result li {
     border-bottom:1px solid #e8e8e8;
+}
+.s-result li.s-empty {
+    text-align: center;
+    flex-direction: column;
 }
 .s-result li .date {
     margin-left:auto;
@@ -667,12 +744,14 @@
 }
 .nav .nav-item li a {
     display:block;
+    color:#666;
     border:1px solid #d8d8d8;
     border-radius:1.5rem;
     box-sizing: border-box;
 }
 .nav .nav-item li.active a, .nav .nav-item li a:hover {
     margin:-1px;
+    font-weight:500;
     color:#2f838d;
     border:2px solid #2f838d;
 }
@@ -786,6 +865,17 @@ a.btn-ico, button.btn-ico, span.btn-ico,span.ico {
     white-space:nowrap;
     background-repeat:no-repeat;
     background-image:url('/img/common/bg_sprite.png');
+}
+
+/* 에러페이지 */
+.error-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
 }
 
 /* 행사일정 */
