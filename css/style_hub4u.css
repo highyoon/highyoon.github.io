@@ -655,10 +655,12 @@
 }
 /* 테이블 type01 */
 .table-box .m-board {
-    overflow: hidden;
+    /* overflow: hidden;
     border-radius: 20px;
     border-style: hidden;
-    box-shadow: 0 0 0 1px #e8e8e8;
+    box-shadow: 0 0 0 1px #e8e8e8; */
+    border-collapse: separate;
+    border-top:0 none;
 }
 .table-box .m-board.solo {
 

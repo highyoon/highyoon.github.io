@@ -574,7 +574,10 @@
 }
 
 .half-box.info  {
-    padding:30px 0 50px;
+    padding:50px 0 40px;
+}
+.half-box.info:first-child {
+    padding-bottom:50px;
 }
 .half-box.info:first-child  {
     padding-top:0;
@@ -591,9 +594,12 @@
 .half-box.info .r-area {
     margin-left:auto;
 }
+.half-box.info:first-child .r-area .img-box {
+    top:0;
+}
 .half-box.info .r-area .img-box {
     position: absolute;
-    top:0;
+    top:30px;
     left:0;
 }
 .half-box.info .l-area {
@@ -601,7 +607,7 @@
 }
 .half-box.info .l-area .img-box {
     position: absolute;
-    top:0;
+    top:30px;
     right:0;
 }
 .half-box.info.no-line, .half-box.info:last-child  {
@@ -1892,6 +1898,16 @@ button.btn,a.btn,input[type="button"].btn {
     display: inline-block;
     color:#666;
 }
+.detail-box .detail-date {
+    padding:15px 30px;
+    font-size:1.6rem;
+    font-weight:500;
+    border-bottom: 1px solid #d5d6d8;
+}
+.detail-box .detail-date dt,
+.detail-box .detail-date dd {
+    display:inline-block;
+}
 .detail-box .detail-cont {
     position: relative;
     padding-top:10px;
@@ -1913,12 +1929,14 @@ button.btn,a.btn,input[type="button"].btn {
 }
 .detail-box .detail-cont .file-box .detail-part a {
     padding-left:5px;
+    color:#666;
 }
 .detail-box .detail-cont .file-box .detail-part a:hover {
     text-decoration: underline;
+    color:#333;
 }
 .detail-box .detail-cont .file-box .detail-part.dash {
-    border-top:1px dashed #333;
+    border-top:1px dashed #ebebeb;
 }
 .detail-box .detail-cont .detail-txt {
     margin-top:40px;

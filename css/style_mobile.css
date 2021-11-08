@@ -1287,7 +1287,7 @@ img {width:100%;}
     content: '...';
     position: absolute;
     right: 10px;
-    bottom: 0;
+    bottom: 0; 
 }
 .table-box .title .b-tit:after {
     content: '';
@@ -1420,6 +1420,16 @@ button.btn,a.btn,input[type="button"].btn {
     display: inline-block;
     color:#666;
 }
+.detail-box .detail-date {
+    padding:10px 20px;
+    font-size:1.2rem;
+    font-weight:500;
+    border-bottom: 1px solid #d5d6d8;
+}
+.detail-box .detail-date dt,
+.detail-box .detail-date dd {
+    display:inline-block;
+}
 .detail-box .detail-cont {
     position: relative;
     padding-top:10px;
@@ -1449,11 +1459,12 @@ button.btn,a.btn,input[type="button"].btn {
     text-decoration: underline;
 }
 .detail-box .detail-cont .file-box .detail-part.dash {
-    border-top:1px dashed #333;
+    border-top:2px dashed #e8e8e8;
 }
 .detail-box .detail-cont .detail-txt {
     margin-top:40px;
     padding:20px;
+    color:#666;
 }
 .detail-box .detail-cont .tag {
     margin-top:40px;
