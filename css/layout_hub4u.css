@@ -140,6 +140,7 @@
     height:23px;
     line-height:23px;
     font-size:1.4rem;
+    font-weight: 400;
     color:#727272;
 }
 #gnb .depth3 > ul > li a:hover:after {
@@ -326,6 +327,7 @@
     height:64px;
     line-height:64px;
     font-size:1.6rem;
+    color:#666;
 }
 .lnb-box .wrap .lnb-menu > li:before {
     content: " ";
@@ -479,7 +481,12 @@
     position: relative;
     margin-right:13px;
     padding-left:13px;
+    font-weight: 400;
     vertical-align: text-bottom;
+}
+#footer .address-wrap .address > span b {
+    color:#111;
+    font-weight: 500;
 }
 #footer .address-wrap .address > span::before {
     content: '';

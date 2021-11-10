@@ -175,25 +175,25 @@
 }
 .main .news .news-cont .news-list .news-tit {
     color:#111;
-    font-weight: 600;
+    font-weight:400;
 }
 
 .main .news .news-cont .news-list .news-tit .ico-new {
     display:inline-block;
     color:#fff;
     border-radius: 50%;
-    font-weight: 400;
+    font-weight: 500;
     vertical-align: top;
     background:#f16b60;
 }
 .main .news .news-cont .news-list .news-detail {
     color:#666;
-    font-weight: 400;
+    font-weight: 300;
 }
 .main .news .news-cont .news-list .news-date {
     text-align:right;
     color:#666;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .center-news {
@@ -207,6 +207,9 @@
 }
 .center-news .center-act .center-info {
 
+}
+.center-news .center-act .center-info h3 {
+    font-weight: 500;
 }
 .center-news .center-act .center-info .info-box {
     overflow:hidden;
@@ -282,11 +285,15 @@
 .section-box .sec-tit {
     background:url('../img/common/tit_bullet.png') no-repeat left center;
 }
+.section-box .sec-tit b {
+    font-weight: 500;
+}
 .section-box .sec-sub-tit {
     background:url('../img/common/sub_bullet.png') no-repeat left center;
 }
 .section-box .sec-txt {
     color:#666;
+    font-weight: 300;
 }
 .section-box .sec-txt .import {
     position: relative;
@@ -329,12 +336,14 @@
 }
 .half-box.info h4 {
     color:#2f8188;
+    font-weight: 700;
 }
 .half-box.info .txt {
     color:#666;
+    font-weight:300;
 }
 .half-box.info .btn {
-
+    font-weight: 400;
 }
 
 
@@ -424,8 +433,6 @@
     display:inline-block;
     color:#fff;
     text-align:center;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
     background-color:#383b4a;
 }
 .org-list .org-box .mid-org {
@@ -485,20 +492,19 @@
 .org-list .org-box .sub-org-info dt {
     display: inline-block;
     text-align: center;
-    border-top-left-radius: 30px;
     color: #111;
     background-color: #96dfe4;
 }
 .org-list .org-box .sub-org-info dd {
-    display: inline-block;
     text-align: center;
-    border-bottom-right-radius: 30px;
     color: #2f8188;
     border:1px dashed #9ad6da;
     border-top:0 none;
     background-color: #e8f9fa;
     box-sizing: border-box;
-    
+}
+.org-list .org-box .sub-org-info dd > span:first-child {
+    border-right:1px dashed #9ad6da;
 }
 .org-list .org-box.line {
     border:2px solid #2f8188;
@@ -524,6 +530,7 @@
 .org-list .org-box .flex-box .table-box table {
 }
 .org-list .org-box .flex-box .table-box table td {
+    border-top:0;
     background:#fff;
 }
 /* map */
@@ -607,6 +614,7 @@
     border-top:2px solid #333;
 }
 .table-box thead th {
+    font-weight: 400;
     border-bottom:1px solid #333;
 
 }
@@ -695,6 +703,7 @@
     background: #2f8188;
 }
 .table-box .m-board th {
+    font-weight: 400;
     border: 1px solid #b1e2e5;
     background:#e8f9fa;
 }
@@ -781,13 +790,14 @@
 
 }
 .horizen-list .list-tit {
-
+    font-weight: 400;
 }
 .horizen-list .list-tit .info-badge {
     vertical-align: middle;
 }
 .horizen-list .list-txt {
     color:#666;
+    font-weight: 300;
 }
 /* search */
 .search-tit {
@@ -886,7 +896,8 @@
     line-height:30px;
 }
 .info-badge.hash {
-    color:#333;
+    color:#666;
+    font-weight: 400;
     background:#ececec;
 }
 /* tab */
@@ -899,6 +910,7 @@
 .nav .nav-item li a {
     display:block;
     color:#666;
+    font-weight: 300;
     border:1px solid #d8d8d8;
     border-radius:1.5rem;
     box-sizing: border-box;
@@ -921,7 +933,7 @@
 }
 .faq-list dt {
     position: relative;
-    font-weight: 600;
+    font-weight: 400;
 } 
 .faq-list dt:before {
    content: '';
@@ -948,6 +960,7 @@
     display: none;
     position: relative;
     color:#666;
+    font-weight: 300;
     background:#f9f9f9;
 }
 .faq-list dd::before {
@@ -1106,7 +1119,7 @@ a.btn-ico, button.btn-ico, span.btn-ico,span.ico {
   }
   .wrap.calendar .calendar-list h2 {
     margin: 0;
-    padding: 14px 15px;
+    padding: 13px 15px;
     background: #efefef;
     border: 1px solid #b1e2e5;
     background: #e8f9fa;

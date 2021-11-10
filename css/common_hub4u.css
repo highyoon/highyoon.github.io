@@ -1371,7 +1371,7 @@ html .ui-button.ui-state-disabled:active {
  border: none;
  background: none;
  border-radius: 20px;
- font-weight: 600;
+ font-weight: 500;
  line-height: 3.6rem;
  text-align: center;
 }
