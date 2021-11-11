@@ -1299,6 +1299,57 @@
 .table-box .m-board.m-line tr:last-child td:last-child {
     border-radius: 0 0 15px 15px;
 }
+
+.table-box .m-board.m-line .row th {
+    border-top:0 none;
+}
+.table-box .m-board.m-line .row tr:first-child th {
+    border-top:1px solid #b1e2e5;
+}
+.table-box .m-board.m-line .row .no-r {
+    border-right:0 none;
+    border-bottom:2px solid #2f8188 !important;
+}
+.table-box .m-board.m-line .row .st th {
+    border-right: 1px solid #b1e2e5 !important;
+}
+.table-box .m-board.m-line .row .st th:nth-child(2) {
+    border-bottom: 1px solid #b1e2e5 !important;
+}
+.table-box .m-board.m-line .row .st th,
+.table-box .m-board.m-line .row .st td {
+    border-style:solid;
+    border-color:#2f8188;
+}
+.table-box .m-board.m-line .row .st.up th,
+.table-box .m-board.m-line .row .st.up td {
+    border-width:2px 0 0 0;
+}
+.table-box .m-board.m-line .row .st.dn th,
+.table-box .m-board.m-line .row .st.dn td {
+    border-width:0 0 2px 0;
+}
+.table-box .m-board.m-line .row tr:first-child th {
+    border-radius: 15px 0 0 0;
+}
+.table-box .m-board.m-line .row tr:first-child td {
+    border-radius: 0 15px 0 0;
+}
+.table-box .m-board.m-line .row tr:last-child th {
+    border-radius: 0 0 0 15px;
+}
+.table-box .m-board.m-line .row tr:last-child td {
+    border-radius: 0 0 15px 0;
+}
+.table-box .m-board.m-line .row td {
+    border-top:0 none;
+}
+.table-box .m-board.m-line .row tr:first-child td {
+    border-top:1px solid #e8e8e8;
+}
+.table-box .m-board.m-line .row tr td {
+    border-left:0 none;
+}
 /* list */
 .list-box {
     margin-top:40px;
