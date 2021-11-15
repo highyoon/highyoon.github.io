@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 .for-pc {display: block !important;}
+.m-board.for-pc {display: table !important;}
 .for-mobile {display: none !important;}
+.p-block {display: block;}
 /* main */
 .main-slide {
     position: relative;
@@ -177,6 +179,7 @@
 }
 .category .cate-wrap dt {
     font-size:2rem;
+    font-weight: bold;
 }
 .category .cate-wrap a:hover dt::after {
     content: '';
@@ -255,6 +258,7 @@
 }
 .main .news .news-cont .news-list .news-detail {
     margin:20px 0 38px;
+    min-height:75px;
     font-size:1.8rem;
 }
 .main .news .news-cont .news-list .news-date {
@@ -283,6 +287,7 @@
 .center-news .center-act .center-info .info-box {
     margin:0 20px 30px 0;
     width: 380px;
+    height:380px;
     border-radius: 20px;
     box-sizing: border-box;
     box-shadow: 10px 13px 13px 0px rgba(71, 73, 75, 0.15);
@@ -291,7 +296,7 @@
     min-height:234px;
 }
 .center-news .center-act .center-info .info-cont {
-    padding:30px;
+    padding:24px 30px;
 }
 .center-news .center-act .center-info h3 {
     min-height:56px;
@@ -320,13 +325,13 @@
     background:#fff;
 }
 .center-news .wrap .main-calendar {
-    margin: 33px 0 0 16px;
-    width: 376px;
+    margin: 36px 0 0 16px;
+    width: 380px;
 }
 .center-news .ui-widget.ui-widget-content {
-    padding: 32px 30px;
+    padding: 32px 30px 0 30px;
     width: 100%;
-    min-height:394px;
+    min-height:380px;
     box-sizing: border-box;
     border:0 none;
     border-radius: 20px;
@@ -348,10 +353,10 @@
     margin-top:17px;
 }
 .center-news .ui-datepicker .ui-datepicker-prev .ui-icon {
-    margin-left:270px;
+    margin-left:276px;
 }
 .center-news .ui-datepicker .ui-datepicker-next .ui-icon {
-    margin-left:-20px;
+    margin-left:0;
 }
 .center-news .event-date {
     position: relative;
@@ -371,13 +376,14 @@
     color: #fff;
     content: attr(title);
     left: 20%;
-    padding: 5px 15px;
+    margin-top:-14px;
+    padding: 12px 15px;
     position: absolute;
     z-index: 98;
     width: auto;
     white-space: nowrap;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 400;
 }
 .center-news .event-date:hover:before {
     border: solid;
@@ -458,7 +464,8 @@
     position: relative;
     display: inline-block;
     padding:0 5px;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 400;
     color: #111;
 }
 .main-banner .detail a::after
@@ -567,7 +574,7 @@
 .half-box {
     display: flex;
     flex-wrap: nowrap;
-    margin: 20px -10px 0;
+    margin: 20px 0 0;
 }
 .half-box > div {
     margin:0 10px;
@@ -604,6 +611,9 @@
 }
 .half-box.info .l-area {
     margin-right:auto;
+}
+.half-box.info .l-area h4 {
+    text-align:right;
 }
 .half-box.info .l-area .img-box {
     position: absolute;
@@ -797,9 +807,6 @@
 }
 /* 인사말 */
 .greeting-box {}
-.greeting-box .g-tit {
-    font-size:3.6rem;
-}
 .greeting-box .txt {
     margin-top:40px;
     line-height:3.2rem;
@@ -1085,16 +1092,8 @@
 .map-box .root_daum_roughmap .wrap_map {
     height:343px;
 }
-.map-box .root_daum_roughmap .border1,
-.map-box .root_daum_roughmap .border2,
-.map-box .root_daum_roughmap .border3,
-.map-box .root_daum_roughmap .border4 {
-    width: 0;
-    border:0 none;
-}
 .map-box .root_daum_roughmap .wrap_controllers {
     padding:9px 11px;
-    border:0 none;
 }
 .map-box .loaction-info{
     margin-top:25px;
@@ -1131,6 +1130,13 @@
 }
 .map-box .traffic-box dl {
     margin:40px 0;
+}
+.map-box .traffic-box dl:last-child {
+    margin-bottom:0;
+    border-bottom: 0;
+}
+.map-box .traffic-box dl:last-child dd {
+    margin-bottom: 8px;
 }
 .map-box .traffic-box .car-info dl {
 }
@@ -1197,9 +1203,10 @@
     display:inline-block;
 }
 .table-box .title .info-badge {
-    min-width: 50px;
-    height:22px;
-    line-height: 22px;
+    margin-top:1px;
+    min-width: 52px;
+    height:25px;
+    line-height: 25px;
     box-sizing: border-box;
 }
 .table-box .title .badge {
@@ -1329,6 +1336,9 @@
 .table-box .m-board.m-line .row .st.dn td {
     border-width:0 0 2px 0;
 }
+.table-box .m-board.m-line .row .st.up td {
+    border-bottom:1px solid #e8e8e8;
+}
 .table-box .m-board.m-line .row tr:first-child th {
     border-radius: 15px 0 0 0;
 }
@@ -1420,6 +1430,7 @@
     border-radius: 1.5rem;
     display: table;
     width: 100%;
+    box-sizing: border-box;
 }
 .horizen-list .thumb {
     display: table-cell;
@@ -1480,7 +1491,7 @@
 .s-result li {
     display:flex;
     flex-wrap:nowrap;
-    padding:22px 5px;
+    padding:22px 20px 22px 10px;
 }
 .s-result li a {
     position: relative;
@@ -1520,7 +1531,7 @@
 
 /* button */
 .btn-box {
-    margin-top:40px;
+    margin-top:32px;
 }
 button.btn,a.btn,input[type="button"].btn {
     min-width: 76px;
@@ -1548,7 +1559,7 @@ button.btn,a.btn,input[type="button"].btn {
 }
 .btn.direct {
     font-size:1.6rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
 }
 .btn.normal:hover {
     color:#333;
@@ -1646,7 +1657,7 @@ button.btn,a.btn,input[type="button"].btn {
     font-weight: 300;
 }
 .detail-box .detail-cont .detail-txt p {
-   
+   font-size: 1.8rem;
 }
 .detail-box .detail-cont .detail-txt ul {
    
@@ -1713,6 +1724,7 @@ button.btn,a.btn,input[type="button"].btn {
 .nav .nav-item li {
     margin:0 5px;
     flex-grow: 1;
+    width: 24%;
     text-align: center;
     border-radius: 0;
 }
@@ -1846,6 +1858,12 @@ a.btn-ico, button.btn-ico, span.btn-ico,span.ico {
     .main-slide .visual-box .slick-next {
         right:-4%;
     }
+    .main .news .news-cont .news-list .news-tit {
+        overflow:hidden;
+    }
+    .category .cate-wrap dd > span {
+        display:inline-block;
+    }
     .category {
         padding:60px 40px 80px;
     }
@@ -1864,5 +1882,8 @@ a.btn-ico, button.btn-ico, span.btn-ico,span.ico {
     .main-banner .detail {
         left:0;
         margin-left:0;
+    }
+    .main-banner .detail a {
+        margin-left:50px;
     }
 }

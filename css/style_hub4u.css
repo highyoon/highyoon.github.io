@@ -120,7 +120,6 @@
 .category .cate-wrap dt {
     display: inline-block;
     position: relative;
-    font-weight: bold;
 }
 .category .cate-wrap dd {
     display: block;
@@ -308,7 +307,7 @@
 
 }
 .section-box .round-box {
-    border-radius: 3.5rem;
+    border-radius: 2rem;
     border:1px dotted #bde6e8;
     background:#e8f9fa;
 }
@@ -401,11 +400,9 @@
 
 /* 인사말 */
 .greeting-box {}
-.greeting-box .g-tit {
-    font-weight:600;
-}
 .greeting-box .txt {
     color:#666;
+    font-weight: 300;
 }
 /* 조직도 */
 .org-list {}
@@ -537,6 +534,17 @@
 .map-box {}
 .map-box .map-area {
     width:100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.map-box .root_daum_roughmap .border1,
+.map-box .root_daum_roughmap .border2,
+.map-box .root_daum_roughmap .border3,
+.map-box .root_daum_roughmap .border4 {
+    width: 0;
+    border:0 none;
+}.map-box .root_daum_roughmap .wrap_controllers {
+    border:0 none;
 }
 .map-box .map-area .root_daum_roughmap {
     width:100%;
@@ -906,7 +914,7 @@
     align-items: center;
     text-align: center;
     border:1px solid #e8e8e8;
-    border-radius: 8px;
+    border-radius: 2rem;
 }
 .no-result .empty {
 }
@@ -926,10 +934,11 @@
     min-width:52px;
     height:25px;
     line-height:25px;
-    font-size:1.2rem;
+    font-size:1.4rem;
     color:#fff;
     text-align: center;
     border-radius: 2.5rem;
+    box-sizing: border-box;
 }
 .info-badge.b-bg {
     background:#5779a7;
