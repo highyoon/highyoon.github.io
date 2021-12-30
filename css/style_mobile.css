@@ -1730,7 +1730,7 @@ button.btn,a.btn,input[type="button"].btn {
     display:flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: end;
+    align-items: flex-end;
     padding:15px 20px;
     font-weight: 300;
 }
