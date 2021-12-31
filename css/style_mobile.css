@@ -86,7 +86,7 @@ img {width:100%; height:auto;}
 }
 .main-slide .ctrl-slick-slider .slide-dots {
     bottom: 0;
-    margin:0 0 6% 0;
+    margin:0;
 }
 .main-slide .ctrl-slick-slider .slide-dots li {
     width: 20px;
@@ -130,7 +130,7 @@ img {width:100%; height:auto;}
     background-position-y: bottom;
 }
 .main-slide .ctrl-slick-slider .play-ctrl {
-    margin:-19px 0 0 5px;
+    margin:5px 0 0 5px;
     width:20px;
     height:20px;
     background-position:0 1px;
@@ -1727,6 +1727,7 @@ button.btn,a.btn,input[type="button"].btn {
 }
 .detail-box .list-ctrl ul {}
 .detail-box .list-ctrl li {
+    position: relative;
     display:flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -1734,10 +1735,14 @@ button.btn,a.btn,input[type="button"].btn {
     padding:15px 20px;
     font-weight: 300;
 }
-.detail-box .list-ctrl li.next_list {
+.detail-box .list-ctrl li.prev_list {
     border-top:1px solid #d5d6d8;
 }
 .detail-box .list-ctrl li .ico-updown {
+    position: absolute;
+    top:50%;
+    margin-top:-6px;
+    left:20px;
     display: block;
     width: 12px;
     height: 7px;
@@ -1750,7 +1755,7 @@ button.btn,a.btn,input[type="button"].btn {
     display: none; 
 }
 .detail-box .list-ctrl li a {
-    margin-left:20px;
+    margin-left:33px;
     width: 89%;
     overflow:hidden;
     white-space: nowrap;
