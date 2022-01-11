@@ -52,6 +52,7 @@ var gnb = function() {
             },
             'focusout': function(){
                 $(this).removeClass('active');
+		$('#gnb .depth2').stop().slideUp(50);
                 $('#header .bg-gnb').removeClass('down');
             }
         });
