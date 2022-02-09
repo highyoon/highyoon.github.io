@@ -52,7 +52,7 @@ var gnb = function() {
             },
             'focusout': function(){
                 $(this).removeClass('active');
-		$('#gnb .depth2').stop().slideUp(50);
+                $('#gnb .depth2').slideUp(300);
                 $('#header .bg-gnb').removeClass('down');
             }
         });
@@ -78,6 +78,11 @@ var gnb_search = function (){
         $(this).toggleClass('active');
         $('#header .search-box').toggleClass('on');
         $('#header .bg-gnb').toggleClass('search');
+        if($(this).hasClass('active')){
+            $(this).text('검색닫기');
+        } else {
+            $(this).text('검색열기');
+        }
     });
 }
 
@@ -148,15 +153,54 @@ var tabs = function () {
 
    $(".tab-nav li").each(function() {
        $(this).on('click', function() {
-           $(".tab-nav li").removeClass("active"); 
-           $(this).addClass("active"); 
-           $(".tab-cont > div").hide(); 
+        var this_target = $($(this).attr("data-target"));
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        this_target.show();
+        this_target.siblings().hide();
+     
+        
+        return false;
+        //    $(".tab-nav li").removeClass("active"); 
+        //    $(this).addClass("active"); 
+        //    $(".tab-cont > div").hide(); 
 
-           var activeTab = $(this).find("a").attr("href"); 
-           $(activeTab).fadeIn(); 
-           return false;
+        //    var activeTab = $(this).find("a").attr("href"); 
+        //    $(activeTab).fadeIn(); 
+        //    return false;
        });
    });
+
+   //접근성 포커스 이벤트
+    $(".faq-tab .nav-item li a").blur(function(){
+        if($(this).parent().hasClass("active")){
+            var trg = $(this).parent().attr("data-target");
+            $(trg).find("div > .tab-detail").eq(0).focus();
+        }
+    });
+    $(".news-tab  .nav-item li a").blur(function(){
+        if($(this).parent().hasClass("active")){
+            var trg = $(this).parent().attr("data-target");
+            $(trg).find(".news-list").eq(0).find("a").focus();
+        }
+    });
+    $(".tab-cont > div:not(:last-child) .tab-detail:last-child").blur(function(){
+        $(".tab-nav .nav-item li.active").next().find("a").focus();
+    });
+    $(".tab-cont > div:not(:last-child) .news-list:last-child a").blur(function(){
+        $(".tab-nav .nav-item li.active").next().find("a").focus();
+    });
+
+    //main 새로운 소식 알려드립니다 탭 접근성
+    $(".news-tab .nav-item li:last-child a").on("focusout", function(){
+        $(".center-act .main-more").focus();
+    });
+    
+    //faq 탭 접근성
+    $(".faq-tab .nav-item li:last-child a").on("focusout", function(){
+        $(".footer-util .center-intro").focus();
+    });
+
 }
 
 
@@ -199,11 +243,31 @@ var layer_Pop = function() {
 
 //Accodion
 var acco_list = function() {       
-    $(document).on('click','.faq-list dt', function() {
-        $(this).parent().siblings().find('dd').slideUp();
-        $(this).parent().siblings().removeClass('active');
-        $(this).parent().toggleClass('active');
-        $(this).next().slideToggle();
+    $(document).on('click','.faq-list dl', function() {
+        if($(this).attr("class") == "active"){
+            $(this).parent().parent().removeClass("active");
+            $(this).find('dd').slideUp(200);
+        }else{
+            $(this).addClass("active");
+            $(this).siblings().removeClass('active');
+            $(this).siblings().find('dd').slideUp(200);
+            $(this).children().next().slideDown(200);
+        }
+        return false;
+    });
+    $(document).on('keyup','.faq-list dl', function(key) {
+        if(key.keyCode==13) {
+            if($(this).attr("class") == "active"){
+                $(this).parent().parent().removeClass("active");
+                $(this).find('dd').slideUp(200);
+            }else{
+                $(this).addClass("active");
+                $(this).siblings().removeClass('active');
+                $(this).siblings().find('dd').slideUp(200);
+                $(this).children().next().slideDown(200);
+            }
+        }
+        return false;
     });
 }
 
