@@ -132,6 +132,10 @@
             showNonCurrentDates: true,
             contentHeight: 720,
             initialView: 'dayGridMonth',
+            eventInteractive: true,
+            datesSet:function () {
+                $('.fc-col-header-cell').attr('scope', 'col');
+            },
             headerToolbar: {
             left: '',
             right: 'today', 
@@ -382,6 +386,13 @@
             }
         }
         monthPickerRepeat();
+
+        $(document).ready(function(){
+            $('.fc-scrollgrid.fc-scrollgrid-liquid').prepend('<caption>달력</caption>');
+            $('.fc-col-header').prepend('<caption>요일표</caption>');
+            $('.fc-scrollgrid-sync-table').prepend('<caption>날짜표</caption>');
+            
+        });
         
         $(document).on('click', function(e){
             let target = e.target;
