@@ -1,0 +1,435 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
+/* Common */
+
+html {
+ font-size: 100%;
+}
+html,
+body {
+ margin: 0;
+ padding: 0;
+ border: none;
+ color: #111;
+ font-family: 'Open Sans', "Noto Sans KR", sans-serif;
+ font-size: 10px;
+ line-height: 10px;
+ background: transparent;
+ -webkit-text-size-adjust: none;
+ -webkit-font-smoothing: antialiased;
+ width: 100%;
+ overflow-x: hidden;
+}
+body,
+button,
+input,
+select,
+table,
+textarea {
+ font-size: 1.6rem;
+ line-height: 2.2rem;
+ border: none;
+}
+body {
+ font-family: 'Open Sans', "Noto Sans KR", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-weight: 500;
+}
+h1 {
+ font-size: 3.4rem;
+ line-height: 4.2rem;
+}
+h2 {
+ font-size: 2.2rem;
+ line-height: 3rem;
+}
+h3 {
+ font-size: 2rem;
+ line-height: 2.8rem;
+}
+h4 {
+ font-size: 1.8rem;
+ line-height: 2.4rem;
+}
+h5 {
+ font-size: 1.6rem;
+ line-height: 2.4rem;
+}
+h6 {
+ font-size: 1.4rem;
+ line-height: 2.2rem;
+}
+pre {
+ white-space: pre-wrap;
+}
+address {
+ font-style: normal;
+}
+strong {
+ font-weight: 500;
+}
+
+/* Display */
+.dp-b {
+ display: block !important;
+}
+.dp-i {
+ display: inline !important;
+}
+.dp-ib {
+ display: inline-block !important;
+}
+
+/* Eliipsis */
+.ellipsis {
+ text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+}
+
+/* Text align style */
+.ta-c {
+ text-align: center !important;
+}
+.ta-l {
+ text-align: left !important;
+}
+.ta-r {
+ text-align: right !important;
+}
+
+/* hidden */
+.hdn {
+ overflow: hidden;
+ display: inline-block;
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ border: 0;
+ clip: rect(1px, 1px, 1px, 1px);
+ clip-path: inset(50%);
+}
+.t-hdn {
+ overflow: hidden;
+ display: inline-block;
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ border: 0;
+ clip: rect(1px, 1px, 1px, 1px);
+ clip-path: inset(50%);
+}
+.txt-hide {
+    font-size:0;
+    text-indent: -9999em;
+}
+/* Grid System */
+.col-2 {
+ width: 50%;
+}
+.col-3 {
+ width: 33.33333333%;
+}
+.col-4 {
+ width: 25%;
+}
+.col-5 {
+ width: 20%;
+}
+
+/* Button Style */
+button {
+ cursor: pointer;
+}
+.btn-grp {
+ clear: both;
+ padding: 30px 0 0;
+}
+.btn-wrap {
+ overflow: hidden;
+ padding-bottom: 20px;
+}
+.btn-wrap:after {
+ content: "";
+ display: block;
+ visibility: hidden;
+ clear: both;
+ overflow: hidden;
+}
+.btn-wrap h3.fl-l {
+ margin: 0;
+}
+a.btn,
+button.btn {
+ display: inline-block;
+ min-width: 70px;
+ height: 69px;
+ padding: 0 20px;
+ font-size: 1.6rem;
+ line-height: 4rem;
+ border-radius: 5px;
+ white-space: nowrap;
+ background: transparent;
+ color: #fff;
+ transition: background-color 0.5s ease-in-out, color 0.15s ease-in-out;
+ vertical-align: middle;
+ text-align: center;
+}
+a.btn {
+ min-width: 30px;
+}
+.btn:hover,
+.btn:focus {
+ transition: background-color 0.5s ease-in-out, color 0.15s ease-in-out;
+ outline-offset: 0;
+}
+/* Dimmed */
+#dimmd {
+ position: absolute;
+ left: 0;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 2;
+ width: 100vw;
+ height: 100vh;
+ background-color: #000;
+ opacity: 0.5;
+}
+
+
+/* Input : Radio & Checkbox */
+.checkbox,
+.radiobox {
+ display: inline-block;
+ position: relative;
+ margin-right: 0;
+ line-height: 2.4rem;
+}
+.checkbox + .checkbox,
+.radiobox + .radiobox {
+ margin-left: 30px;
+}
+input:-webkit-autofill {
+ -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ margin: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+ position: absolute;
+ left: 0;
+ top: 2px;
+ width: 24px;
+ height: 24px;
+ clip: rect(1px, 1px, 1px, 1px);
+ clip-path: inset(50%);
+}
+input[type="checkbox"]:checked,
+input[type="checkbox"]:focus,
+input[type="radio"]:checked,
+input[type="radio"]:focus {
+ outline: none !important;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+ position: relative;
+ font-size: 1.6rem;
+ line-height: 2.4rem;
+ color: #111;
+ cursor: pointer;
+}
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+ outline: auto;
+}
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+ cursor: default;
+}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+ content: "";
+ display: inline-block;
+ width: 24px;
+ height: 24px;
+ margin-right: 10px;
+ font-size: 1.6rem;
+ line-height: 2.4rem;
+ color: #222;
+ vertical-align: top;
+}
+input[type="checkbox"] + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -148px 0;
+}
+input[type="checkbox"]:checked + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -124px 0;
+}
+input[type="checkbox"]:disabled + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -172px 0;
+}
+input[type="radio"] + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -148px -24px;
+}
+input[type="radio"]:checked + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -124px -24px;
+}
+input[type="radio"]:disabled + label:before {
+ background: url(/images/bg_iconset.png) no-repeat -172px -24px;
+}
+
+/* Input : Text & etc */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+ display: inline-block;
+ width: auto;
+ height: 38px;
+ padding: 0 15px;
+ border: 1px solid #bbb;
+ border-radius: 4px;
+ line-height: 3.8rem;
+ color: #111;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+}
+input::-ms-clear {
+ display: none;
+}
+input[type="number"] {
+ min-width: 88px;
+ -moz-appearance: textfield;
+}
+input[type="text"]::placeholder {
+ color: #737373;
+}
+input[type="text"]:disabled,
+input[type="text"]:read-only {
+ background-color: #f9f9f9;
+}
+input[type="text"].xxsmall,
+input[type="password"].xxsmall,
+input[type="number"].xxsmall {
+ width: calc(50px - 32px);
+ min-width: auto;
+}
+input[type="text"].xsmall,
+input[type="password"].xsmall,
+input[type="number"].xsmall {
+ width: calc(120px - 32px);
+ min-width: auto;
+}
+input[type="text"].small,
+input[type="password"].small,
+input[type="number"].small {
+ width: calc(200px - 32px);
+ min-width: auto;
+}
+input[type="text"].mediun,
+input[type="password"].mediun,
+input[type="number"].mediun {
+ width: calc(400px - 32px);
+ min-width: auto;
+}
+input[type="text"].full,
+input[type="password"].full,
+input[type="number"].full {
+ width: calc(100% - 22px);
+ min-width: auto;
+}
+input[type="text"].xhalf,
+input[type="password"].xhalf,
+input[type="number"].xhalf {
+ width: calc(50% - 116px);
+ min-width: auto;
+}
+input[type="text"].half,
+input[type="password"].half,
+input[type="number"].half {
+ width: calc(50% - 32px);
+ min-width: auto;
+}
+
+input[type="file"] {
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 78px;
+ height: 40px;
+ line-height: 4rem;
+ opacity: 0;
+}
+input[type="file"] + label {
+ display: inline-block;
+ height: 40px;
+ margin-right: 5px;
+ padding: 0 10px;
+ background-color: #666666;
+ border-radius: 4px;
+ line-height: 4rem;
+ color: #fff;
+ cursor: pointer;
+}
+input[type="file"]:focus + label {
+ outline: auto !important;
+}
+
+/* Form List */
+fieldset legend {
+ position: absolute;
+ z-index: -1;
+ width: 0;
+ height: 0;
+ visibility: hidden;
+ text-indent: -9999em;
+}
+.textarea {
+ width: calc(100% - 22px);
+ padding: 10px;
+ border: 1px solid #bbb;
+ border-radius: 4px;
+ background-color: #fff;
+}
+
+
+/* Mobile Device */
+@media screen and (max-width: 415px) {
+ .boxlist.type2 .data-info.dot-type .progress dd {
+  max-width: 190px;
+  width: auto;
+ }
+}
+/* Mobile Device */
+@media screen and (max-width: 639px) {
+ /* Input */
+ .flexbox.address:first-child input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+ }
+ input[type="text"].xhalf,
+ input[type="password"].xhalf,
+ input[type="number"].xhalf,
+ input[type="text"].half,
+ input[type="password"].half,
+ input[type="number"].half {
+  width: calc(100% - 22px);
+  min-width: auto;
+ }
+}

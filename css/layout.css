@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* All Device */
+/* Skip Navigation*/
+#skip-nav {
+ position: relative;
+ z-index: 9999;
+}
+#skip-nav a {
+ display: block;
+ height: 1px;
+ width: 1px;
+ margin-bottom: -1px;
+ overflow: hidden;
+ font-size: 20px;
+ color: #fff;
+ font-weight: bold;
+ background: #0779d1;
+ white-space: nowrap;
+ text-align: center;
+}
+#skip-nav a:focus,
+#skipNav a:active {
+ height: auto;
+ width: 100%;
+ padding: 5px;
+ margin-bottom: 10px;
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+/* Header */
+
+/* Navigation */
+
+
+/* Contents */
+#container {
+
+}
+#container .section-tit {
+    font-size: 3rem;
+}
+/* Main */
+
+
+/* footer */
+#footer {
+
+}
+
+
+/* dim */
+.dim {
+    display:none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.2;
+}
+/* Mobile Device  */
+@media screen and (max-width: 320px) {
+
+}
+
+/* Mobile Device  */
+@media screen and (max-width: 660px) {
+    
+}
+
+/* Desktop Device */
+@media screen and (max-width: 1200px) {
+   
+}
+@media screen and (min-width: 1024px) {
+   
+}
+
+/* Desktop Device (big screen) */
+@media screen and (min-width: 1280px) {
+}
