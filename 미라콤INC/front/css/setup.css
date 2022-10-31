@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+.block {
+    display: block;
+}
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* btn_ico 아이콘형 버튼 */
+a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; width:35px; height:35px; font-size:0; line-height:0; vertical-align:middle; white-space:nowrap; background:url('/static/images/common/sp_icon.png') 0 0 no-repeat;}
+.btn_ico.join {margin-right:8px; width:25px; height:21px; background-position:0 0;}
+.btn_ico.login {margin-right:8px; width:25px; height:21px; background-position:-25px 0;}
+.btn_ico.home {margin-right:8px; width:12px; height:13px; background-position:0 -21px;}
+.btn_ico.nextArrow {margin-left:18px; width:16px; height:34px; background-position:-50px 0;}
+.btn_ico.beArrow {margin-right:18px; width:16px; height:34px; background-position:-66px 0;}
+.btn_ico.blog {margin-right:16px; width:34px; height:34px; background-position:-82px 0;}
+.btn_ico.face {margin-right:20px; width:34px; height:34px; background-position:-116px 0;}

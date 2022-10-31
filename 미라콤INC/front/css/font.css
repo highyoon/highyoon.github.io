@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/front/font/NotoSansCJKkr-Thin.eot');
+    src: url('/front/font/NotoSansCJKkr-Thin.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Thin.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Thin.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/front/font/NotoSansCJKkr-Light.eot');
+    src: url('/front/font/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Light.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/front/font/NotoSansCJKkr-DemiLight.eot');
+    src: url('/front/font/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-DemiLight.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-DemiLight.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/front/font/NotoSansCJKkr-Regular.eot');
+    src: url('/front/font/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Regular.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/front/font/NotoSansCJKkr-Medium.eot');
+    src: url('/front/font/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Medium.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/front/font/NotoSansCJKkr-Black.eot');
+    src: url('/front/font/NotoSansCJKkr-Black.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Black.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Black.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'noto sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/front/font/NotoSansCJKkr-Bold.eot');
+    src: url('/front/font/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+    url('/front/font/NotoSansCJKkr-Bold.woff') format('woff'),
+    url('/front/font/NotoSansCJKkr-Bold.otf') format('truetype');
+}
