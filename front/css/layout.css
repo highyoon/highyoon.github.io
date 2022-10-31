@@ -85,12 +85,18 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 
 #wrap-top .menu-box {
 	flex-grow:1;
+	text-align: center;
 }
 #wrap-top .menu-box  > ul > li {
 	display: inline-block;
+	margin:0 5%;
 }
 #wrap-top .menu-box  > ul > li > a {
+	display: block;
+	padding:37px 0;
 	font-size:20px;
+	font-weight: 600;
+	color:var(--txt-wht);
 }
 #wrap-top .menu-box .sub-box {
 	display: none;
@@ -147,6 +153,11 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	border-radius: 48px;
 	color:var(--txt-wht);
 	border:1px solid #9ea2a8;
+}
+
+.main-why {
+	background: url('/front/img/main/main_why.jpg') no-repeat center;
+	background-size:cover ;
 }
 
 
