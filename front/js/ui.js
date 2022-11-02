@@ -24,6 +24,7 @@ $(function () {
 
     //Functions
     gnb();
+    mo_gnb()
     // sc_move();
     
 });
@@ -90,6 +91,20 @@ var gnb = function() {
                 $('#header .search-box').removeClass('on');
                 $('#header .bg-gnb').removeClass('search');
                 e.stopImmediatePropagation(); 
+            }
+        });
+    }
+}
+
+function mo_gnb(){
+    var $mo_menu = $('.ctrl-menu > a');
+    var $mo_gnb = $('#gnb');
+    var $hasClass = $('body').hasClass('pc');
+    if ($hasClass) {
+        $mo_menu.bind({
+            'click' :function(e){
+                $(this).toggleClass('show');
+                $mo_gnb.toggleClass('open');
             }
         });
     }

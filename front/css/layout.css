@@ -111,6 +111,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	text-align: center;
 }
 #wrap-top .menu-box  > ul {
+	display:inline-block;
 	font-size: 0;
 }
 #wrap-top .menu-box  > ul > li {
@@ -252,16 +253,28 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	font-weight: 600;
 }
 #wrap-top .ctrl-menu {
-	margin-right:10px;
+	margin-right:30px;
+	display: none;
 }
-#wrap-top .ctrl-menu a {}
-
+#wrap-top .ctrl-menu a {
+	position: relative;
+}
 #wrap-top .ctrl-menu a > span {
-	margin:5px 0;
+	position: relative;
+	top:0;
+	margin:10px 0;
 	display: block;
-	width: 20px;
+	width: 30px;
 	height:3px;
 	background:#fff;
+	transition: .5s ease-in-out;
+}
+#wrap-top .ctrl-menu a > span:nth-child(2) {
+	top:2px;
+}
+#wrap-top.on .ctrl-menu a > span,
+#wrap-top.wht .ctrl-menu a > span {
+	background: #111;
 }
 /* main */
 .topArea {
@@ -636,3 +649,33 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 }
 
 /* media query */
+/* Mobile Device  */
+@media screen and (max-width: 1600px) {
+
+	#gnb {
+		display: none;
+	}
+	#gnb.open {
+		display: block;
+		position: absolute;
+		top: 90px;
+		left:0;
+		width: 100%;
+		background: #fff;
+	}
+	#gnb.open .sub-box {
+		display: block;
+	}
+	#wrap-top .ctrl-menu {
+		display: block;
+	}
+	#wrap-top .ctrl-menu .show span:nth-child(1) {
+		top:5px;
+		transform: rotate(45deg);
+	}
+	#wrap-top .ctrl-menu .show span:nth-child(2) {
+		top:-8px;
+		transform: rotate(-45deg);
+	}
+
+}
