@@ -99,6 +99,13 @@
 		<a href="#none" class="join">문의하기</a>
 		<a href="#none" class="demo">Demo</a>
 	</div>
+	<div class="ctrl-menu">
+		<a href="#none">
+			<span></span>
+			<span></span>
+			<em class="hidden">메뉴 열기</em>
+		</a>
+	</div>
 	<div class="contact">
 		<dl>
 			<dt>이용문의</dt>
@@ -444,37 +451,85 @@
 <!-- [e]include : Footer -->
 
 <script>
-$('.slide-box').slick({
-	centerMode:true,
-    centerPadding:'15vw',
-	responsive: [
-        {
-          breakpoint: 1800,
-          settings: {
-            centerPadding:'12vw',
-          }
-        },
-		{
-          breakpoint: 1700,
-          settings: {
-            centerPadding:'11vw',
-          }
-        },
-		{
-          breakpoint: 1600,
-          settings: {
-            centerPadding:'10vw',
-          }
-        },
-        {
-          breakpoint: 770,
-          settings: {
-            centerPadding:'0',
-            arrows:false,
-          }
-        },
-    ],
+	//main slider
+jQuery(function () {
+	jQuery('.main-slide .slide-box').on('init', function (event, slick) {
+		jQuery(this).append('<div class="slick-counter"><div><button class="top-slider-prev"><span class="arrow"></span>PREV</button><div class="num"><span class="current"></span><span class="total hidden"></span></div><button class="top-slider-pause"></button><button class="top-slider-play"></button><button class="top-slider-next">NEXT<span class="arrow"></span></button></div></div>');
+		jQuery('.current').text('0'+ 1);
+		//jQuery('.current').text(slick.currentSlide + 1);
+		jQuery('.total').text(slick.slideCount);
+		var $slider = $('.slider');
+
+
+
+		$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			// var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+			var calc = Number((nextSlide + 1) / slick.slideCount * 100);
+		});
+	})
+
+	jQuery('.main-slide .slide-box').slick({
+		infinite: true,
+		dots: false,
+		centerMode:true,
+		prevArrow: $('#top-slider-prev'),
+		nextArrow: $('#top-slider-next')
+	});
+	jQuery('.main-slide .slide-box').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		jQuery('.main-slide .slide-box .current').text('0' + (nextSlide + 1));
+	});
+	// Play/Pause button
+	$(".main-slide .slide-box .top-slider-play").click(function () {
+		jQuery('.main-slide .slide-box').slick('slickPlay');
+		$(this).hide();
+		$('.main-slide .slide-box .top-slider-pause').show();
+	});
+	$(".main-slide .slide-box .top-slider-pause").click(function () {
+		jQuery('.main-slide .slide-box').slick('slickPause');
+		$(this).hide();
+		$('.main-slide .slide-box .top-slider-play').show();
+	});
+	// Custom carousel nav
+	jQuery('.main-slide .slide-box .top-slider-next').click(function () {
+		jQuery('.main-slide .slide-box').slick('slickNext');
+	});
+
+	// Prev slide button
+	jQuery('.main-slide .slide-box .top-slider-prev').click(function () {
+		jQuery('.main-slide .slide-box').slick('slickPrev');
+	});
 });
+// $('.slide-box').slick({
+// 	centerMode:true,
+//     centerPadding:'15vw',
+// 	responsive: [
+//         {
+//           breakpoint: 1800,
+//           settings: {
+//             centerPadding:'12vw',
+//           }
+//         },
+// 		{
+//           breakpoint: 1700,
+//           settings: {
+//             centerPadding:'11vw',
+//           }
+//         },
+// 		{
+//           breakpoint: 1600,
+//           settings: {
+//             centerPadding:'10vw',
+//           }
+//         },
+//         {
+//           breakpoint: 770,
+//           settings: {
+//             centerPadding:'0',
+//             arrows:false,
+//           }
+//         },
+//     ],
+// });
 </script>
 </body>
 </html>
