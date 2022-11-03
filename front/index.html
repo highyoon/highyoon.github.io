@@ -473,7 +473,16 @@ jQuery(function () {
 		dots: false,
 		centerMode:true,
 		prevArrow: $('#top-slider-prev'),
-		nextArrow: $('#top-slider-next')
+		nextArrow: $('#top-slider-next'),
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					centerMode:false,
+					dots: false,
+				}
+			},
+		]
 	});
 	jQuery('.main-slide .slide-box').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 		jQuery('.main-slide .slide-box .current').text('0' + (nextSlide + 1));
