@@ -72,11 +72,15 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	top:0;
 	left:0;
 	width: 100%;
+	border-bottom:1px solid rgba(255,255,255,0.15);
+	z-index: 10;
+}
+#wrap-top .top-wrap {
+	margin:0 auto;
+	max-width: 1920px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom:1px solid rgba(255,255,255,0.15);
-	z-index: 10;
 }
 #wrap-top::after { 
 	content: ""; 
@@ -284,10 +288,10 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 #wrap-top .ctrl-menu a > span {
 	position: relative;
 	top:0;
-	margin:10px 0;
+	margin:5px 0;
 	display: block;
-	width: 30px;
-	height:3px;
+	width: 20px;
+	height:2px;
 	background:#fff;
 	transition: .5s ease-in-out;
 }
@@ -395,12 +399,12 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 #wrap-footer .select-wrap .select-box > li {
 	display: inline-block;
 	vertical-align: top;
+	position: relative;
 }
 #wrap-footer .select-wrap .select-box > li + li {
 	margin-left:7px;
 }
 #wrap-footer .select-wrap .select-box > li > a {
-	position: relative;
 	display: block;
 	padding:15px 136px 15px 20px;
 	font-size:16px;
@@ -420,6 +424,60 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	border-bottom:1px solid var(--txt-sub);
 	transform: rotate(-45deg);
 }
+#wrap-footer .select-wrap .select-box a.on:after {
+	margin-top: -4px;
+	transform:rotate(-225deg);
+} 
+#wrap-footer .select-wrap .select-box li .sel-cont {
+	margin:0; 
+	box-sizing:border-box; 
+	border:1px solid #5e5e5e; 
+	position:absolute; 
+	left:0; 
+	bottom:44px; 
+	z-index:200; 
+	background:#454545; 
+	width:100%; 
+	display:none; 
+	max-height:210px; 
+	overflow:auto;
+}
+#wrap-footer .select-wrap .select-box li .sel-cont li {
+	margin:0; 
+	border-bottom:1px solid #525259;
+}
+#wrap-footer .select-wrap .select-box li .sel-cont li a {
+	
+	display:block;
+	border:0; 
+	padding:8px 3%; 
+	height:auto; 
+	color:#fff; 
+	font-size:13px; 
+	line-height:18px;
+}
+
+.float-banner { position: fixed; right: 0; bottom: 47px; overflow: hidden; z-index: 6000; transition: width ease-out 0.4s; }
+.float-banner .floating-wrap { position: relative; right: unset; bottom: unset; }
+.float-banner { display: block; }
+.float-banner.act { position: absolute; bottom: 466px; }
+
+.floating-wrap {width:56px;border-radius:0;}
+.floating-wrap ul {width:56px;transition:width ease-out 0.4s;}
+.floating-wrap.on ul {width:148px;}
+.floating-wrap li a {min-width:148px;padding-left:56px;font-size:16px;background:#222;}
+.floating-wrap li a:before {position:absolute;left:0;top:0;width:60px;height:56px;content:"";transform:scale(0.8);}
+.floating-wrap li a:before {width:56px;transform:scale(0.57);}
+.floating-wrap li a.icon_try:before {background:url(https://image.samsungsds.com/module_src/images/default/icon_floating_try.svg?queryString=20221103110813) center/100% no-repeat;}
+.floating-wrap li a.icon_inquiry:before {background:url(https://image.samsungsds.com/module_src/images/default/icon_floating_inquiry.svg?queryString=20221103110813) center/100% no-repeat;}
+.floating-wrap li a.icon_digital:before {background:url(https://image.samsungsds.com/module_src/images/default/icon_floating_digital.svg?queryString=20221103110813) center/100% no-repeat;}
+.floating-wrap li a.icon_cloud:before {background:url(https://image.samsungsds.com/module_src/images/default/icon_floating_cloud.svg?queryString=20221103110813) center/100% no-repeat;}
+
+.floating-wrap li a.btn_top { background-color: #999; }
+.floating-wrap li a.btn_top:before {background:url(https://image.samsungsds.com/module_src/images/icon/top_icon.png?queryString=20221103110813) center/100% no-repeat; width: 23px; left: 17px; transform: scale(1); }
+
+.floating-wrap.act {position:absolute;}
+.floating-wrap.on {width:140px;}
 
 /* media query */
 /* pc Device  */
@@ -442,7 +500,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 		transform: rotate(45deg);
 	}
 	#wrap-top .ctrl-menu .show span:nth-child(2) {
-		top:-8px;
+		top:-2px;
 		transform: rotate(-45deg);
 	}
 
@@ -450,18 +508,14 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 
 /* tabet Device  */
 @media screen and (max-width: 1280px) {
-	#wrap-top {
-		height:90px;
+	#wrap-top .top-wrap {
+		height:50px;
 	}
 	#gnb {
 		display: none;
 	}
 	#wrap-top .ctrl-menu {
 		display: block;
-	}
-	.wrap {
-		padding-left:50px;
-		padding-right:50px;
 	}
 }
 @media screen and (max-width: 1024px) {

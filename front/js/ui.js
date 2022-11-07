@@ -25,6 +25,7 @@ $(function () {
     //Functions
     gnb();
     mo_gnb();
+    js_relate();
     // sc_move();
     
 });
@@ -145,6 +146,45 @@ function mobile_menu(){
             $('.m-menu').removeClass('on');
         }
     });
+}
+// footer select
+function js_relate (){
+	var obj = $(".select-box >li"); 
+	
+	obj.each(function() {
+        obj.addClass('bbb');
+		var tgt = $(this);
+            tgt.btn = tgt.find(">a"); 
+			tgt.sel_cont = tgt.find(".sel-cont"); 
+			tgt.sel_cont.li = tgt.sel_cont.find(">li"); 
+		$("<em class='hidden'>열기</em>").appendTo(tgt.btn);		
+			
+		tgt.btn.on("click",function() {
+            console.log('aaa');
+			if(tgt.sel_cont.is(":animated")) return false;
+			$(this).toggleClass("on").siblings(".sel-cont").slideToggle(300);
+			if($(this).hasClass("on")){
+				$(this).find(">em").text("닫기");
+			} else {
+				$(this).find(">em").text("열기");
+			}
+			return false;
+		});
+		
+		tgt.on("mouseleave",function() {
+			$(this).find(">a").removeAttr("class");
+			$(this).find(">.sel-cont").slideUp(300);
+			tgt.btn.find(">em").text("열기");
+			return false;
+		});
+		
+		tgt.sel_cont.li.last().find(">a").on("focusout",function() {
+			$(this).parent().parent().siblings("a").removeAttr("class");
+			$(this).parent().parent().slideUp(300);
+			tgt.btn.find(">em").text("열기");
+			return false;
+		});		
+	});
 }
 
 //scroll moving
