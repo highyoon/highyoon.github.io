@@ -373,7 +373,8 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		border-top:2px solid #e3e3e3;
 	}
 	.main-slide .slick-list {
-		padding:0 !important;
+		padding:0 5vw !important;
+		margin-left:-11vw;
 	}
 	.main-slide .slide-box .slick-current .cont-box {
 		position: static;
@@ -388,10 +389,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
         height:50px;
     }
 	.main-slide {
-		padding:50px 20px;;
+		padding:50px 20px 50px 50px;
 	}
 	.main-slide .slide-box .slide-cont {
-		margin:0 20px;
+		margin:0 15px;
 	}
 	.main-slide .slide-box .slick-current .cont-box {
 		padding:20px 0;

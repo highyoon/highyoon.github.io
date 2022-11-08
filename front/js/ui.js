@@ -118,7 +118,13 @@ function mo_gnb(){
         $mo_menu.bind({
             'click' :function(e){
                 $(this).toggleClass('show');
+                if ($(this).hasClass('show')){
+                    $('.dim').addClass('on');
+                } else {
+                    $('.dim').removeClass('on');
+                }
                 $mo_gnb.toggleClass('open ');
+
             }
         });
     }
@@ -205,9 +211,7 @@ function js_relate (){
 
 // btn_top
 var top_scroll_func = function() {
-    console.log('bbb');
-    $('body').scroll(function() {
-        console.log('aaa');
+    $(window).scroll(function() {
         try {
             var topScrollPos = $(this).scrollTop();
 
@@ -221,7 +225,7 @@ var top_scroll_func = function() {
 };
 //Top move
 var btn_top = function () {
-    $(document).on('click', '.btn-top a', function(ev){
+    $(document).on('click', '.btn_top a', function(ev){
         ev.preventDefault();
 		var targetHash = $(this).attr('href'),
 			$targetObj = $(targetHash),
