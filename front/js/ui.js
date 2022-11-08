@@ -1,18 +1,18 @@
 //Document ready
+
 $(function () {
     //Resize
     $(window).resize(function(){
         var winW = $(window).width();
-        
         if (winW >= 1280) {
             $("body").removeClass().addClass("pc");     
             header_chk();
         } else if (winW >= 768 && winW <= 1280) {
             $("body").removeClass().addClass("tablet");
-            mo_gnb()
+            mo_gnb();
         } else if (winW <= 767) {
             $("body").removeClass().addClass("mobile");
-            mo_gnb()
+            mo_gnb();
         }
     }).resize();
     //scroll
@@ -234,6 +234,9 @@ var btn_top = function () {
 		$('html, body').stop(true,false).animate({scrollTop: scroll_to},700, 'easeInOutQuart', function(){ });
     });
 }
-				
+$(document).ready(function() {	
+    $(".header-include").load("include/header.html");
+    $(".footer-include").load("include/footer.html");
+});
 
 
