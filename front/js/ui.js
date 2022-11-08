@@ -9,9 +9,10 @@ $(function () {
             header_chk();
         } else if (winW >= 768 && winW <= 1280) {
             $("body").removeClass().addClass("tablet");
+            mo_gnb()
         } else if (winW <= 767) {
             $("body").removeClass().addClass("mobile");
-            mobile_menu();
+            mo_gnb()
         }
     }).resize();
     //scroll
@@ -26,6 +27,8 @@ $(function () {
     gnb();
     mo_gnb();
     js_relate();
+    flt_banner();
+    top_scroll_func();
     // sc_move();
     
 });
@@ -111,11 +114,11 @@ function mo_gnb(){
     var $mo_gnb = $('#gnb');
     var $hasClass = $('body').hasClass('pc');
     if (!$hasClass) {
+        $mo_menu.off('click');
         $mo_menu.bind({
             'click' :function(e){
                 $(this).toggleClass('show');
                 $mo_gnb.toggleClass('open ');
-                console.log('click m gnb');
             }
         });
     }
@@ -132,19 +135,14 @@ function header_chk(){
     });
 }
 
-// mobile menu
-function mobile_menu(){
-    $('.m-menu').click(function(){
-        $('body').toggleClass('hold');
-        $(this).toggleClass('on');
-        $('.gnb').toggleClass('on');
+
+//floating banner
+function flt_banner (){
+    $('.floating-wrap ul li a').on("mouseover focusin", function() {
+        $('.floating-wrap').addClass('on');
     });
-    $('.gnb li a').click(function(){
-        if ($('body').hasClass('hold')) {
-            $('body').removeClass('hold');
-            $('.gnb').removeClass('on');
-            $('.m-menu').removeClass('on');
-        }
+    $('.floating-wrap ul li a').on('mouseleave focusout', function() {
+        $('.floating-wrap').removeClass('on');
     });
 }
 // footer select
@@ -160,7 +158,6 @@ function js_relate (){
 		$("<em class='hidden'>열기</em>").appendTo(tgt.btn);		
 			
 		tgt.btn.on("click",function() {
-            console.log('aaa');
 			if(tgt.sel_cont.is(":animated")) return false;
 			$(this).toggleClass("on").siblings(".sel-cont").slideToggle(300);
 			if($(this).hasClass("on")){
@@ -208,14 +205,16 @@ function js_relate (){
 
 // btn_top
 var top_scroll_func = function() {
+    console.log('bbb');
     $('body').scroll(function() {
+        console.log('aaa');
         try {
             var topScrollPos = $(this).scrollTop();
 
             if (topScrollPos > ($(this).height() / 2)) {
-                $('.btn-top').fadeIn('fast');
+                $('.float-banner').fadeIn('fast');
             } else {
-                $('.btn-top').fadeOut('fast');
+                $('.float-banner').fadeOut('fast');
             }
         } catch(e) { }
     });
