@@ -199,3 +199,8 @@
 .pagination .page-item.prev, .pagination .page-item.next {
     margin-top:-2px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .chk .chk-label .txt {font-size:14px;}
+}

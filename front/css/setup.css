@@ -415,6 +415,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	margin:40px 0 15px;
 	text-align: left;
 	font-size: 16px;
+	font-weight: 500;
 }
 .join-wrap .agree-box {}
 .join-wrap .agree-box ul {
@@ -483,6 +484,13 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.more-box .flex-box .flex-cont:last-child {
 		display: none;
 	}
+
+	.login-box {
+		margin-top:50px;
+	}
+	.content .gray-box {
+		margin-top:50px;
+	}
 }
 @media screen and (max-width: 1024px) {
 	.main-slide {
@@ -521,6 +529,101 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.main-slide .sec-tit {
 		max-width: 80%;
+	}
+
+		/* 로그인 */
+	.content .login-box {
+		align-items: center;
+		padding:50px 30px 65px;
+		min-height:calc(100vh - 233px);
+		background-image: url('/front/img/bg_m_login.jpg');
+	}
+	.login-box .sub-tit {
+		font-size:25px;
+		line-height: 1.4;
+	}
+	.login-box .login {
+		margin-top:-70px;
+		padding:30px 30px 35px;
+		min-width: 100%;
+		background-color: #fff;
+		box-sizing: border-box;
+		box-shadow: 0px 1px 14px -2px rgba(168,166,159,0.2);
+	}
+	.login-box .login h3 {
+		margin-bottom:25px;
+		font-size:25px;
+		line-height: 1.4;
+	}
+	.login-box .login .field {
+		margin-bottom:10px;
+	}
+	.login-box .login .field-error {
+		padding-left:16px;
+		font-size:11px;
+	}
+	.login-box .login .field-error::before {
+		top:0;
+		width: 13px;
+		height:13px;
+	}
+	.login-box .login .fieldset-addinfo {
+		margin:20px 0 0;
+		text-align:left;
+	}
+	.login-box .login .btn {
+		margin:25px 0 20px;
+	}
+	.login-box .login .login-util a {
+		font-size:14px;
+	}
+
+		/* 회원가입 */
+	.content .gray-box {
+		padding:50px 30px 65px;
+	}
+	.join-wrap {
+		margin:0 auto;
+		max-width: 100%;
+	}
+	.join-wrap.single {
+		max-width: 100%;
+	}
+	.join-wrap .sub-tit {
+		font-size:25px;
+		line-height: 3.75rem;
+	}
+	.join-wrap .sub-txt {
+		font-size:12px;
+	}
+	.join-wrap .label-tit {
+		margin:23px 0 10px;
+		font-size: 14px;
+	}
+	.join-wrap .agree-box {}
+	.join-wrap .agree-box ul {
+		border-top:2px solid #222;
+	}
+	.join-wrap .agree-box ul li {
+		position: relative;
+		padding:22px 0;
+		text-align:left;
+		border-bottom:1px solid #dbdbdb;
+	}
+	.join-wrap .agree-box ul li .txt-link {
+		position: absolute;
+		top:50%;
+		right:0;
+		margin-top:-18px
+	}
+	.join-wrap .btn-wrap {
+		margin-top:30px;
+	}
+	.join-wrap .flex-box {
+		gap:10px;
+	}
+	.join-wrap .flex-box .btn {
+		flex-grow: 1;
 	}
 
 }
