@@ -235,8 +235,8 @@ var btn_top = function () {
     });
 }
 $(document).ready(function() {	
-    $(".header-include").load("include/header.html");
-    $(".footer-include").load("include/footer.html");
+    $(".header-include").load("/front/include/header.html");
+    $(".footer-include").load("/front/include/footer.html");
 });
 
 

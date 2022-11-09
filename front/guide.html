@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nexplant MESplus front</title>
+    <link rel="stylesheet" type="text/css" href="/front/css/highlight.theme.css">
+    <link rel="stylesheet" type="text/css" href="/front/css/guide.css">
+    <link rel="stylesheet" type="text/css" href="/front/css/common.css">
+
+    <script type="text/javascript" src="/front/js/libs/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/front/js/libs/jquery-ui-1.12.1.min.js"></script>
+    <script src="/front/js/libs/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+
+
+        $(function(){
+            let $nav = $('.guide-snb-link'),
+            $section = $('.guide-section'),
+			sections = {},
+			i = 0;
+
+            $section.each(function(item, e){
+				sections[e.id] = $section.eq(item).offset().top - 350;
+			});
+
+            $(window).on('scroll', function() {
+                let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+                for (i in sections) {
+                    if (sections[i] <= scrollPosition) {
+                        $nav.find('>li').removeClass('active');
+                        $( 'a[href*=' + i + ']' ).parent().addClass('active');
+                    }
+                }
+            });
+
+            $nav.find('>li>a').on('click', function(e){
+                let thisHash = $(this).attr('href');
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                $('html, body').stop().animate({
+                    scrollTop: $(thisHash).offset().top - 100
+                }, 680, 'easeInOutCubic');
+                e.preventDefault();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="guide">
+        <div class="guide-snb">
+            <h2>
+                <img src="img/logo_blk.png" alt="Nexplant MESplus cloud edition">
+                <div>Style Guide<small>front</small></div>
+            </h2>
+            <ul class="guide-snb-link">
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#chkrdo">Checkbox, Radio</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#tabs">Tab</a></li>
+                <li><a href="#paging">Paging</a></li>
+                <li><a href="#popup">Popup/Alert</a></li>
+            </ul>
+        </div>
+        <div class="guide-wrapper">
+            <div class="guide-header">
+                Styleguide v1
+            </div>
+            <div class="guide-cont">
+                <section id="typography" class="guide-section">
+                    <h3 class="guide-tit">TYPOGRAPHY</h3>
+                    <div class="result typograhy">
+                        <h2 class="tit">Noto Sans 36px, 자간 0 <small>- 대제목</small></h2>
+                        <h3 class="section-tit">Noto Sans 24px, 자간 0 <small>- 섹션 제목</small></h3>
+                        <div class="txt">
+                            Noto Sans  16px, 자간 0, 행간26px <small>- 기본텍스트</small>
+                        </div>
+                        <br>
+                    </div>
+                </section>
+                <section id="buttons" class="guide-section">
+                    <h3 class="guide-tit">BUTTONS</h3>
+                    <div class="result syntax-result button">
+                        <button type="button" class="btn btn-import">강조</button>
+                        <button type="button" class="btn btn-normal">일반</button>
+                        <button type="button" class="btn btn-lightblue" disabled>비활성화</button>
+                        <br><br>
+                        <a href="#" class="btn btn-import">강조</a>
+                        <a href="#" class="btn btn-normal">일반</a>
+                        <a href="#" class="btn btn-lightblue" disabled>비활성화</a>
+                        <br><br>
+                        <button type="button" class="btn btn-import rd">강조</button>
+                        <button type="button" class="btn btn-normal rd">일반</button>
+                        <button type="button" class="btn btn-lightblue rd" disabled>비활성화</button>
+                        <br><br>
+                        <button type="button" class="btn btn-import lg">강조</button>
+                        <button type="button" class="btn btn-normal md">일반</button> 
+                        <button type="button" class="btn btn-lightblue" disabled>비활성화</button> 
+                        <button type="button" class="btn btn-import lg rd">강조</button>
+                        <button type="button" class="btn btn-normal md rd" style="background-color: #666">일반</button>
+                        <button type="button" class="btn btn-lightblue rd" disabled>비활성화</button>
+                    </div>
+                    <div class="syntax">
+                        <span class="syntax-txt">Markup</span>
+                        <pre><code class="language-xml hljs">&lt;button type="button" class="btn btn-lightblue"&gt;버튼&lt;/div&gt;
+&lt;button type="button" class="btn btn-darkblue"&gt;강조&lt;/div&gt;
+&lt;button type="button" class="btn btn-gray"&gt;일반&lt;/div&gt;
+&lt;button type="button" class="btn btn-lightblue" disabled&gt;비활성화&lt;/div&gt;
+
+&lt;a href="#" class="btn btn-lightblue"&gt;버튼&lt;/a&gt;
+&lt;a href="#" class="btn btn-darkblue"&gt;강조&lt;/a&gt;
+&lt;a href="#" class="btn btn-gray"&gt;일반&lt;/a&gt;
+&lt;a href="#" class="btn btn-lightblue" disabled&gt;비활성화&lt;/a&gt;</code></pre>
+                    </div>
+                </section>
+                
+                <section id="chkrdo" class="guide-section">
+                    <h3 class="guide-tit">CHECKBOX, RADIO</h3>
+                    <div class="result syntax-result chkrdo">
+                        <span class="chk radio">
+                            <input type="radio" id="rdo01" name="rdo" /> 
+                            <label for="rdo01" class="chk-label">검수 전</label>
+                        </span>
+                        <span class="chk radio">
+                            <input type="radio" id="rdo02" name="rdo" checked /> 
+                            <label for="rdo02" class="chk-label">검수 완료</label>
+                        </span>
+                        <span class="chk radio">
+                            <input type="radio" id="rdo03" name="rdo" disabled /> 
+                            <label for="rdo03" class="chk-label">선택불가</label>
+                        </span>
+
+                        <span class="chk checkbox">
+                            <input type="checkbox" id="chk01" /> 
+                            <label for="chk01" class="chk-label">검수 전</label>
+                        </span>
+                        <span class="chk checkbox">
+                            <input type="checkbox" id="chk02" checked/> 
+                            <label for="chk02" class="chk-label">검수 완료</label>
+                        </span>
+                        <span class="chk checkbox">
+                            <input type="checkbox" id="chk03" disabled /> 
+                            <label for="chk03" class="chk-label">선택불가</label>
+                        </span>
+
+                        <span class="chk radio single">
+                            <input type="radio" id="rdo04" title="Label" /> 
+                            <label for="rdo04" class="chk-label"></label>
+                        </span>
+                        <span class="chk checkbox single">
+                            <input type="checkbox" id="chk04" title="Label"/> 
+                            <label for="chk04" class="chk-label"></label>
+                        </span>
+                    </div>
+                    <div class="syntax">
+                        <span class="syntax-txt">Markup</span>
+<pre><code class="language-xml hljs">&lt;span class="chk radio"&gt;
+    &lt;input type="radio" id="rdo01" name="rdo"/&gt; 
+    &lt;label for="rdo01" class="chk-label"&gt;검수 전&lt;/label&gt;
+&lt;/span&gt;
+&lt;span class="chk radio"&gt;
+    &lt;input type="radio" id="rdo02" name="rdo" checked/&gt; 
+    &lt;label for="rdo02" class="chk-label"&gt;검수 완료&lt;/label&gt;
+&lt;/span&gt;
+&lt;span class="chk radio"&gt;
+    &lt;input type="radio" id="rdo03" name="rdo" disabled/&gt; 
+    &lt;label for="rdo03" class="chk-label"&gt;선택불가&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class="chk checkbox"&gt;
+    &lt;input type="checkbox" id="chk01"/&gt; 
+    &lt;label for="chk01" class="chk-label"&gt;검수 전&lt;/label&gt;
+&lt;/span&gt;
+&lt;span class="chk checkbox"&gt;
+    &lt;input type="checkbox" id="chk02" checked/&gt; 
+    &lt;label for="chk02" class="chk-label"&gt;검수 완료&lt;/label&gt;
+&lt;/span&gt;
+&lt;span class="chk checkbox"&gt;
+    &lt;input type="checkbox" id="chk03" disabled/&gt; 
+    &lt;label for="chk03" class="chk-label"&gt;선택불가&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class="chk radio single"&gt;
+    &lt;input type="radio" id="rdo04" title="Label"/&gt; 
+    &lt;label for="rdo04" class="chk-label"&gt;&lt;/label&gt;
+&lt;/span&gt;
+&lt;span class="chk checkbox single"&gt;
+    &lt;input type="checkbox" id="chk04" title="Label"/&gt; 
+    &lt;label for="chk04" class="chk-label"&gt;&lt;/label&gt;
+&lt;/span&gt;
+</code></pre>
+                    </div>
+                </section>
+                <section id="form" class="guide-section">
+                    <h3 class="guide-tit">FORM</h3>
+                    <div class="result syntax-result form-guide">
+                        <div class="form-guide-wrap">
+                            <div>
+                                <div class="form-guide-item">
+                                    <input type="text" class="input-default" placeholder="입력란"/>
+                                </div>
+                                <div class="form-guide-item">
+                                    <div class="input-select">
+                                        <select class="input-default">
+                                            <option>전체</option>
+                                            <option>옵션1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-guide-item">
+                                    <div class="form-inline">
+                                        <input type="text" class="input-default"/>
+                                        <button type="button" class="btn btn-darkblue">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-guide-item">
+                                    <input type="text" class="input-default" value="비활성화" disabled />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <textarea name="" id="" cols="30" rows="7" class="input-default textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="syntax">
+                        <span class="syntax-txt">Markup</span>
+<pre><code class="language-xml hljs">&lt;input type="text" class="input-default" value="옵션1"/&gt;
+
+&lt;div class="input-select"&gt;
+    &lt;select class="input-default"&gt;
+        &lt;option&gt;전체&lt;/option&gt;
+        &lt;option&gt;옵션1&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="form-inline"&gt;
+    &lt;input type="text" class="input-default"/&gt;
+    &lt;button type="button" class="btn btn-darkblue"&gt;검색&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;input type="text" class="input-default" value="비활성화" disabled /&gt;
+
+&lt;div class="input-select"&gt;
+    &lt;select class="input-default" disabled&gt;
+        &lt;option&gt;전체&lt;/option&gt;
+        &lt;option&gt;옵션1&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="form-inline form-datepicker"&gt;
+    &lt;input type="text" class="input-default datepicker" id="startDate" name="startDate" style="width: 110px;"&gt;
+    &lt;span class="wave"&gt;~&lt;/span&gt;
+    &lt;input type="text" class="input-default datepicker" id="endDate" name="endDate" style="width: 110px;"&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </section>
+                <section id="tabs" class="guiide-section">
+                    <h3 class="guide-tit">TABS</h3>
+                    <div class="result syntax-result page-guide">
+                        <div>
+                            <ul class="tabs">
+                                <li class="tabs-item active">
+                                    <a href="#tab01" class="tabs-link">tab 01</a>
+                                </li>
+                                <li class="tabs-item">
+                                    <a href="#tab02" class="tabs-link">tab 02</a>
+                                </li>
+                                <li class="tabs-item">
+                                    <a href="#tab03" class="tabs-link">tab 03</a>
+                                </li>
+                                <li class="tabs-item">
+                                    <a href="#tab04" class="tabs-link">tab 04</a>
+                                </li>
+                            </ul>
+                            <div class="tabs-content">
+                                <div id="tab01" class="tabs-content-item active">
+                                    Tabs content 01
+                                </div>
+                                <div id="tab02" class="tabs-content-item">
+                                    Tabs content 02
+                                </div>
+                                <div id="tab03" class="tabs-content-item">
+                                    Tabs content 03
+                                </div>
+                                <div id="tab04" class="tabs-content-item">
+                                    Tabs content 04
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="syntax">
+                        <span class="syntax-txt">Markup</span>
+                        <pre>
+                        <code class="language-xml hljs">
+&lt;ul class="tabs"&gt;
+    &lt;li class="tabs-item active"&gt;
+        &lt;a href="#tab01" class="tabs-link"&gt;tab 01&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="tabs-item"&gt;
+        &lt;a href="#tab02" class="tabs-link"&gt;tab 02&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="tabs-item"&gt;
+        &lt;a href="#tab03" class="tabs-link"&gt;tab 03&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="tabs-item"&gt;
+        &lt;a href="#tab04" class="tabs-link"&gt;tab 04&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabs-content"&gt;
+    &lt;div id="tab01" class="tabs-content-item active"&gt;
+        Tabs content 01
+    &lt;/div&gt;
+    &lt;div id="tab02" class="tabs-content-item"&gt;
+        Tabs content 02
+    &lt;/div&gt;
+    &lt;div id="tab03" class="tabs-content-item"&gt;
+        Tabs content 03
+    &lt;/div&gt;
+    &lt;div id="tab04" class="tabs-content-item"&gt;
+        Tabs content 04
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                        </pre>
+                    </div>
+                </section>
+                <section id="paging" class="guide-section">
+                    <h3 class="guide-tit">PAGING</h3>
+                    <div class="result syntax-result page-guide">
+                        <div class="paging">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item prev disabled">
+                                    <a href="#" class="page-link"><span class="material-icons">navigate_before</span></a>
+                                </li>
+                                <li class="paginate_button page-item active">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" class="page-link">4</a>
+                                </li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" class="page-link">5</a>
+                                </li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" class="page-link">6</a>
+                                </li>
+                                <li class="paginate_button page-item next" id="dtBasicExample_next">
+                                    <a href="#" class="page-link"><span class="material-icons">navigate_next</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="syntax">
+                        <span class="syntax-txt">Markup</span>
+<pre><code class="language-xml hljs">&lt;div class="paging"&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="paginate_button page-item prev disabled"&gt;
+            &lt;a href="#" class="page-link"&gt;&lt;span class="material-icons"&gt;navigate_before&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item active"&gt;
+            &lt;a href="#" class="page-link"&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item "&gt;
+            &lt;a href="#" class="page-link"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item "&gt;
+            &lt;a href="#" class="page-link"&gt;3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item "&gt;
+            &lt;a href="#" class="page-link"&gt;4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item "&gt;
+            &lt;a href="#" class="page-link"&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item "&gt;
+            &lt;a href="#" class="page-link"&gt;6&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item next" id="dtBasicExample_next"&gt;
+            &lt;a href="#" class="page-link"&gt;&lt;span class="material-icons"&gt;navigate_next&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </section>
+                
+               
+                <section id="popup" class="guide-section">
+                    <h3 class="guide-tit">POPUP/ALERT</h3>
+                    <div class="result syntax-result popup-guide">
+                        <a href="#pop" class="btn btn-darkblue pop-open">Popup</a>
+                        <a href="#pop-table" class="btn btn-gray pop-open">SMS</a>
+                        <a href="#text" class="btn btn-gray pop-open">text</a>
+                        
+                        <!-- Popup 기본 -->
+                        <div class="popup" id="pop">
+                            <a href="#" class="pop-close">
+                                <span class="hidden">팝업 닫기</span>
+                            </a>
+                            <div class="pop-header">
+                                제목
+                            </div>
+                            <div class="pop-body">
+                                <div class="dummy-cont">
+                                    Content
+                                </div>
+                                <div class="pop-btn-area">
+                                    <a href="#" class="btn btn-darkblue">등록</a>
+                                    <a href="#" class="btn btn-gray pop-dismiss">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Popup 기본 -->
+
+                        <!-- 팝업 테이블 -->
+                        <div class="popup" id="pop-table">
+                            <a href="#" class="pop-close">
+                                <span class="hidden">팝업 닫기</span>
+                            </a>
+                            <div class="pop-header">
+                                문의하기 분류
+                            </div>
+                            <div class="pop-body">
+                                <div class="tbl">
+                                    <table class="tbl-row">
+                                        <caption>테이블 설명</caption>
+                                        <colgroup>
+                                            <col width="15%;">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">분류코드</th>
+                                                <td>
+                                                    <div class="form-row">
+                                                        <div class="col-9">
+                                                            <div class="form-inline">
+                                                                <input type="text" class="input-default"/>
+                                                                <button type="button" style="min-width:85px;" class="btn btn-darkblue">중복확인</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">분류명</th>
+                                                <td>
+                                                    <div class="form-row">
+                                                        <div class="col-9">
+                                                            <input type="text" class="input-default" value="옵션1"/>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">작성일</th>
+                                                <td>2022-09-27 13:03</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="pop-btn-area">
+                                    <a href="#" class="btn btn-darkblue">저장</a>
+                                    <a href="#" class="btn btn-gray pop-dismiss">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 테이블 -->
+
+                        <!-- Text -->
+                        <div class="popup" id="text">
+                            <a href="#" class="pop-close">
+                                <span class="hidden">팝업 닫기</span>
+                            </a>
+                            <div class="pop-header">
+                                Text 단독
+                            </div>
+                            <div class="pop-body">
+                                <p class="pop-tit">팝업 중제목</p>
+                                <p class="pop-txt">
+                                    내용 입니다. 내용입니다.
+                                </p>
+                                <div class="pop-btn-area">
+                                    <a href="#" class="btn btn-gray pop-dismiss">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Text -->
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="/front/js/ui.js"></script>
+</body>
+
+</html>

@@ -325,6 +325,122 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
     border: 1px solid #9ea2a8;
 }
 
+	/* 로그인 */
+.login-box {
+	margin-top:90px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('/front/img/bg_login.jpg');
+}
+.login-box .sub-tit {
+	width: 100%;
+	font-size:48px;
+	line-height: 1.2;
+}
+.login-box .login {
+	margin-top:45px;
+	padding:60px 80px 75px;
+	min-width: 600px;
+	background-color: #fff;
+	box-sizing: border-box;
+	box-shadow: 0px 1px 14px -2px rgba(168,166,159,0.2);
+}
+.login-box .login h3 {
+	margin-bottom:45px;
+	font-size:40px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+.login-box .login .field {
+	margin-bottom:20px;
+}
+.login-box .login .field-error {
+	position: relative;
+	padding-left:17px;
+	font-size:14px;
+	text-align: left;
+	color:#dc3545;
+}
+.login-box .login .field-error::before {
+	content:'';
+	display: block;
+	position: absolute;
+	top:-1px;
+	left:0;
+	width: 16px;
+	height:16px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024px' height='1024px' viewBox='0 0 1024 1024' class='icon'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z' fill='%23dc3545'/%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z' fill='%23dc3545'/%3E%3C/svg%3E");
+	background-size: 100%; 
+	background-position: calc(100%) center; 
+	background-repeat: no-repeat;
+}
+.login-box .login .fieldset-addinfo {
+	margin:20px 0;
+	text-align:left;
+}
+.login-box .login .btn {
+	margin:25px 0 20px;
+}
+.login-box .login .login-util a {
+	font-size:16px;
+}
+
+	/* 회원가입 */
+.gray-box {
+	margin-top:90px;
+	background-color: #f7f7f7;
+}
+.join-wrap {
+	margin:0 auto;
+	max-width: 740px;
+}
+.join-wrap.single {
+	max-width: 440px;
+}
+.join-wrap .sub-tit {
+	font-size:40px;
+	line-height: 3.75rem;
+}
+.join-wrap .sub-txt {
+	font-size:16px;
+	color:#666;
+}
+.join-wrap .label-tit {
+	display: block;
+	margin:40px 0 15px;
+	text-align: left;
+	font-size: 16px;
+}
+.join-wrap .agree-box {}
+.join-wrap .agree-box ul {
+	border-top:2px solid #222;
+}
+.join-wrap .agree-box ul li {
+	position: relative;
+	padding:22px 0;
+	text-align:left;
+	border-bottom:1px solid #dbdbdb;
+}
+.join-wrap .agree-box ul li .txt-link {
+	position: absolute;
+	top:50%;
+	right:0;
+	margin-top:-18px
+}
+.join-wrap .btn-wrap {
+	margin-top:50px;
+}
+.join-wrap .flex-box {
+	gap:10px;
+}
+.join-wrap .flex-box .btn {
+	flex-grow: 1;
+}
 
 /* media query */
 /* pc Device  */
