@@ -33,14 +33,105 @@
         <h2 class="sec-tit">공지사항</h2>
     </div>
     <article class="content">
-        <div class="notice">
-            <div class="notice-head"></div>
-            <ul>
-                <li>
-                    <span class="numer"></span>
-                    
-                </li>
-            </ul>
+        <div class="wrap notice">
+            <div class="notice-top">
+                <div class="search-area">
+                    <div class="search-box">
+                        <fieldset>
+                            <legend class="txt-hide">검색</legend>
+                            <input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오.">
+                            <button type="button" class="btn_search"><span class="txt-hide">검색</span></button>
+                        </fieldset>
+                    </div> 
+                </div>
+            </div>
+            <div class="tbl">
+                <table>
+                    <caption>No, 제목, 등록일로 구성된 공지사항</caption>
+                    <colgroup>
+                        <col class="m-hidden" width="100px">
+                        <col width="*">
+                        <col width="100px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">8</span></td>
+                            <td><a href="#none">다음카카오 데이터센터 화재로 인해 일부서비스 사용불가 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">7</span></td>
+                            <td><a href="#none">[멤버십]개인정보 처리방침 변경 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">6</span></td>
+                            <td><a href="#none">[이벤트] 개인정보처리방침 변경 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">5</span></td>
+                            <td><a href="#none">다음카카오 데이터센터 화재로 인해 일부서비스 사용불가 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">4</span></td>
+                            <td><a href="#none">[이벤트] 개인정보처리방침 변경 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">3</span></td>
+                            <td><a href="#none">[이벤트] 개인정보처리방침 변경 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">2</span></td>
+                            <td><a href="#none">삼성 스마트 카메라 이메일 전송 서비스 종료 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                        <tr class="mo-box">
+                            <td class="m-hidden"><span class="num">1</span></td>
+                            <td><a href="#none">[멤버십/멤버십블루]개인정보처리방침변경 안내</a></td>
+                            <td><span class="date">202-08-24</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="paging">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item prev disabled">
+                            <a href="#" class="page-link"><span class="material-icons">navigate_before</span></a>
+                        </li>
+                        <li class="paginate_button page-item active">
+                            <a href="#" class="page-link">1</a>
+                        </li>
+                        <li class="paginate_button page-item ">
+                            <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="paginate_button page-item ">
+                            <a href="#" class="page-link">3</a>
+                        </li>
+                        <li class="paginate_button page-item ">
+                            <a href="#" class="page-link">4</a>
+                        </li>
+                        <li class="paginate_button page-item ">
+                            <a href="#" class="page-link">5</a>
+                        </li>
+                        <li class="paginate_button page-item ">
+                            <a href="#" class="page-link">6</a>
+                        </li>
+                        <li class="paginate_button page-item next" id="dtBasicExample_next">
+                            <a href="#" class="page-link"><span class="material-icons">navigate_next</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </article>
 </section>
