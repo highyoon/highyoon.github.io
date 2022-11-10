@@ -31,14 +31,75 @@
                 <h2 class="sub-tit">
                     회원가입
                 </h2>
-                <p class="import">*가 표시된 정보는 모두 필수 입력정보 입니다.</p>
+                <p class="sub-txt import">*가 표시된 정보는 모두 필수 입력정보 입니다.</p>
                 <div class="join">
-                    <div class="">
-    
+                    <div class="field-box">
+                        <div class="field-line">
+                            <label for="user-name" class="label-tit">이름 <strong>*</strong></label>
+                            <div class="field">
+                                <input type="text" class="input-default" id="user-name" title="가입자 이름" name="user-name">
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="last-name" class="label-tit">성 <strong>*</strong></label>
+                            <div class="field">
+                                <input type="text" class="input-default" id="last-name" title="가입자 성" name="last-name">
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="user-pw" class="label-tit">비밀번호 <strong>*</strong></label>
+                            <div class="field">
+                                <input type="password" class="input-default" id="user-pw" title="비밀번호" name="user-pw">
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="pw-chk" class="label-tit">비밀번호 확인  <strong>*</strong></label>
+                            <div class="field">
+                                <input type="password" class="input-default" id="pw-chk" title="비밀번호 확인" name="pw-chk">
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="join-email" class="label-tit">이메일 <strong>*</strong></label>
+                            <div class="field">
+                                <input type="text" class="input-default" id="join-email" title="가입자 이메일 " name="join-email">
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="phone" class="label-tit">전화번호 <strong>*</strong></label>
+                            <div class="field">
+                                <div class="form-row">
+                                    <div class="col-4">
+                                        <div class="input-select">
+                                            <select class="input-default">
+                                                <option>대한민국(+82)</option>
+                                                <option>옵션1</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="input-default" id="phone" title="가입자 성" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-line">
+                            <label for="company" class="label-tit">회사명</label>
+                            <div class="field">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="input-default" id="company" title="회사명" name="company" disabled>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-import md">회사검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="agree-box">
                         <h3 class="">이용약관을 잘 읽고 동의해 주세요</h3>
-                        <p>필수 약관에 동의하셔야 회워가입 및 이용이 가능합니다.</p>
+                        <p class="sub-txt small">필수 약관에 동의하셔야 회워가입 및 이용이 가능합니다.</p>
                         <ul>
                             <li>
                                 <span class="chk checkbox">
@@ -47,7 +108,7 @@
                                         <span class="txt">(필수) 서비스 이용약관에 동의합니다.</span>
                                     </label>
                                 </span>
-                                <a href="#none" class="pop-open btn txt-link">자세히 보기</a>
+                                <a href="#none" class="pop-open btn txt-link"><span>자세히 보기</span></a>
                             </li>
                             <li>
                                 <span class="chk checkbox">
@@ -56,7 +117,7 @@
                                         <span class="txt">(필수) 개인정보 수집 및 이용에 동의합니다.</span>
                                     </label>
                                 </span>
-                                <a href="#none" class="pop-open btn txt-link">자세히 보기</a>
+                                <a href="#none" class="pop-open btn txt-link"><span>자세히 보기</span></a>
                             </li>
                             <li>
                                 <span class="chk checkbox">
@@ -82,5 +143,50 @@
 <div class="footer-include"></div>
 <!-- [e]include : Footer -->
 <div class="dim"></div>
+<script>
+    $('.header-include').load('/front/include/header.html', function() {
+    });
+    $('.footer-include').load('/front/include/footer.html', function() {
+       // footer select
+        function js_relate (){
+            let obj = $(".select-box >li"); 
+            
+            obj.each(function() {
+                obj.addClass('bbb');
+                var tgt = $(this);
+                    tgt.btn = tgt.find(">a"); 
+                    tgt.sel_cont = tgt.find(".sel-cont"); 
+                    tgt.sel_cont.li = tgt.sel_cont.find(">li"); 
+                $("<em class='hidden'>열기</em>").appendTo(tgt.btn);		
+                    
+                tgt.btn.on("click",function() {
+                    if(tgt.sel_cont.is(":animated")) return false;
+                    $(this).toggleClass("on").siblings(".sel-cont").slideToggle(300);
+                    if($(this).hasClass("on")){
+                        $(this).find(">em").text("닫기");
+                    } else {
+                        $(this).find(">em").text("열기");
+                    }
+                    return false;
+                });
+                
+                tgt.on("mouseleave",function() {
+                    $(this).find(">a").removeAttr("class");
+                    $(this).find(">.sel-cont").slideUp(300);
+                    tgt.btn.find(">em").text("열기");
+                    return false;
+                });
+                
+                tgt.sel_cont.li.last().find(">a").on("focusout",function() {
+                    $(this).parent().parent().siblings("a").removeAttr("class");
+                    $(this).parent().parent().slideUp(300);
+                    tgt.btn.find(">em").text("열기");
+                    return false;
+                });		
+            });
+        }
+        js_relate ();
+    });
+</script>
 </body>
 </html>

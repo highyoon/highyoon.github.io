@@ -101,6 +101,8 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	z-index: 5; 
 	opacity: 0; 
 	transition: 0.3s; 
+	
+	box-shadow: 0 30px 30px rgba(0,0,0,0.2);
 }
 #wrap-top.on::after { 
 	height: 394px;
@@ -616,16 +618,21 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 		position: relative;
 		z-index: 10;
 	}
+	#wrap-footer .info-box {
+		padding:40px;
+	}
 }
 @media screen and (max-width: 1024px) {
 	#gnb.open > ul {
 	}
 	#wrap-footer {
-		padding:0 50px;
 		text-align: center;
 	}
 	#wrap-footer .info-box {
 		display: none;
+	}
+	#wrap-footer .select-wrap {
+		margin-bottom:30px;
 	}
 	#wrap-footer .copy-box .flex-box {
 		flex-direction: column-reverse;
@@ -667,12 +674,23 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	.top-util {
 		display: none;
 	}
-
+	#wrap-footer .copy-box {
+		padding-top:10px;
+	}
 	#wrap-footer .select-wrap .select-box > li:first-child {
 		display:none;
 	}
 	#wrap-footer .select-wrap .select-box > li {
 		width: 100%;
+	}
+	#wrap-footer .select-wrap .select-box > li > a {
+		padding:20px;
+		text-align: center;
+		border-width: 0 0 1px 0;
+	}
+	#wrap-footer .select-wrap .select-box > li > a::after {
+		right:50%;
+		margin-right:-60px;
 	}
 	#wrap-footer .select-wrap .select-box > li + li {
 		margin-left:0;

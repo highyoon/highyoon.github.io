@@ -59,7 +59,9 @@
     #container {
       padding: 0 30px 30px;
     }
-
+    li {
+      list-style: none;
+    }
     .work-info>h2,
     .notice-info>h2,
     .status-icon>h2,
@@ -330,6 +332,25 @@
             <li><strong>Image: </strong>/img/</li>
           </ul>
         </div>
+        <div class="status-icon">
+          <h2>진행상태</h2>
+          <div class="status">
+            <span class="und">Und</span><em>미정</em> <span class="del">Del</span><em>삭제</em> <span class="ing">Ing</span><em>진행 및 수정 중</em>
+            <span class="done">Done</span><em>완료</em> <span class="new">N</span><em>신규</em> <span class="update">Update</span><em>업데이트</em>
+          </div>
+        </div>
+        <div class="notice-info">
+          <h2>Notice</h2>
+          <ul>
+            <li>경로설정 : 루트(:root) 기준 절대경로(/)로 작업</li>
+            <li>font-size &amp; line-height 단위 : 루트 font-size:16px 기준 1rem 설정</li>
+            <li>모바일 대응 : Media query</li>
+            <li>웹표준 HTML/CSS Validation Check 기준 : W3C</li>
+            <li>웹접근성 Check 기준 : OpenWax, KWCAG</li>
+            <li>Date,Note 셀 내 동그라미 아이콘 마우스 오버시 히스토리 확인 가능</li>
+            <li><strong>담당자:</strong> 윤태철</li>
+          </ul>
+        </div>
         <div class="status-info">
           <h2>퍼블리싱 진행률</h2>
           <div class="total-count"><strong>Total: </strong><span></span></div>
@@ -340,11 +361,11 @@
           </caption>
           <colgroup>
             <col width="3%" />
-            <col width="6%" />
+            <col width="9%" />
             <col width="10%" />
             <col width="6%" />
             <col width="17%" />
-            <col width="10%" />
+            <col width="12%" />
             <col width="5%" />
             <col width="5%" />
             <col width="*" />
@@ -373,7 +394,7 @@
                 <span>2022-11-09</span>
               </td>
               <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li>Guide</li>
@@ -387,10 +408,10 @@
               <td></td>
               <td class="file-name"><span>./html/member/login.html</span></td>
               <td class="date">
-                <span>2022-11-09</span>
+                <span>2022-11-07</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="done">Done</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li>로그인 페이지 pc제작</li>
@@ -404,10 +425,10 @@
               <td></td>
               <td class="file-name"><span>./html/member/join.html</span></td>
               <td class="date">
-                <span>2022-10-03</span>
+                <span>2022-10-07</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="done">Done</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li>로그인 페이지</li>
@@ -421,13 +442,13 @@
               <td></td>
               <td class="file-name"><span>./html/member/pw_chg.html</span></td>
               <td class="date">
-                <span>2022-10-03</span>
+                <span>2022-10-08</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="done">Done</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
-                  <li>로그인 페이지</li>
+                  <li>비밀번호 변경페이지</li>
                 </ul>
               </td>
             </tr>
@@ -438,13 +459,14 @@
               <td></td>
               <td class="file-name"><span>./html/member/find.html</span></td>
               <td class="date">
-                <span>2022-10-03</span>
+                <span>2022-10-08</span>
+                <span>2022-10-09</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="done">Done</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
-                  <li>로그인 페이지</li>
+                  <li>아이디찾기/비번변경</li>
                 </ul>
               </td>
             </tr>
@@ -455,13 +477,15 @@
               <td></td>
               <td class="file-name"><span>./html/member/result.html</span></td>
               <td class="date">
-                <span>2022-10-03</span>
+                <span>2022-10-08</span>
+                <span>2022-10-09</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="done">Done</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
-                  <li>로그인 페이지</li>
+                  <li>아이디찾기결과</li>
+                  <li>모바일 작업</li>
                 </ul>
               </td>
             </tr>
@@ -472,13 +496,14 @@
               <td></td>
               <td class="file-name"><span>./html/member/revision.html</span></td>
               <td class="date">
-                <span>2022-10-03</span>
+                <span>2022-10-10</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="ing">Ing</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
-                  <li></li>
+                  <li>이용약관 확인</li>
+                  <li>팝업 작업예정</li>
                 </ul>
               </td>
             </tr>
@@ -491,8 +516,8 @@
               <td class="date">
                 <span>2022-10-03</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li>로그인 페이지</li>
@@ -506,10 +531,10 @@
               <td></td>
               <td class="file-name"><span>./layout.html</span></td>
               <td class="date">
-                <span>2021-10-06</span>
+                <span>2021-11-10</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="ing">Ing</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li>Default Layout</li>
@@ -523,13 +548,17 @@
               <td></td>
               <td class="file-name"><span>./index.html</span></td>
               <td class="date">
-                <span>2021-10-11</span>
+                <span>2021-10-31</span>
+                <span>2021-11-04</span>
+                <span>2021-11-07</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="update">Update</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
-                  <li>메인페이지</li>
+                  <li>메인페이지 시작</li>
+                  <li>탑버튼 추가</li>
+                  <li>버튼class/푸터 변경</li>
                 </ul>
               </td>
             </tr>
@@ -540,10 +569,10 @@
               <td></td>
               <td class="file-name"><span>./introduce/different.html</span></td>
               <td class="date">
-                <span>2021-10-16</span>
+                <span></span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -559,8 +588,8 @@
               <td class="date">
                 <span>2021-10-16</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -576,8 +605,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -593,8 +622,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -606,12 +635,12 @@
               <td>고객성공센터</td>
               <td>공지사항</td>
               <td></td>
-              <td class="file-name"><span>./center/notice.html</span></td>
+              <td class="file-name"><span>./html/center/notice.html</span></td>
               <td class="date">
-                <span>2021-10-14</span>
+                <span>2021-10-10</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="ing">Ing</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -627,8 +656,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -644,8 +673,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -661,8 +690,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -678,8 +707,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -695,8 +724,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -712,8 +741,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
@@ -729,8 +758,8 @@
               <td class="date">
                 <span>2021-10-14</span>
               </td>
-              <td class="status"></td>
-              <td class="publisher"></td>
+              <td class="status"><span class="und">Und</span></td>
+              <td class="publisher">TC</td>
               <td class="note">
                 <ul>
                   <li></li>
