@@ -339,8 +339,11 @@
                     <div class="result syntax-result page-guide">
                         <div class="paging">
                             <ul class="pagination">
+                                <li class="paginate_button page-item first disabled">
+                                    <button class="page-link"><span class="hidden">first page</span></button>
+                                </li>
                                 <li class="paginate_button page-item prev disabled">
-                                    <a href="#" class="page-link"><span class="material-icons">navigate_before</span></a>
+                                    <button class="page-link"><span class="hidden">prev page</span></button>
                                 </li>
                                 <li class="paginate_button page-item active">
                                     <a href="#" class="page-link">1</a>
@@ -360,11 +363,14 @@
                                 <li class="paginate_button page-item ">
                                     <a href="#" class="page-link">6</a>
                                 </li>
-                                <li class="paginate_button page-item next" id="dtBasicExample_next">
-                                    <a href="#" class="page-link"><span class="material-icons">navigate_next</span></a>
+                                <li class="paginate_button page-item next">
+                                    <button class="page-link"><span class="hidden">next page</span></button>
+                                </li>
+                                <li class="paginate_button page-item last">
+                                    <button class="page-link"><span class="hidden">last page</span></button>
                                 </li>
                             </ul>
-                        </div>
+                        </div>  
                     </div>
                     <div class="syntax">
                         <span class="syntax-txt">Markup</span>
@@ -400,12 +406,10 @@
                     </div>
                 </section>
                 
-               
                 <section id="popup" class="guide-section">
                     <h3 class="guide-tit">POPUP/ALERT</h3>
                     <div class="result syntax-result popup-guide">
                         <a href="#pop" class="btn btn-import pop-open">Popup</a>
-                        <a href="#pop-table" class="btn btn-normal pop-open">popup</a>
                         
                         <!-- Popup 기본 -->
                         <div class="popup" id="pop">
@@ -416,9 +420,7 @@
                                 제목
                             </div>
                             <div class="pop-body">
-                                <div class="dummy-cont">
                                     Content
-                                </div>
                             </div>
                             <div class="pop-footer">
                                 <div class="pop-btn-area">
@@ -428,81 +430,6 @@
                             </div>
                         </div>
                         <!-- //Popup 기본 -->
-
-                        <!-- 팝업 테이블 -->
-                        <div class="popup" id="pop-table">
-                            <a href="#" class="pop-close">
-                                <span class="hidden">팝업 닫기</span>
-                            </a>
-                            <div class="pop-header">
-                                문의하기 분류
-                            </div>
-                            <div class="pop-body">
-                                <div class="tbl">
-                                    <table class="tbl-row">
-                                        <caption>테이블 설명</caption>
-                                        <colgroup>
-                                            <col width="15%;">
-                                            <col width="*">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">분류코드</th>
-                                                <td>
-                                                    <div class="form-row">
-                                                        <div class="col-9">
-                                                            <div class="form-inline">
-                                                                <input type="text" class="input-default"/>
-                                                                <button type="button" style="min-width:85px;" class="btn btn-darkblue">중복확인</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">분류명</th>
-                                                <td>
-                                                    <div class="form-row">
-                                                        <div class="col-9">
-                                                            <input type="text" class="input-default" value="옵션1"/>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">작성일</th>
-                                                <td>2022-09-27 13:03</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="pop-btn-area">
-                                    <a href="#" class="btn btn-darkblue">저장</a>
-                                    <a href="#" class="btn btn-gray pop-dismiss">닫기</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //팝업 테이블 -->
-
-                        <!-- Text -->
-                        <div class="popup" id="text">
-                            <a href="#" class="pop-close">
-                                <span class="hidden">팝업 닫기</span>
-                            </a>
-                            <div class="pop-header">
-                                Text 단독
-                            </div>
-                            <div class="pop-body">
-                                <p class="pop-tit">팝업 중제목</p>
-                                <p class="pop-txt">
-                                    내용 입니다. 내용입니다.
-                                </p>
-                                <div class="pop-btn-area">
-                                    <a href="#" class="btn btn-gray pop-dismiss">닫기</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //Text -->
 
                     </div>
                 </section>
