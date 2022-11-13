@@ -37,67 +37,76 @@
                         <div class="field-line">
                             <label for="user-name" class="label-tit">이름 <strong>*</strong></label>
                             <div class="field">
-                                <input type="text" class="input-default" id="user-name" title="가입자 이름" name="user-name">
+                                <input type="text" class="input-default" id="user-name" placeholder="이름" title="가입자 이름" name="user-name">
                             </div>
                         </div>
                         <div class="field-line">
-                            <label for="last-name" class="label-tit">직급 <strong>*</strong></label>
+                            <label for="user-position" class="label-tit">직급 <strong>*</strong></label>
                             <div class="field">
-                                <input type="text" class="input-default" id="last-name" title="가입자 성" name="last-name">
+                                <div class="input-select">
+                                    <select class="input-default" id="user-position">
+                                        <option>직급을 선택해 주세요.</option>
+                                        <option>옵션1</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="field-line">
-                            <label for="join-email" class="label-tit">이메일 <strong>*</strong></label>
+                            <label for="user-email" class="label-tit">이메일 <strong>*</strong></label>
                             <div class="field">
-                                <input type="text" class="input-default" id="join-email" title="가입자 이메일 " name="join-email">
+                                <input type="text" class="input-default" id="user-email" placeholder="이메일을 입력해 주세요." title="가입자 이메일 " name="join-email">
                             </div>
                         </div>
                         <div class="field-line">
                             <label for="phone" class="label-tit">연락처 <strong>*</strong></label>
                             <div class="field">
-                                <div class="form-row">
-                                    <div class="col-4">
-                                        <div class="input-select">
-                                            <select class="input-default">
-                                                <option>대한민국(+82)</option>
-                                                <option>옵션1</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="input-default" id="phone" title="가입자 성" name="phone">
-                                    </div>
-                                </div>
+                                <input type="text" class="input-default" id="phone" placeholder="‘-’ 제외하고 숫자만 입력해주세요." title="연락처" name="phone">
                             </div>
                         </div>
                         <div class="field-line">
-                            <label for="user-pw" class="label-tit">비밀번호 <strong>*</strong></label>
+                            <label for="user-company" class="label-tit">회사명 <strong>*</strong></label>
                             <div class="field">
-                                <input type="password" class="input-default" id="user-pw" title="비밀번호" name="user-pw">
+                                <input type="text" class="input-default" id="user-company" placeholder="회사명을 입력해 주세요." title="회사명" name="user-pw">
                             </div>
                         </div>
                         <div class="field-line">
-                            <label for="pw-chk" class="label-tit">비밀번호 확인  <strong>*</strong></label>
+                            <label for="company-size" class="label-tit">회사규모<strong>*</strong></label>
                             <div class="field">
-                                <input type="password" class="input-default" id="pw-chk" title="비밀번호 확인" name="pw-chk">
-                            </div>
-                        </div>
-                        <div class="field-line">
-                            <label for="company" class="label-tit">회사명</label>
-                            <div class="field">
-                                <div class="form-row">
-                                    <div class="col">
-                                        <input type="text" class="input-default" id="company" title="회사명" name="company" disabled>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn btn-import md">회사검색</button>
-                                    </div>
+                                <div class="input-select">
+                                    <select class="input-default" id="company-size">
+                                        <option>회사규모를 선택해 주세요.</option>
+                                        <option>옵션1</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="field-line full">
-                            <textarea name="" id="" cols="30" rows="7" class="input-default textarea"></textarea>
+                            <label for="select-category" class="label-tit">문의내용<strong>*</strong></label>
+                            <div class="field">
+                                <div class="form-row g20">
+                                    <div class="col">
+                                        <div class="input-select">
+                                            <select class="input-default" id="select-category">
+                                                <option>문의 내용을 선택해 주세요.</option>
+                                                <option>옵션1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="field">
+                                            <div class="input-select">
+                                                <select class="input-default">
+                                                    <option>본 사이트를 알게된 경로</option>
+                                                    <option>옵션1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field-line single full">
+                                    <textarea name="" id="" cols="30" rows="15" placeholder="문의사항에 대해 자세한 내용을 남기시면 신속하게 담당자를 연결해 드리겠습니다." class="input-default textarea"></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="agree-box">
@@ -123,15 +132,6 @@
                                 <span class="chk checkbox">
                                     <input type="checkbox" id="loginSave" name="loginSave">
                                     <label for="loginSave" class="chk-label">
-                                        <span class="txt">(필수) 서비스 이용약관에 동의합니다.</span>
-                                    </label>
-                                </span>
-                                <a href="#none" class="pop-open btn txt-link"><span>자세히 보기</span></a>
-                            </li>
-                            <li>
-                                <span class="chk checkbox">
-                                    <input type="checkbox" id="loginSave" name="loginSave">
-                                    <label for="loginSave" class="chk-label">
                                         <span class="txt">(필수) 개인정보 수집 및 이용에 동의합니다.</span>
                                     </label>
                                 </span>
@@ -141,7 +141,33 @@
                                 <span class="chk checkbox">
                                     <input type="checkbox" id="loginSave" name="loginSave">
                                     <label for="loginSave" class="chk-label">
-                                        <span class="txt">(선택) 이벤트 정보 수신에 동의합니다.</span>
+                                        <span class="txt">(필수) 만 14세 이상임을 확인하고 동의합니다.</span>
+                                    </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="chk checkbox">
+                                    <input type="checkbox" id="loginSave" name="loginSave">
+                                    <label for="loginSave" class="chk-label">
+                                        <span class="txt">(필수) 개인정보 제3자 제공에 동의합니다.</span>
+                                    </label>
+                                </span>
+                                <a href="#none" class="pop-open btn txt-link"><span>자세히 보기</span></a>
+                            </li>
+                            <li>
+                                <span class="chk checkbox">
+                                    <input type="checkbox" id="loginSave" name="loginSave">
+                                    <label for="loginSave" class="chk-label">
+                                        <span class="txt">(선택) 마케팅 활요에 동의합니다.</span>
+                                    </label>
+                                </span>
+                                <a href="#none" class="pop-open btn txt-link"><span>자세히 보기</span></a>
+                            </li>
+                            <li>
+                                <span class="chk checkbox">
+                                    <input type="checkbox" id="loginSave" name="loginSave">
+                                    <label for="loginSave" class="chk-label">
+                                        <span class="txt">(선택) 마케팅 정보 수신에 동의합니다.</span>
                                     </label>
                                     <div class="sub-filed">
                                         <span class="chk checkbox">
@@ -161,6 +187,10 @@
                             </li>
                         </ul>
                     </div>
+                    <ul class="caution">
+                        <li class="txt-red">필수항목에 모두 동의하지 않으시면 본 서비스를 이용하실 수 없습니다.</li>
+                        <li>본 사이트는 이용자 편의를 위해 쿠키정보를 활용하고 있습니다.</li>
+                    </ul>
                     <div class="btn-wrap">
                         <button type="button" class="btn btn-import lg w100">등록하기</button>
                     </div>

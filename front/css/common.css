@@ -192,7 +192,7 @@
 .chk-wrap .chk {margin: 5px 10px 0 0;}
  /* Form */
 .form-info {vertical-align: text-bottom; color:#007bff; }
-.input-default { display: block; width: 100%; padding: 5px 10px; font-size: 0.85rem; color: #111; background-color: #fff; background-clip: padding-box; border: 1px solid #dbdbdb; height: 40px; box-sizing: border-box; }
+.input-default, .sel { display: block; width: 100%; padding: 5px 10px; font-size: 0.85rem; color: #111; background-color: #fff; background-clip: padding-box; border: 1px solid #dbdbdb; height: 40px; box-sizing: border-box; }
 .input-default:focus,
 .input-default:focus-visible {border:1px solid #222; outline: 0;}
 .field .field-error {display:none;  margin-top:5px;}
@@ -204,6 +204,96 @@
 .input-select { display: inline-block; position: relative; width: 100%; }
 .input-select select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1024' width='767.5'%3E%3Cpath d='M0 384l383.75 383.75L767.5 384H0z'/%3E%3C/svg%3E"); background-size: 12px; background-position: calc(100% - 12px) center; background-repeat: no-repeat; }
 
+/* custom select */
+.sel.disable,
+.sel.disable:hover {
+    background-color: #d4cec9;
+    border-color:#d4cec9;
+    color:#fff;
+}
+.sel:hover {
+    background-color: #fff;
+}
+.sel.active {
+}
+.sel::before {
+    position: absolute;
+    content: '';
+    color: #FFF;
+    width: 13px;
+    height:9px;
+    right: 20px;
+    top: calc(50% - 5px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1024' width='767.5'%3E%3Cpath d='M0 384l383.75 383.75L767.5 384H0z'/%3E%3C/svg%3E"); background-size: 100%; background-position:center; background-repeat: no-repeat;
+}
+
+.sel.active::before {
+    transform: rotateX(-180deg);
+}
+
+.sel-placeholder {
+    display: block;
+    text-align: left;
+    color:#888;
+    line-height: 29px;
+    pointer-events: none;
+    user-select: none;
+    visibility: visible;
+}
+
+.sel.active .sel-placeholder {
+    visibility: hidden;
+}
+
+.sel-placeholder::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:5px 10px;
+    height:100%;
+    content: attr(data-placeholder);
+    visibility: hidden;
+    box-sizing: border-box;
+}
+
+.sel.active .sel-placeholder::before {
+    visibility: visible;
+}
+
+.sel-box {
+    position: absolute;
+    top: calc(100%);
+    left: -1px;
+    display: none;
+    padding:9px;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1em;
+    background-color: #fff;
+    width: calc(100% + 2px);
+    border:1px solid #dbdbdb;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.sel.active .sel-box {
+    display: block;
+    animation: fadeInUp 500ms;
+}
+
+.sel-box-options {
+    display: list-item;
+    font-size: 14px;
+    padding: 0.5em 1em;
+    user-select: none;
+}
+
+.sel-box-options:hover {
+    background-color: #f7f7f7;
+}
+
 .form-row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -212,6 +302,9 @@
     flex-wrap: wrap;
     margin-right: -5px;
     margin-left: -5px;
+}
+.form-row.g20 {
+    gap:20px;
 }
 .form-row + .form-row {
     margin-top:10px;

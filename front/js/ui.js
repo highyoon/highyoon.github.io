@@ -138,6 +138,56 @@ function flt_banner (){
         $('.floating-wrap').removeClass('on');
     });
 }
+ //Select box
+$('.sel').each(function() {
+    $(this).children('select').css('display', 'none');
+    
+    var $current = $(this);
+    
+    $(this).find('option').each(function(i) {
+        if (i == 0) {
+            $current.prepend($('<div>', {
+            class: $current.attr('class').replace(/sel/g, 'sel-box')
+        }));
+        
+        var placeholder = $(this).text();
+            $current.prepend($('<span>', {
+            class: $current.attr('class').replace(/sel/g, 'sel-placeholder'),
+            text: placeholder,
+            'data-placeholder': placeholder
+        }));
+        
+        return;
+        }
+        
+        $current.children('div').append($('<span>', {
+        class: $current.attr('class').replace(/sel/g, 'sel-box-options'),
+        text: $(this).text()
+        }));
+    });
+});
+// Toggling the .active state on the .sel
+$('.sel').click(function() {
+    if ($(this).hasClass('disable')) {
+
+    } else {
+        $(this).toggleClass('active');
+    }
+    
+});
+    
+// Toggling the .selected state on the options
+$('.sel-box-options').click(function() {
+    var txt = $(this).text();
+    var index = $(this).index();
+    
+    $(this).siblings('.sel-box-options').removeClass('selected');
+    $(this).addClass('selected');
+    
+    var $currentSel = $(this).closest('.sel');
+    $currentSel.children('.sel-placeholder').text(txt);
+    $currentSel.children('select').prop('selectedIndex', index + 1);
+});
 // footer select
 function js_relate (){
 	let obj = $(".select-box >li"); 

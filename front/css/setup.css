@@ -433,7 +433,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .join-wrap .field-box .field-line.full {
 	width: 100%;
 } 
-
+.join-wrap .field-box .field-line.single {
+	margin-top:40px;
+}
 .join-wrap .label-tit {
 	display: block;
 	margin:40px 0 15px;
