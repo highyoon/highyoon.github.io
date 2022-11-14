@@ -402,6 +402,22 @@
     max-width: none;
 }
 
+/* badge */
+.badge {
+    display: inline-block;
+    min-width: 9px;
+    height: 24px;
+    padding: 0 13px;
+    text-align: center;
+    box-sizing: border-box;
+    color:#fff !important;
+    font-size: 14px !important;
+    line-height: 24px;
+}
+.badge.pre {background-color: #142e7b;}
+.badge.ing {background-color: #ef6000;}
+.badge.done {background-color: #666;}
+
 /* Table */
 .tbl {margin-top:40px;}
 .tbl table { width: 100%; border-top:2px solid #222; table-layout: fixed; }
@@ -421,7 +437,9 @@
 .tbl .tbl-paging .paging-info { position: absolute; top: 8px; right: 0; }
 
 /* Paging */
-.paging { margin:20px 0 8px; display: flex; justify-content: center;}
+.paging { margin:40px 0 8px; display: flex; justify-content: center;}
+.paging.add-btn .pagination,
+.paging.add-btn .btn-wrap {margin-left:auto;}
 .pagination {
     display: -ms-flexbox;
     display: flex;
@@ -575,8 +593,14 @@
         display: block;
         padding: 10px 30px;
         width: 100%;
+        overflow: hidden;
         box-sizing: border-box;
         border-bottom: 1px solid #ececec;
+    }
+    .tbl table tbody tr::after {
+        display: block;
+        content:'';
+        clear:both;
     }
     .tbl table tbody td {
         display: block;
@@ -584,6 +608,30 @@
         border: 0;
         font-size: 13px;
         text-align: left;
+    }
+    .tbl table tbody td.m-pos {
+        position: absolute;
+        bottom:10px;
+        left:30px;
+    }
+    .tbl table tbody td.m-pad {
+        margin-left:130px;
+    }
+    .tbl table tbody td.m-flt {
+        position: relative;
+        float:left;
+        margin-right:10px;
+        padding-right:10px;
+    }
+    .tbl table tbody td.m-flt::before {
+        display: block;
+        position: absolute;
+        top:5px;
+        left:-10px;
+        content:'';
+        width: 1px;
+        height:11px;
+        background-color: #dbdbdb;
     }
     .tbl table tbody td > span {
         font-size:12px;
@@ -594,7 +642,19 @@
     .search-area {
 		justify-content: center;
 	}
+    /* badge */
+    .badge {
+        min-width: 50px;
+        height: 16px;
+        padding: 0 6px;
+        font-size: 11px !important;
+        line-height: 16px;
+    }
 
+    .paging.add-btn { margin:20px 0 8px; flex-wrap: wrap;}
+    .paging.add-btn .pagination,
+    .paging.add-btn .btn-wrap {margin-left:0;}
+    .paging.add-btn .btn-wrap {margin-top:20px; width: 100%; text-align: center;}
     .pagination .page-item .page-link {
         padding:4px 9px;
         font-size:0.875rem;
@@ -609,5 +669,25 @@
 @media screen and (max-width: 475px) {
     .search-box {
         width: 85%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .tbl table tbody td.m-pos {
+        bottom:10px;
+    }
+    .tbl table tbody td.m-pad {
+        margin-left:110px;
+    }
+    .tbl table tbody td.m-flt {
+        position: relative;
+        float:left;
+        margin-right:5px;
+        padding-right:5px;
+    }
+    .tbl table tbody td.m-flt::before {
+        left:-5px;
+    }
+    .tbl table tbody td > span {
+        font-size: 11px;
     }
 }

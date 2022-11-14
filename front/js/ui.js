@@ -30,6 +30,7 @@ $(function () {
     flt_banner();  
     layer_Pop();
     top_scroll_func();
+    acco_menu();
     // sc_move();
     
 });
@@ -140,24 +141,31 @@ function flt_banner (){
 }
  //Select box
 $('.sel').each(function() {
+
+	var selValue = $("option:selected", this).text();
+	
     $(this).children('select').css('display', 'none');
     
     var $current = $(this);
     
     $(this).find('option').each(function(i) {
+
         if (i == 0) {
             $current.prepend($('<div>', {
             class: $current.attr('class').replace(/sel/g, 'sel-box')
-        }));
+            }));
         
-        var placeholder = $(this).text();
-            $current.prepend($('<span>', {
-            class: $current.attr('class').replace(/sel/g, 'sel-placeholder'),
-            text: placeholder,
-            'data-placeholder': placeholder
-        }));
+            if(selValue == "" || selValue == null)
+                selValue = $(this).text;
         
-        return;
+            var placeholder = selValue;//$(this).text();
+                $current.prepend($('<span>', {
+                class: $current.attr('class').replace(/sel/g, 'sel-placeholder'),
+                text: placeholder,
+                'data-placeholder': placeholder
+            }));
+        
+            return;
         }
         
         $current.children('div').append($('<span>', {
@@ -285,6 +293,24 @@ $tabsLink.on('click', function(e){
     $(hrefHash).addClass('active');
     e.preventDefault();
 })
+
+// accodian menu
+var acco_menu = function() {
+    $(".faq-list a").click(function (j) {
+        var dropDown = $(this).closest("li").find(".expand-box");
+        $(this).closest(".faq-list").find(".expand-box").not(dropDown).slideUp();
+
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        } else {
+            $(this).closest("li").find("a").removeClass("active");
+            $(this).addClass("active");
+        }
+
+        dropDown.stop(false, true).slideToggle();
+        j.preventDefault();
+    });
+}
 
 //Layer Popup
 var layer_Pop = function() {

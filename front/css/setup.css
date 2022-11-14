@@ -538,6 +538,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .top-area.notice {
 	background-image: url('/front/img/bg_notice.jpg');
 }
+.top-area.support {
+	background-image: url('/front/img/bg_support.jpg');
+}
+.top-area.faq {
+	background-image: url('/front/img/bg_faq.jpg');
+}
 .top-area .sec-tit {
 	padding-top:120px;
 	text-align:center;
@@ -634,6 +640,74 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .detail-box .btn-wrap {
 	margin-top:40px;
 }
+
+/* FAQ */
+.faq-cont {
+	display: flex;
+}
+.faq-cont .faq-menu {
+	margin-top:40px;
+	width: 235px;
+}
+.faq-cont .faq-menu li {
+
+}
+.faq-cont .faq-menu li a {
+	position: relative;
+	color:#666;
+	font-size: 18px;
+	line-height: 3.625rem;
+}
+.faq-cont .faq-menu li.active a {
+	color:#142e7b;
+	font-weight: 500;
+}
+.faq-cont .faq-menu li.active a::after {
+	position: absolute;
+	top:-2px;
+	right: -6px;
+	display: block;
+	content:'';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #142e7b;
+}
+.faq-cont #detail {
+	width: calc(100% - 235px);
+}
+.faq-cont .faq-list {
+	margin-top:40px;
+	border-top:2px solid #222;
+}
+.faq-cont .faq-list li {}
+.faq-cont .faq-list li a {
+	display: block;
+	padding:32px 60px;
+	font-size: 18px;
+	font-weight: 500;
+	border-bottom:1px solid #dbdbdb;
+}
+.faq-cont .faq-list li .expand-box {
+	display:none;
+	padding:30px 60px;
+	font-size:16px;
+	color:#666;
+	line-height:1.4;
+	background: #f7f7f7;
+}
+.faq-cont .btn-wrap {
+	margin-top:40px;
+}
+.faq-cont .btn-wrap .btn-more {
+	display: block;
+	padding:18px 0;
+	text-align: center;
+	font-size:16px;
+	color:#888;
+	background-color: #eee;
+}
+
 
 /* popup 약관영역 */
 .privacy-wrap {
@@ -861,6 +935,14 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		height:125px;
 		background-image:url('/front/img/bg_m_notice.jpg');
 	}
+	.top-area.support {
+		height:125px;
+		background-image:url('/front/img/bg_m_support.jpg');
+	}
+	.top-area.faq {
+		height:125px;
+		background-image:url('/front/img/bg_m_faq.jpg');
+	}
 	.top-area .sec-tit {
 		padding-top:55px;
 		font-size:30px;
@@ -897,7 +979,6 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		padding-left:5%;
 		font-size:14px;
 	}
-	
 
 }
 /* mobile Device  */
