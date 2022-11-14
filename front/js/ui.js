@@ -303,7 +303,7 @@ var acco_menu = function() {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
         } else {
-            $(this).closest("li").find("a").removeClass("active");
+            $(this).closest("li").siblings().find("a").removeClass("active");
             $(this).addClass("active");
         }
 

@@ -6,6 +6,11 @@
     --txt-red:#dc3545;
 }
 
+*:not(body):not(html)::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 /* 수정하지 마세요 개별적으로 사용시엔 setup.css에 해주시기 바랍니다. */
 
 .left { text-align: left; }
@@ -24,7 +29,6 @@
 .floatright { float: right !important; }
 .noneborder { border: none !important; }
 .nonebg { background-image: none !important; }
-.b1 { border: 1px solid red; }
 .imgfix { font-size: 0; line-height: 0; vertical-align: top; }
 .floatfix { *zoom: 1; }
 .floatfix:after { display: block; content: ''; clear: both; }
