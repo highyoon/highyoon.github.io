@@ -470,6 +470,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .join-wrap .agree-box ul li .txt-link {
 	display: block;
 }
+.join-wrap .agree-box ul li .sub-filed {
+	margin-top:16px;
+}
 .join-wrap .btn-wrap {
 	margin-top:50px;
 }
@@ -505,6 +508,23 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .join-wrap .login-util a:hover {
 	text-decoration: underline;
 	text-underline-position: under;
+}
+.join-wrap .caution {
+	margin-top:16px;
+}
+.join-wrap .caution li {
+	padding-left:6px;
+	text-indent:-2px;
+	text-align:left;
+	font-size:16px;
+	line-height:1.4;
+}
+.join-wrap .caution li::before {
+	display: inline-block;
+	content:'- ';
+}
+.join-wrap .caution li.txt-red{
+	color:#dc3545;
 }
 
 /* 탑영역 */
@@ -994,6 +1014,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.bottom-banner .btn-wrap {
 		margin-top:20px;
+	}
+	
+	.join-wrap .caution {
+		margin-top:13px;
+	}
+	.join-wrap .caution li {
+		padding-left:6px;
+		text-indent:-2px;
+		font-size:12px;
 	}
 	
 }

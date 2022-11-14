@@ -91,7 +91,7 @@
                                         <input type="text" class="input-default" id="company" title="회사명" name="company" disabled>
                                     </div>
                                     <div class="col-auto">
-                                        <button class="btn btn-import md">회사검색</button>
+                                        <a class="btn btn-import md pop-open" href="#find-company">회사검색</a>
                                     </div>
                                 </div>
                             </div>
@@ -103,8 +103,8 @@
                         <ul>
                             <li>
                                 <span class="chk checkbox">
-                                    <input type="checkbox" id="loginSave" name="loginSave">
-                                    <label for="loginSave" class="chk-label">
+                                    <input type="checkbox" id="aaa" name="aaa">
+                                    <label for="aaa" class="chk-label">
                                         <span class="txt">(필수) 서비스 이용약관에 동의합니다.</span>
                                     </label>
                                 </span>
@@ -112,8 +112,8 @@
                             </li>
                             <li>
                                 <span class="chk checkbox">
-                                    <input type="checkbox" id="loginSave" name="loginSave">
-                                    <label for="loginSave" class="chk-label">
+                                    <input type="checkbox" id="bbb" name="bbb">
+                                    <label for="bbb" class="chk-label">
                                         <span class="txt">(필수) 개인정보 수집 및 이용에 동의합니다.</span>
                                     </label>
                                 </span>
@@ -121,8 +121,8 @@
                             </li>
                             <li>
                                 <span class="chk checkbox">
-                                    <input type="checkbox" id="loginSave" name="loginSave">
-                                    <label for="loginSave" class="chk-label">
+                                    <input type="checkbox" id="ccc" name="ccc">
+                                    <label for="ccc" class="chk-label">
                                         <span class="txt">(선택) 이벤트 정보 수신에 동의합니다.</span>
                                     </label>
                                 </span>
@@ -143,6 +143,43 @@
 <div class="footer-include"></div>
 <!-- [e]include : Footer -->
 <div class="dim"></div>
+<!-- Popup 기본 -->
+<div class="popup sm" id="find-company">
+    <a href="#" class="pop-close">
+        <span class="hidden">팝업 닫기</span>
+    </a>
+    <div class="pop-header">
+        회사검색
+    </div>
+    <div class="pop-body">
+        <div class="search-area">
+            <div class="search-box">
+                <fieldset>
+                    <legend class="txt-hide">검색</legend>
+                    <input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오.">
+                    <button type="button" class="btn_search"><span class="txt-hide">검색</span></button>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="search-result">
+            <p class="empty">검색 결과가 없습니다.</p>
+            <ul>
+                <li><a href="#none">회사명001</a></li>
+                <li><a href="#none">회사명002</a></li>
+                <li><a href="#none">회사명003</a></li>
+                <li><a href="#none">회사명004</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="pop-footer">
+        <div class="pop-btn-area">
+            <a href="#" class="btn btn-import">확인</a>
+            <a href="#" class="btn btn-normal pop-dismiss">닫기</a>
+        </div>
+    </div>
+</div>
+<!-- //Popup 기본 -->
 <script>
     $('.header-include').load('/front/include/header.html', function() {
     });

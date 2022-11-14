@@ -3,6 +3,7 @@
 :root {
     --txt-wht:#ffffff;
     --txt-sub:#979797;
+    --txt-red:#dc3545;
 }
 
 /* 수정하지 마세요 개별적으로 사용시엔 setup.css에 해주시기 바랍니다. */

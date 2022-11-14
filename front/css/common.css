@@ -186,7 +186,7 @@
 .chk.checkbox input:checked + .chk-label::after { content: ''; position: absolute; top: 2px; left: 3px; width: 10px; height: 5px; background: #142e7b; margin: 0; border-radius: 0; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
 .chk.checkbox input:checked + .chk-label::before {background-color: #142e7b;}
 .chk input:disabled + .chk-label::before { background: #e9e9e9; border-color: #e9e9e9; }
-.chk input[type="checkbox"]:focus + .chk-label,
+.chk input[type="checkbox"]:focus-visible + .chk-label,
 .chk input[type="radio"]:focus + .chk-label {  border:1px solid #111; outline: 0;}
 .chk .chk-label .txt {font-size:16px;}
 .chk-wrap .chk {margin: 5px 10px 0 0;}
@@ -499,10 +499,17 @@
 
 /* Popup */
 .popup { display: none; position: fixed; left: 50%; top: 50%; z-index: 200; padding: 0; min-width: 900px; overflow: hidden; border-radius: 1.8rem; background-color: #fff; transform: translateX(-50%) translateY(-50%);}
+.popup.sm {min-width: 580px;}
 .popup .pop-header { height: 50px; line-height: 50px; padding: 45px 30px 0; font-size: 28px; text-align: center; font-weight: 500; color: #222; }
 .popup .pop-body { padding: 30px 10px 20px 30px; box-sizing:border-box;}
 .popup .pop-body .pop-tit {font-size:2rem;}
 .popup .pop-body .pop-txt {margin-top:10px;font-size:1rem; line-height:1.4;}
+.popup .pop-body .search-area {justify-content: center;}
+.popup .pop-body .search-result {margin:58px 20px 0 0; border-top:1px solid #222;}
+.popup .pop-body .search-result .empty {padding:50px; font-size:18px; text-align: center;}
+.popup .pop-body .search-result ul {overflow-y: auto; max-height:200px;}
+.popup .pop-body .search-result li {padding:23px 50px; border-bottom:1px solid #eee;}
+.popup .pop-body .search-result li a {display: block; font-size:18px; color:#222;}
 .popup .pop-footer {padding:0 0 60px;}
 .popup .pop-close:before, 
 .popup .pop-close { position: absolute; width: 30px; height: 30px; right: 25px; top: 10px; }
@@ -513,6 +520,8 @@
 .popup .pop-btn-area {text-align: center;}
 .popup .pop-btn-area .btn { margin: 0 3px; width: auto; }
 .dimmed { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 150; background-color: #000; opacity: .5; }
+
+
 
 
 @media screen and (max-width:1024px) {
@@ -590,6 +599,11 @@
         padding:4px 9px;
         font-size:0.875rem;
     }
+    .popup.sm {min-width: 90%;}
+    .popup .pop-body .search-box .input_search {font-size:14px; width: 85%;}
+    .popup .pop-body .search-result {margin-top:30px;}
+    .popup .pop-body .search-result li {padding:15px 30px}
+    .popup .pop-body .search-result li a {font-size:14px;}
 }
 
 @media screen and (max-width: 475px) {

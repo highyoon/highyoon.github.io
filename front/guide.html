@@ -96,7 +96,7 @@
                         <a href="#" class="btn btn-lightblue" disabled>비활성화</a>
                         <br><br>
                         <button type="button" class="btn btn-import rd">강조</button>
-                        <button type="button" class="btn btn-normal rd">일반</button>
+                        <button type="button" class="btn btn-normal rd" style="background-color: #666">일반</button>
                         <button type="button" class="btn btn-lightblue rd" disabled>비활성화</button>
                         <br><br>
                         <button type="button" class="btn btn-import lg">강조</button>
@@ -108,15 +108,26 @@
                     </div>
                     <div class="syntax">
                         <span class="syntax-txt">Markup</span>
-                        <pre><code class="language-xml hljs">&lt;button type="button" class="btn btn-lightblue"&gt;버튼&lt;/div&gt;
-&lt;button type="button" class="btn btn-darkblue"&gt;강조&lt;/div&gt;
-&lt;button type="button" class="btn btn-gray"&gt;일반&lt;/div&gt;
-&lt;button type="button" class="btn btn-lightblue" disabled&gt;비활성화&lt;/div&gt;
-
-&lt;a href="#" class="btn btn-lightblue"&gt;버튼&lt;/a&gt;
-&lt;a href="#" class="btn btn-darkblue"&gt;강조&lt;/a&gt;
-&lt;a href="#" class="btn btn-gray"&gt;일반&lt;/a&gt;
-&lt;a href="#" class="btn btn-lightblue" disabled&gt;비활성화&lt;/a&gt;</code></pre>
+                        <pre><code class="language-xml hljs">
+&lt;button type="button" class="btn btn-import"&gt;강조&lt;/button&gt;
+&lt;button type="button" class="btn btn-normal"&gt;일반&lt;/button&gt;
+&lt;button type="button" class="btn btn-lightblue" disabled&gt;비활성화&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;a href="#" class="btn btn-import"&gt;강조&lt;/a&gt;
+&lt;a href="#" class="btn btn-normal"&gt;일반&lt;/a&gt;
+&lt;a href="#" class="btn btn-lightblue" disabled&gt;비활성화&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;button type="button" class="btn btn-import rd"&gt;강조&lt;/button&gt;
+&lt;button type="button" class="btn btn-normal rd"&gt;일반&lt;/button&gt;
+&lt;button type="button" class="btn btn-lightblue rd" disabled&gt;비활성화&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;button type="button" class="btn btn-import lg"&gt;강조&lt;/button&gt;
+&lt;button type="button" class="btn btn-normal md"&gt;일반&lt;/button&gt; 
+&lt;button type="button" class="btn btn-lightblue" disabled&gt;비활성화&lt;/button&gt; 
+&lt;button type="button" class="btn btn-import lg rd"&gt;강조&lt;/button&gt;
+&lt;button type="button" class="btn btn-normal md rd"&gt;일반&lt;/button&gt;
+&lt;button type="button" class="btn btn-lightblue rd" disabled&gt;비활성화&lt;/button&gt;
+                        </code></pre>
                     </div>
                 </section>
                 
@@ -160,21 +171,22 @@
                     </div>
                     <div class="syntax">
                         <span class="syntax-txt">Markup</span>
-<pre><code class="language-xml hljs">&lt;span class="chk radio"&gt;
-    &lt;input type="radio" id="rdo01" name="rdo"/&gt; 
+<pre><code class="language-xml hljs">
+    &lt;span class="chk radio"&gt;
+    &lt;input type="radio" id="rdo01" name="rdo" /&gt; 
     &lt;label for="rdo01" class="chk-label"&gt;검수 전&lt;/label&gt;
 &lt;/span&gt;
 &lt;span class="chk radio"&gt;
-    &lt;input type="radio" id="rdo02" name="rdo" checked/&gt; 
+    &lt;input type="radio" id="rdo02" name="rdo" checked /&gt; 
     &lt;label for="rdo02" class="chk-label"&gt;검수 완료&lt;/label&gt;
 &lt;/span&gt;
 &lt;span class="chk radio"&gt;
-    &lt;input type="radio" id="rdo03" name="rdo" disabled/&gt; 
+    &lt;input type="radio" id="rdo03" name="rdo" disabled /&gt; 
     &lt;label for="rdo03" class="chk-label"&gt;선택불가&lt;/label&gt;
 &lt;/span&gt;
 
 &lt;span class="chk checkbox"&gt;
-    &lt;input type="checkbox" id="chk01"/&gt; 
+    &lt;input type="checkbox" id="chk01" /&gt; 
     &lt;label for="chk01" class="chk-label"&gt;검수 전&lt;/label&gt;
 &lt;/span&gt;
 &lt;span class="chk checkbox"&gt;
@@ -182,12 +194,12 @@
     &lt;label for="chk02" class="chk-label"&gt;검수 완료&lt;/label&gt;
 &lt;/span&gt;
 &lt;span class="chk checkbox"&gt;
-    &lt;input type="checkbox" id="chk03" disabled/&gt; 
+    &lt;input type="checkbox" id="chk03" disabled /&gt; 
     &lt;label for="chk03" class="chk-label"&gt;선택불가&lt;/label&gt;
 &lt;/span&gt;
 
 &lt;span class="chk radio single"&gt;
-    &lt;input type="radio" id="rdo04" title="Label"/&gt; 
+    &lt;input type="radio" id="rdo04" title="Label" /&gt; 
     &lt;label for="rdo04" class="chk-label"&gt;&lt;/label&gt;
 &lt;/span&gt;
 &lt;span class="chk checkbox single"&gt;
@@ -223,9 +235,14 @@
                                     </div>
                                 </div>
                                 <div class="form-guide-item">
-                                    <div class="form-inline">
-                                        <input type="text" class="input-default"/>
-                                        <button type="button" class="btn btn-darkblue">검색</button>
+                                    <div class="search-area">
+                                        <div class="search-box">
+                                            <fieldset>
+                                                <legend class="txt-hide">검색</legend>
+                                                <input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오.">
+                                                <button type="button" class="btn_search"><span class="txt-hide">검색</span></button>
+                                            </fieldset>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -242,8 +259,7 @@
                     </div>
                     <div class="syntax">
                         <span class="syntax-txt">Markup</span>
-<pre><code class="language-xml hljs">&lt;input type="text" class="input-default" value="옵션1"/&gt;
-
+<pre><code class="language-xml hljs">
 &lt;div class="input-select"&gt;
     &lt;select class="input-default"&gt;
         &lt;option&gt;전체&lt;/option&gt;
@@ -251,25 +267,29 @@
     &lt;/select&gt;
 &lt;/div&gt;
 
-&lt;div class="form-inline"&gt;
-    &lt;input type="text" class="input-default"/&gt;
-    &lt;button type="button" class="btn btn-darkblue"&gt;검색&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;input type="text" class="input-default" value="비활성화" disabled /&gt;
-
-&lt;div class="input-select"&gt;
-    &lt;select class="input-default" disabled&gt;
-        &lt;option&gt;전체&lt;/option&gt;
+&lt;div class="input-select sel"&gt;
+    &lt;select class="input-default" id="select-custom"&gt;
+        &lt;option disabled&gt;커스텀 셀렉트&lt;/option&gt;
         &lt;option&gt;옵션1&lt;/option&gt;
+        &lt;option&gt;옵션2&lt;/option&gt;
     &lt;/select&gt;
 &lt;/div&gt;
 
-&lt;div class="form-inline form-datepicker"&gt;
-    &lt;input type="text" class="input-default datepicker" id="startDate" name="startDate" style="width: 110px;"&gt;
-    &lt;span class="wave"&gt;~&lt;/span&gt;
-    &lt;input type="text" class="input-default datepicker" id="endDate" name="endDate" style="width: 110px;"&gt;
+&lt;div class="search-area"&gt;
+    &lt;div class="search-box"&gt;
+        &lt;fieldset&gt;
+            &lt;legend class="txt-hide"&gt;검색&lt;/legend&gt;
+            &lt;input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오."&gt;
+            &lt;button type="button" class="btn_search"&gt;&lt;span class="txt-hide"&gt;검색&lt;/span&gt;&lt;/button&gt;
+        &lt;/fieldset&gt;
+    &lt;/div&gt; 
 &lt;/div&gt;
+
+&lt;div class="form-guide-item"&gt;
+    &lt;input type="text" class="input-default" value="비활성화" disabled /&gt;
+&lt;/div&gt;
+
+&lt;textarea name="" id="" cols="30" rows="7" class="input-default textarea"&gt;&lt;/textarea&gt;
 </code></pre>
                     </div>
                 </section>
@@ -348,10 +368,10 @@
                     <div class="result syntax-result page-guide">
                         <div class="paging">
                             <ul class="pagination">
-                                <li class="paginate_button page-item first disabled">
-                                    <button class="page-link"><span class="hidden">first page</span></button>
+                                <li class="paginate_button page-item first">
+                                    <button class="page-link" disabled><span class="hidden">first page</span></button>
                                 </li>
-                                <li class="paginate_button page-item prev disabled">
+                                <li class="paginate_button page-item prev">
                                     <button class="page-link"><span class="hidden">prev page</span></button>
                                 </li>
                                 <li class="paginate_button page-item active">
@@ -383,10 +403,14 @@
                     </div>
                     <div class="syntax">
                         <span class="syntax-txt">Markup</span>
-<pre><code class="language-xml hljs">&lt;div class="paging"&gt;
+<pre><code class="language-xml hljs">
+&lt;div class="paging"&gt;
     &lt;ul class="pagination"&gt;
-        &lt;li class="paginate_button page-item prev disabled"&gt;
-            &lt;a href="#" class="page-link"&gt;&lt;span class="material-icons"&gt;navigate_before&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="paginate_button page-item first"&gt;
+            &lt;button class="page-link" disabled&gt;&lt;span class="hidden"&gt;first page&lt;/span&gt;&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item prev"&gt;
+            &lt;button class="page-link"&gt;&lt;span class="hidden"&gt;prev page&lt;/span&gt;&lt;/button&gt;
         &lt;/li&gt;
         &lt;li class="paginate_button page-item active"&gt;
             &lt;a href="#" class="page-link"&gt;1&lt;/a&gt;
@@ -406,8 +430,11 @@
         &lt;li class="paginate_button page-item "&gt;
             &lt;a href="#" class="page-link"&gt;6&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="paginate_button page-item next" id="dtBasicExample_next"&gt;
-            &lt;a href="#" class="page-link"&gt;&lt;span class="material-icons"&gt;navigate_next&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="paginate_button page-item next"&gt;
+            &lt;button class="page-link"&gt;&lt;span class="hidden"&gt;next page&lt;/span&gt;&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class="paginate_button page-item last"&gt;
+            &lt;button class="page-link"&gt;&lt;span class="hidden"&gt;last page&lt;/span&gt;&lt;/button&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
