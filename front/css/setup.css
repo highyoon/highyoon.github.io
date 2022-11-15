@@ -582,6 +582,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 
 .top-util {margin-bottom:20px;}
+.top-util .top-tit {margin-bottom:50px; line-height:1.4; font-size:40px; text-align: center;}
 .top-util .flex-box {align-items: center;}
 .top-util .case-id {font-size:18px; font-weight:500;}
 
@@ -589,6 +590,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .detail-box {
 	border-top:2px solid #222;
 }
+.detail-box.thin {border-width:1px;}
 .detail-box .detail-top {
 	padding:35px 0;
 	text-align: center;
@@ -608,6 +610,11 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .detail-box .detail-top .detail-util span {
 	font-size:16px;
 	color:#888;
+}
+.detail-box .detail-top .detail-util .bar {
+	display: block;
+	padding:0 20px;
+	color:#dbdbdb;
 }
 .detail-box .detail-cont {
 	padding:60px 170px;
@@ -636,6 +643,17 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	padding-right:20px;
 	color:#142e7b;
 	font-weight: 400;
+}
+.detail-box .detail-cont.reply .info-box .user-name::before {
+	position: absolute;
+	top:2px;
+	left:-15px;
+	width: 9px;
+	height:12px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	background-image:url('/front/img/bg_reply.png');
 }
 .detail-box .detail-cont .info-box .user-name::before {
 	content: '';
@@ -1020,6 +1038,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.detail-box .detail-top .detail-util span {
 		font-size:12px;
+	}
+	.detail-box .detail-top .detail-util .bar {
+		padding:0 10px;
 	}
 	.detail-box .detail-cont {
 		padding:35px 30px;
