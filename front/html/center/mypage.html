@@ -24,77 +24,110 @@
 
 <!-- [s]Content area-->
 <section id="wrapCont">
-	<div class="top-area support">
+	<div class="top-area mypage">
         <ul class="lnb">
             <li>HOME</li>
             <li>고객성공센터</li>
-            <li>고객지원</li>
+            <li>My page</li>
         </ul>
-        <h2 class="sec-tit">고객지원</h2>
+        <h2 class="sec-tit">My page</h2>
     </div>
     <article class="content">
-        <div class="wrap notice">
-            <div class="top-util m-block">
-                <h3 class="top-tit">
-                    어떤 도움이 필요하신가요?
-                    <span class="block">이곳으로 문의해주세요.</span>
-                </h3>
-                <div class="flex-box">
-                    <div class="flex-cont">
-                        <div class="custom-chk">
-                            <label class="radio-btn" for="price">
-                                <input type="radio" id="price" name="sel-radio" checked>
-                                <span>비용문의</span>
-                            </label>
-                            <label class="radio-btn" for="tech">
-                                <input type="radio" id="tech" name="sel-radio">
-                                <span>기술문의</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="flex-cont">
-                        <p class="tbl-info-txt"><strong class="mandatory">*</strong>는 필수입력 사항입니다.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="wrap mypage">
+            <h3 class="top-tit">나의 정보</h3>
             <div class="detail-box thin">
                 <div class="tbl tbl-row">
                     <table>
-                        <caption>제목, 내용, 첨부 입력으로 구성되어진 표</caption>
+                        <caption>회사명, 이름, 이메일로 구성되어진 표</caption>
                         <colgroup>
                             <col width="20%">
                             <col width="*">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">제목 <strong class="mandatory">*</strong></th>
+                                <th scope="row">회사명</th>
                                 <td>
-                                    <input type="text" class="input-default" placeholder="입력란">
+                                    레노소프트
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">내용 <strong class="mandatory">*</strong></th>
+                                <th scope="row">이름</th>
                                 <td>
-                                    <textarea name="" id="" cols="30" rows="7" class="input-default textarea"></textarea>
+                                    한상석
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">첨부 <strong class="mandatory">*</strong></th>
+                                <th scope="row">이메일</th>
                                 <td>
-                                    <div class="flex-box frm-file">
-                                        <input type="text" title="" class="input-default file-txt">
-                                        <input type="file" id="filefrm2" class="btn-file" value="" title="파일 찾기">
-                                        <label for="filefrm2">파일첨부</label>
-                                    </div>
+                                    hss554@renosoft.kr
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                
-                
-                <div class="btn-wrap center">
-                    <button class="btn btn-import lg">문의하기</button>
+            </div>
+            <div class="section">
+                <h3 class="top-tit">계약 정보</h3>
+                <div class="detail-box thin">
+                    <div class="tbl tbl-row">
+                        <table>
+                            <caption>계약명, 구독기간, User 수로 구성되어진 표</caption>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">계약명</th>
+                                    <td>
+                                        MES 계약
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">구독 기간</th>
+                                    <td>
+                                        2022-09-01 ~ 2023-08-31
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">User 수</th>
+                                    <td>
+                                        20 User
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="top-tit">
+                    서비스 사용량
+                    <span class="top-sub-txt">DB는 데이터를 저장하며 S3는 파일을 저장합니다.</span>
+                </h3>
+                <div class="detail-box thin">
+                    <div class="amount-used">
+                        <div class="service-name">DB</div>
+                        <div class="service-used">
+                            <span class="progress-bar">
+                                <span class="state-graph" style="width:16.5%">
+                                    <span class="state-txt">50GB</span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="service-value">300GB</div>
+                    </div>
+                    <div class="amount-used">
+                        <div class="service-name">S3</div>
+                        <div class="service-used" style="max-width: 33%;">
+                            <span class="progress-bar">
+                                <span class="state-graph" style="width:20%">
+                                    <span class="state-txt">20GB</span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="service-value">100GB</div>
+                    </div>
                 </div>
             </div>
         </div>

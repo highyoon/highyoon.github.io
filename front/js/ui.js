@@ -31,6 +31,7 @@ $(function () {
     layer_Pop();
     top_scroll_func();
     acco_menu();
+    file_upload();
     // sc_move();
     
 });
@@ -143,7 +144,6 @@ function flt_banner (){
 $('.sel').each(function() {
 
 	var selValue = $("option:selected", this).text();
-	
     $(this).children('select').css('display', 'none');
     
     var $current = $(this);
@@ -311,7 +311,23 @@ var acco_menu = function() {
         j.preventDefault();
     });
 }
+//File Control
+var file_upload = function() {
+    $(document).on('change',".frm-file input[type='file']",function(e){
+        var filename = e.target.files[0].name;
+        var filesize = e.target.files[0].size;
+        var filetext = $(this).parent().find('.file-txt');
 
+        if ( filetext.length ) {
+            $(this).siblings("input[type='text']").val(filename);	
+        } 
+    });	
+
+    //File Delete
+    $(document).on('click','.btn-file-del > button', function() {
+        $(this).parent().remove();
+    })
+}
 //Layer Popup
 var layer_Pop = function() {
     $(document).on('click','.pop-open', function() {
