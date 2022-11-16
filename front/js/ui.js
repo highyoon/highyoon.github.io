@@ -33,7 +33,7 @@ $(function () {
     acco_menu();
     file_upload();
     
-faq_menu();
+    faq_menu();
     // sc_move();
     
 });
@@ -45,12 +45,15 @@ function scroll_chk() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 80;
+        var elementVisible = 90;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         } else {
             reveals[i].classList.remove("active");
         }
+        console.log('height' + windowHeight);
+        console.log('now' + elementTop);
+        console.log('height' + windowHeight);
     }
 }
 
