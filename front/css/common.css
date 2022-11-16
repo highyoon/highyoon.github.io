@@ -203,6 +203,11 @@
 .input-default:disabled { background-color: #ccc; border-color: #ccc; color: #737373; opacity: 1; }
 .input-select { display: inline-block; position: relative; width: 100%; }
 .input-select select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1024' width='767.5'%3E%3Cpath d='M0 384l383.75 383.75L767.5 384H0z'/%3E%3C/svg%3E"); background-size: 12px; background-position: calc(100% - 12px) center; background-repeat: no-repeat; }
+.input-select select option {
+    color: #222;
+    padding: 8px;
+    font-size: 16px;
+}
 .frm-file {
     position: relative;
 }

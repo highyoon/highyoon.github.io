@@ -778,8 +778,14 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	border-radius: 50%;
 	background: #142e7b;
 }
-.faq-cont #detail {
+.faq-cont #faq-detail {
 	width: calc(100% - 235px);
+}
+.faq-cont #faq-detail .faq-section {
+	display: none;
+}
+.faq-cont #faq-detail .faq-section.on {
+	display: block;
 }
 .faq-cont .faq-list {
 	margin-top:40px;
@@ -828,6 +834,17 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	font-size:16px;
 	color:#888;
 	background-color: #eee;
+}
+.faq-cont .btn-wrap .btn-more .dw-arrow {
+	margin:0 0 2px 10px;
+	display: inline-block;
+	width: 12px;
+	height: 6px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position:center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='M505.752,123.582c-8.331-8.331-21.839-8.331-30.17,0L256,343.163L36.418,123.582c-8.331-8.331-21.839-8.331-30.17,0 s-8.331,21.839,0,30.17l234.667,234.667c8.331,8.331,21.839,8.331,30.17,0l234.667-234.667 C514.083,145.42,514.083,131.913,505.752,123.582z'/%3E%3C/svg%3E");
+	opacity: 0.5;
 }
 /* mypage */
 .mypage .top-tit {
@@ -1196,7 +1213,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		font-size: 14px;
 		white-space: nowrap;
 	}
-	.faq-cont #detail {width: 100%;}
+	.faq-cont #faq-detail {width: 100%;}
 	.faq-cont .faq-list {margin-top:0;}
 	.faq-cont .faq-list li a {padding:15px 30px; font-size:14px;}
 	.faq-cont .faq-list li a .arrow {
@@ -1247,6 +1264,18 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.detail-box .amount-used .service-value {
 		margin-left:17px;
 		font-size:11px;
+	}
+
+	
+	.faq-cont::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	.faq-cont::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+	.faq-cont::-webkit-scrollbar-thumb {
+		box-shadow: none;
 	}
 
 }

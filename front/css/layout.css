@@ -254,6 +254,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 }
 #wrap-top .top-util {
 	margin-left:auto;
+	margin-bottom:0;
 	margin-right:28px;
 }
 #wrap-top .top-util a {

@@ -32,6 +32,8 @@ $(function () {
     top_scroll_func();
     acco_menu();
     file_upload();
+    
+faq_menu();
     // sc_move();
     
 });
@@ -253,6 +255,18 @@ function js_relate (){
 //     });
 // }
 
+// faq menu
+var faq_menu = function() {
+    var faq_sel = $('.faq-menu li a');
+    faq_sel.on('click', function(){
+        var current_num = $(this).parent().index();
+        $(this).closest('li').addClass('active');
+        $(this).closest('li').siblings().removeClass('active');
+        var show_faq = $('#faq-detail > div');
+        show_faq.siblings().removeClass('on');
+        show_faq.eq(current_num).addClass('on');
+    });
+}
 
 // btn_top
 var top_scroll_func = function() {
