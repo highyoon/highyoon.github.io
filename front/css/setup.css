@@ -74,6 +74,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	animation:fadeInDown 1s both 1s;
 }
 
+.feature-box .sec-tit,
+.main-why .sec-tit,
+.more-box.active .flex-box > div:nth-child(1),
+.more-box.active .flex-box > div:nth-child(2)  {
+	opacity: 0;
+}
 .feature-box.active .sec-tit {
 	-webkit-animation:fadeInUp 0.8s both 0.8s;
 	animation:fadeInUp 1s both 0.8s;
@@ -99,12 +105,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	animation:zoomIn .9s both .9s;
 }
 .more-box.active .flex-box > div:nth-child(1) {
-	-webkit-animation: fadeInLeft .5s both .5s;
-    animation: fadeInLeft .5s both .5s;
+	-webkit-animation: fadeInLeft .7s both .7s;
+    animation: fadeInLeft .7s both .7s;
 }
 .more-box.active .flex-box > div:nth-child(2) {
-    -webkit-animation: fadeInRight .7s both .7s;
-    animation: fadeInRight .7s both .7s;
+    -webkit-animation: fadeInRight .9s both .9s;
+    animation: fadeInRight .9s both .9s;
 }
 
 @keyframes fadeInDown {
@@ -1241,7 +1247,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:45px;
 	}
 
-	.content .notice {
+	.content .wrap.notice {
 		padding:50px 0 65px;
 	}
 
@@ -1302,7 +1308,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 
 	/* faq */
-	.content .faq {
+	.content .wrap.faq {
 		padding:50px 0 65px;
 	}
 	.faq-cont {
