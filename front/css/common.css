@@ -564,6 +564,10 @@ input[type="file"]:focus + label {
 .popup .pop-body .search-result ul {overflow-y: auto; max-height:200px;}
 .popup .pop-body .search-result li {padding:23px 50px; border-bottom:1px solid #eee;}
 .popup .pop-body .search-result li a {display: block; font-size:18px; color:#222;}
+.popup .pop-body .join-wrap .sub-txt {text-align: center;  line-height:1.4; color:#666; font-size:18px;}
+.popup .pop-body .join-wrap .field-box {margin-top:10px; max-height:400px; overflow-y: auto;}
+.popup .pop-body .info-txt {margin-top:39px; font-size:16px; line-height:1.4; text-align:center; color:#666;}
+.popup .pop-body .info-txt > strong {color:#142e7b;}
 .popup .pop-footer {padding:0 0 60px;}
 .popup .pop-close:before, 
 .popup .pop-close { position: absolute; width: 30px; height: 30px; right: 25px; top: 10px; }
@@ -585,6 +589,7 @@ input[type="file"]:focus + label {
     .popup .pop-body { padding: 30px 10px 20px 30px; }
     .popup .pop-body .pop-tit {font-size:2rem;}
     .popup .pop-body .pop-txt {margin-top:10px;font-size:1rem; line-height:1.4;}
+    .popup .pop-body .join-wrap .sub-txt {margin-top:-20px}
     .popup .pop-footer {padding:0 0 60px;}
     .popup .pop-close:before, 
     .popup .pop-close { position: absolute; width: 30px; height: 30px; right: 25px; top: 10px; }
@@ -707,6 +712,7 @@ input[type="file"]:focus + label {
     .popup .pop-body .search-result {margin-top:30px;}
     .popup .pop-body .search-result li {padding:15px 30px}
     .popup .pop-body .search-result li a {font-size:14px;}
+    .popup .pop-body .join-wrap .sub-txt {font-size: 14px;}
 }
 
 @media screen and (max-width: 475px) {

@@ -6,7 +6,7 @@
     --txt-red:#dc3545;
 }
 
-*:not(body):not(html):not(.search-result ul)::-webkit-scrollbar {
+*:not(body):not(html):not(.search-result ul):not(.popup .pop-body .join-wrap .field-box)::-webkit-scrollbar {
     width: 0;
     height: 0;
 }

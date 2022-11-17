@@ -756,6 +756,45 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background-color: #142e7b;
 }
 
+/* box-radio */
+.box-radio {
+	display: flex;
+	margin-top:15px;
+}
+.box-radio .radio-btn {
+	flex-grow: 1;
+	width: calc(100%);
+	cursor: pointer;
+    position: relative;
+}
+.box-radio .radio-btn input {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    z-index: -1;
+    opacity: 0;
+}
+.box-radio .radio-btn > span {
+	display: block;
+	flex-grow:1;
+	position: relative;
+	width: 100%;
+	padding:8px 10px;
+	font-size:16px;
+	text-align: center;
+	color:#888;
+	background: #eee;
+	border:1px solid #dbdbdb;
+	box-sizing: border-box;
+}
+.box-radio .radio-btn input:checked + span {
+	font-weight: 500;
+	color:#142e7b;
+	background-color: #fff;
+	border-color:#142e7b;
+}
+
 /* 공지사항 */
 .detail-box {
 	border-top:2px solid #222;
@@ -1538,6 +1577,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		font-size:12px;
 	}
 	
+}
+/* mobile Device  */
+@media screen and (max-width: 540px) {
+	.box-radio {
+		display: block;
+	}
+	.box-radio .radio-btn > span {
+		font-size: 14px;
+	}
 }
 /* mobile Device  */
 @media screen and (max-width: 414px) {
