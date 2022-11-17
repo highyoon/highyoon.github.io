@@ -182,6 +182,13 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
     }
 }
 
+@keyframes fadeText {
+    100% {
+        opacity: 0;
+		height:0;
+    }
+}
+
 .main-why {
 	background: url('/front/img/main/main_why.jpg') no-repeat center;
 	background-size:cover ;
@@ -498,6 +505,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	font-size:14px;
 	text-align: left;
 	color:#dc3545;
+}
+.login-box .login .field-error.fade {
+	margin-top:8px;
+	animation: fadeText 1s 1s ease-in-out forwards;
 }
 .login-box .login .field-error::before {
 	content:'';

@@ -196,8 +196,8 @@
 .input-default:focus,
 .input-default:focus-visible {border:1px solid #222; outline: 0;}
 .field .field-error {display:none;  margin-top:5px;}
-.error .input-default {border-color:#dc3545;}
-.error .field-error {display:block;}
+.field.error .input-default {border-color:#dc3545;}
+.field.error .field-error {display:block;}
 .input-default::placeholder {color:#888;}
 .input-default.textarea { resize: vertical; height: auto; min-height: 100px; padding: 10px; }
 .input-default:disabled { background-color: #ccc; border-color: #ccc; color: #737373; opacity: 1; }
