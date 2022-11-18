@@ -129,6 +129,17 @@
     color:#222;
     background-color: #fff;
 }
+
+.btn-primary.rd {
+    color:#fff;
+    border-color: transparent;
+    background-color: #077ee4;
+}
+.btn-primary.rd:focus,
+.btn-primary.rd:hover {
+    color:#222;
+    background-color: #fff;
+}
 .btn.btn-more {
     position: relative;
     padding-right:15px;

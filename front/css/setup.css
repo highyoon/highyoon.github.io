@@ -58,7 +58,141 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	color:var(--txt-wht);
 	border:1px solid #9ea2a8;
 }
-
+/* 추가 작업 */
+.top-small {
+	margin-top:91px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:18px 60px;
+	border-top:1px solid #c5c5c5;
+	border-bottom:1px solid #c5c5c5;
+}
+.top-small .sec-tit {
+	color:#067de3;
+}
+.top-small .lnb li {
+	position: relative;
+	display:inline-block;
+	padding-left:10px;
+	font-size:16px;
+	font-weight: 300;
+	color:#898989;
+}
+.top-small .lnb li:first-child {
+	padding-left:0;
+}
+.top-small .lnb li:first-child::after {
+	display: none;
+}
+.top-small .lnb li::after {
+	content:'';
+	position: absolute;
+	display:block;
+	top:2px;
+	left:23px;
+	width:7px;
+	height:11px;
+	background-size: 12px;
+	background-position: center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='enable-background:new 0 0 478.448 478.448' viewBox='0 0 478.448 478.448'%3E%3Cpath d='m131.659 0-31.165 32.035 213.31 207.197-213.31 207.141 31.156 32.075 246.304-239.216z' style='fill:%23ffffff'/%3E%3C/svg%3E");
+}
+/* 미라콤이 다른 이유 추가 */
+.content .introduce {
+	padding:20px 0;
+}
+.top-cont {
+	position: relative;
+	padding:80px 0 120px;
+}
+.top-cont h3 {
+	font-size:42px;
+	line-height:1.4;
+}
+.top-cont p {
+	margin-top:44px;
+	max-width: 43%;
+	font-size:18px;
+	line-height:1.4;
+	color:#555;
+}
+.top-cont .obj {
+	position: absolute;
+	top:-80px;
+	right:0;
+	width: 500px;
+	height:385px;
+	background-color: #ececec;
+}
+.we-global {
+	padding:85px 0;
+	background-color: #ececec;
+}
+.we-global h3 {
+	font-size:34px;
+	text-align: center;
+}
+.we-global .global-count {
+	margin-top:80px;
+	display: flex;
+	justify-content: space-around;
+}
+.we-global .global-count dl {
+	text-align: center;
+}
+.we-global .global-count dl dt {
+	font-size:60px;
+	line-height:1.4;
+	font-weight:bold;
+}
+.we-global .global-count dl dt .num {}
+.we-global .global-count dl dd {
+	font-size: 20px;
+}
+.tech-box {
+	padding:100px 0;
+}
+.tech-box .img-box {
+	margin-top:80px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
+	gap: 100px;
+}
+.tech-box .img-box.reverse {
+	flex-direction: row-reverse;
+}
+.tech-box .img-box > div {
+	width: 50%;
+}
+.tech-box .img-box .thumb {}
+.tech-box .img-box .thumb img {
+	width:100%;
+}
+.tech-box .img-box .thumb-txt {
+	line-height: 1.4;
+}
+.tech-box .img-box .thumb-txt .thumb-tit {
+	font-size:28px;
+	color:#087ee0;
+	font-weight: 500;
+}
+.tech-box .img-box .thumb-txt p {
+	margin-top:20px;
+	padding-right:60px;
+	font-size:20px;
+}
+.half-banner {
+	background-color: #ececec;
+}
+.half-banner .flex-cont p {
+	font-size: 30px;
+	line-height: 1.2;
+}
+.half-banner .flex-cont .btn-wrap {
+	margin-top:30px;
+}
 
 /* 슬라이드 모션 */
 .topArea .top-tit {
