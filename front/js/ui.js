@@ -395,9 +395,4 @@ var layer_Pop = function() {
     })
 }
 
-// $(document).ready(function() {	
-//     $(".header-include").load("/front/include/header.html");
-//     $(".footer-include").load("/front/include/footer.html");
-// });
-
 
