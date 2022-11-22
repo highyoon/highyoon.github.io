@@ -236,7 +236,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 #wrap-top .menu-box .sub-box > ul > li > a {
 	font-size:24px;
 	color:#077ee4;
-	font-weight: 600;
+	font-weight: 500;
 }
 #wrap-top .menu-box .sub-box .depth li a {
 	display: block;
@@ -250,7 +250,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 }
 #wrap-top .menu-box .sub-box .depth li a:hover {
 	color:#077ee4;
-	font-weight: 600;
+	font-weight: 500;
 }
 #wrap-top .top-util {
 	margin-left:auto;

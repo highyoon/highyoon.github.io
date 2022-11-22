@@ -103,19 +103,25 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='enable-background:new 0 0 478.448 478.448' viewBox='0 0 478.448 478.448'%3E%3Cpath d='m131.659 0-31.165 32.035 213.31 207.197-213.31 207.141 31.156 32.075 246.304-239.216z' style='fill:%23666666'/%3E%3C/svg%3E");
 }
 /* 미라콤이 다른 이유 추가 */
+
+.small-tit {
+	font-size:22px;
+	font-weight: 500;
+	color:#666;
+}
 .content .introduce {
 	padding:20px 0;
 }
 .top-cont {
 	position: relative;
-	padding:80px 0 180px;
+	padding:110px 0 180px;
 }
 .top-cont .cont-tit {
 	font-size:46px;
-	line-height:1.4;
+	line-height:1.2;
 }
 .top-cont .cont-txt {
-	margin-top:22px;
+	margin-top:37px;
 	max-width: 52%;
 	font-size:22px;
 	line-height:1.4;
@@ -133,6 +139,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	width: 531px;
 	height:403px;
 	background-image:url('/front/img/obj_different.png');
+}
+.top-cont .obj.product {
+	top:-76px;
+	width: 530px;
+	height:528px;
+	background-image:url('/front/img/obj_product.png');
 }
 .we-global {
 	padding:85px 0;
@@ -236,27 +248,25 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .tech-box .img-box .btn-wrap {
 	margin-top:50px;
 }
-.move-cloud {
-	padding:120px 0;
+.basic-banner {
+	margin-top:10px;
+	padding:130px 0;
 	line-height:1.4;
 	background-color:#ececec ;
 }
-.move-cloud h3 {
-	font-size:32px;
+.basic-banner h3 {
+	font-size:40px;
 }
-.move-cloud p {
+.basic-banner p {
 	margin-top:50px;
-	font-size:18px;
-	color: #555;
+	max-width: 45%;
+	font-size:22px;
+	color: #666;
 }
 
 .expect-box {
 	padding:120px 0;
 	line-height:1.4;
-}
-.expect-box small {
-	font-size:20px;
-	font-weight: 500;
 }
 .expect-box h3 {
 	margin-top:15px;
@@ -267,7 +277,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	width: 100%;
 }
 .expect-box .expect-list {
-	padding-left:200px;
+	padding-left:112px;
 }
 .expect-box .expect-list ul {
 	display: flex;
@@ -280,13 +290,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	box-sizing: border-box;
 }
 .expect-box .expect-list dt {
-	font-size:28px;
+	font-size:34px;
 	color:#087ee0;
 	font-weight: 500;
 }
 .expect-box .expect-list dd {
 	margin-top:30px;
-	font-size:20px;
+	font-size:22px;
+	color:#666;
+	font-weight: 300;
 }
 
 .video-box {
@@ -303,20 +315,23 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .video-box .flex-box .flex-cont h3 {
 	margin-top:10px;
-	font-size:28px;
+	font-size:40px;
 }
 .video-box .flex-box .flex-cont p {
-	padding-right:80px;
+	padding-right:50px;
 	margin-top:50px;
-	padding-right: 50px;
-	font-size:18px;
+	font-size:22px;
 	color:#555;
 }
 .video-box .flex-box .flex-cont.img {
+	margin-top:45px;
 	width: 45%;
 }
 .video-box .flex-box .flex-cont img {
 	width: 100%;
+}
+.video-box .flex-box .flex-cont .btn-wrap {
+	margin-top:22px;
 }
 
 .Features {
@@ -345,7 +360,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .Features .Features-list li .tit {
 	padding-bottom:35px;
-	font-size:28px;
+	font-size:34px;
 	font-weight: 500;
 	border-bottom:1px solid #979797;
 }
@@ -354,8 +369,8 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	top:0;
 	left:0;
 	width: 82px;
-	height:68px;
-	line-height:68px;
+	height:88px;
+	line-height:88px;
 	text-align: center;
 	color:#fff;
 	font-size: 14px;
@@ -370,14 +385,16 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	position: relative;
 	margin:14px 0;
 	padding-left:14px;
-	font-size:18px;
-	color:#555;
+	font-size:22px;
+	color:#666;
+	font-weight: 300;
+	letter-spacing: -0.05rem;
 }
 .Features .Features-list li ul > li::after {
 	content:'-';
 	position: absolute;
 	display: block;
-	top:-1px;
+	top:-2px;
 	left:0;
 }
 
