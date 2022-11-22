@@ -265,7 +265,7 @@ var faq_menu = function() {
         var current_num = $(this).parent().index();
         $(this).closest('li').addClass('active');
         $(this).closest('li').siblings().removeClass('active');
-        var show_faq = $('#faq-detail > div');
+        var show_faq = $('#faq-detail > span');
         show_faq.siblings().removeClass('on');
         show_faq.eq(current_num).addClass('on');
     });
