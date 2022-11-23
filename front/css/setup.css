@@ -1119,14 +1119,14 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .custom-chk {
 	display: flex;
 	justify-content: space-between;
-	gap:10px;
+	gap:20px;
 }
 .custom-chk .radio-btn {
-	padding:10px 20px;
 	width: 100%;
+	height: 36px;
 	cursor: pointer;
     position: relative;
-	background-color: red;
+	background:transparent;
 }
 .custom-chk .radio-btn input {
 	position: absolute;
@@ -1137,24 +1137,47 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
     opacity: 0;
 }
 .custom-chk .radio-btn > span {
-	position: relative;
+	position: absolute;
+	top:0;
+	left:0;
+	padding:10px 40px;
+	width: 100%;
 	font-size:1.125rem;
 	color:#666;
+	border:1px solid #dbdbdb;
+	box-sizing: border-box;
 }
 .custom-chk .radio-btn input:checked + span {
 	font-weight: 500;
-	color:#077ee4;
+	color:#fff;
+	background:#067de3;
+	border:1px solid transparent;
 }
-.custom-chk .radio-btn input:checked + span::after {
+.custom-chk .radio-btn input + span::after {
 	content:'';
 	position: absolute;
-	top:-2px;
-	right:-5px;
+	top:10px;
+	left:10px;
 	display: block;
-	width: 5px;
-	height:5px;
+	width: 15px;
+	height:15px;
 	border-radius: 50%;
-	background-color: #142e7b;
+	background-color: #dbdbdb;
+}
+.custom-chk .radio-btn input:checked + span::before {
+	content:'';
+	position: absolute;
+	top:12px;
+	left:12px;
+	display: block;
+	width: 11px;
+	height:11px;
+	border-radius: 50%;
+	background:#067de3;
+	z-index: 1;
+}
+.custom-chk .radio-btn input:checked + span::after {
+	background-color: #fff;
 }
 
 /* box-radio */
@@ -1267,7 +1290,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .detail-box.thin {border-width:1px;}
 .detail-box .detail-top {
 	display: flex;
-	padding:35px 30px;
+	padding:15px 30px;
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
@@ -1275,13 +1298,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .detail-box .detail-top .category {display:inline-block; margin-right:10px;  color:#077ee4; vertical-align:top; font-size:15px; font-weight: 500;}
 .detail-box .detail-top .detail-tit {
-	font-size:28px;
+	font-size:18px;
 	font-weight: 500;
 	line-height: 1.4;
 	letter-spacing: -0.05rem;
 }
 .detail-box .detail-top .detail-util {
-	margin-top:0.75rem;
 	justify-content: center;
 }
 .detail-box .detail-top .detail-util span {
@@ -1294,7 +1316,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	color:#dbdbdb;
 }
 .detail-box .detail-cont {
-	padding:60px 170px;
+	padding:60px;
 	font-size: 1rem;
 	font-weight: 200;
 	line-height:1.4;
@@ -1556,9 +1578,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 /* media query */
 /* pc Device  */
 @media screen and (max-width: 1600px) {
-	.contact {
-		display: none;
-	}
+
 
 }
 
@@ -1877,6 +1897,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		font-size:14px;
 	}
 
+	/* support */
+	.join-wrap.support {
+		padding:50px 30px 60px;
+	}
+
+
 	/* faq */
 	.content .wrap.faq {
 		padding:50px 0 65px;
@@ -2044,19 +2070,17 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 /* mobile Device  */
 @media screen and (max-width: 720px) {
 	
-	.top-util {
-		display: none;
-	}
+
 	.top-util.m-block {
 		display: block;
 	}
 	.top-util.m-block .top-tit {
-		margin-bottom:35px;
-		font-size:19px;
+		margin-bottom:25px;
+		font-size:25px;
 	}
 	.top-util .tbl-info-txt {font-size:0.75rem;}
-	.custom-chk {padding-left:30px;}
-	.custom-chk .radio-btn > span {font-size:14px;}
+	/* .custom-chk {padding-left:30px;} */
+	.custom-chk .radio-btn > span {padding-left:30px; font-size:14px;}
 	.topArea {
 		padding:160px 50px;
 		height:auto;
@@ -2239,4 +2263,5 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.detail-box .list-ctrl li a {
 		max-width: 70%;
 	}
+	.custom-chk .radio-btn > span {font-size:12px;}
 }
