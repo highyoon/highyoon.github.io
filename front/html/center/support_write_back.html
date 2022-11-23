@@ -24,30 +24,26 @@
 
 <!-- [s]Content area-->
 <section id="wrapCont">
-	<div class="top-small">
-        <h2 class="sec-tit">고객지원</h2>
+	<div class="top-area support">
         <ul class="lnb">
             <li>HOME</li>
             <li>고객성공센터</li>
             <li>고객지원</li>
         </ul>
+        <h2 class="sec-tit">고객지원</h2>
     </div>
     <article class="content">
-        <div class="join-wrap">
-            <div class="top-util">
+        <div class="wrap notice">
+            <div class="top-util m-block">
                 <h3 class="top-tit">
-                    고객지원
+                    어떤 도움이 필요하신가요?
+                    <span class="block">이곳으로 문의해주세요.</span>
                 </h3>
-                <p class="sub-txt">어떤 도움이 필요하신가요?
-                    이곳으로 문의해주세요.</p>
-            </div>
-            <div class="join">
-                <div class="field-line">
-                    <label for="user-position" class="label-tit">문의유형 <strong>*</strong></label>
-                    <div class="field">
+                <div class="flex-box">
+                    <div class="flex-cont">
                         <div class="custom-chk">
                             <label class="radio-btn" for="price">
-                                <input type="radio" id="price" name="sel-radio" checked="">
+                                <input type="radio" id="price" name="sel-radio" checked>
                                 <span>비용문의</span>
                             </label>
                             <label class="radio-btn" for="tech">
@@ -56,32 +52,52 @@
                             </label>
                         </div>
                     </div>
-                </div>
-                <div class="field-line">
-                    <label for="subject" class="label-tit">제목 <strong>*</strong></label>
-                    <div class="field error">
-                        <input type="text" class="input-default" id="subject">
-                        <div class="field-error">
-                            입력 형식이 맞지 않습니다.
-                        </div>
+                    <div class="flex-cont">
+                        <p class="tbl-info-txt"><strong class="mandatory">*</strong>는 필수입력 사항입니다.</p>
                     </div>
                 </div>
-                    
-                    
-                <div class="field-line full">
-                    <label for="select-category" class="label-tit">문의내용<strong>*</strong></label>
-                    
-                        <div class="field-line single full">
-                            <textarea name="" id="" cols="30" rows="15" placeholder="문의사항에 대해 자세한 내용을 남기시면 신속하게 담당자를 연결해 드리겠습니다." class="input-default textarea"></textarea>
-                        </div>
-                    </div>
+            </div>
+            <div class="detail-box thin">
+                <div class="tbl tbl-row">
+                    <table>
+                        <caption>제목, 내용, 첨부 입력으로 구성되어진 표</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">제목 <strong class="mandatory">*</strong></th>
+                                <td>
+                                    <input type="text" class="input-default" placeholder="입력란">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">내용 <strong class="mandatory">*</strong></th>
+                                <td>
+                                    <textarea name="" id="" cols="30" rows="7" class="input-default textarea"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">첨부 <strong class="mandatory">*</strong></th>
+                                <td>
+                                    <div class="flex-box frm-file">
+                                        <input type="text" title="" class="input-default file-txt">
+                                        <input type="file" id="filefrm2" class="btn-file" value="" title="파일 찾기">
+                                        <label for="filefrm2">파일첨부</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="btn-wrap">
-                    <button type="button" class="btn btn-import lg w100">등록하기</button>
+                
+                
+                <div class="btn-wrap center">
+                    <button class="btn btn-import lg">문의하기</button>
                 </div>
             </div>
         </div>
-
     </article>
 </section>
 <!-- [e]Content area -->

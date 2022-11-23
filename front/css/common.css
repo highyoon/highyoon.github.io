@@ -16,7 +16,7 @@
 /* Tabs */
 .tabs { display: flex; flex-wrap: wrap; width: 100%; padding-bottom: 20px; }
 .tabs .tabs-item { flex: 1; }
-.tabs .tabs-link { display: block; padding: 11px 10px 10px; text-align: center; font-size:16px; background: #eee; color: #888; text-decoration: none; height: 40px; border: 1px solid #dbdbdb; box-sizing: border-box;}
+.tabs .tabs-link { display: block; padding: 11px 10px 10px; text-align: center; font-size:1rem; background: #eee; color: #888; text-decoration: none; height: 40px; border: 1px solid #dbdbdb; box-sizing: border-box;}
 .tabs .active .tabs-link { font-weight: 600; background: #fff; border-color: #142e7b; color: #142e7b; }
 .tabs .tabs-item:first-child .tabs-link { border-left: 1px solid #dfdfdf; }
 .tabs .tabs-item:first-child.active .tabs-link { padding: 11px 10px 10px 11px; margin-left: -1px; border-left: 1px solid #145b8b; }
@@ -26,19 +26,34 @@
 /* Search */
 .search-area {
 	display: flex;
-	justify-content: end;
+	justify-content: start;
 }
 .search-box {
-	padding:20px 0;
+    position: relative;
+	padding:10px 0;
 	width: 425px;
-    border-bottom:2px solid #222;
+    border:1px solid #222;
 }
 .search-box .input_search {
     border:0 none;
-    padding:0;
-    width: 90%;
-	font-size: 18px;
+    padding: 0 0 0 40px;
+    width: 100%;
+	font-size: 1rem;
 	color:#888;
+    box-sizing: border-box;
+}
+.search-box::before {
+    content:'';
+    position: absolute;
+    top:10px;
+    left:10px;
+    display: block;
+    width: 23px;
+    height:23px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 512 512' enable-background='new 0 0 512 512'%3E%3Cg%3E%3Cpath d='m495,466.1l-119.2-119.2c29.1-35.5 46.5-80.8 46.5-130.3 0-113.5-92.1-205.6-205.6-205.6-113.6,0-205.7,92.1-205.7,205.7s92.1,205.7 205.7,205.7c49.4,0 94.8-17.4 130.3-46.5l119.1,119.1c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9zm-443.2-249.4c-1.42109e-14-91 73.8-164.8 164.8-164.8 91,0 164.8,73.8 164.8,164.8s-73.8,164.8-164.8,164.8c-91,0-164.8-73.8-164.8-164.8z'/%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 100%;
+    opacity: 0.3;
 }
 .search-box .input_search:focus-visible {
     outline: 0 none;
@@ -85,7 +100,7 @@
     padding:0 30px;
     height:50px;
     line-height:50px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .btn.rd {
     border-radius:33px;
@@ -97,15 +112,15 @@
 .btn.btn-text {
     position: relative;
     padding-left:0;
-    padding-right:18px;
-    font-size:20px;
+    padding-right:15px;
+    font-size:0.9375rem;
     color:#077ee4;
 }
 .btn.btn-text::after {
     content:'';
     display: block;
     position: absolute;
-    top:10px;
+    top:11px;
     right:0;
     width: 8px;
     height:11px;
@@ -210,9 +225,9 @@
 /* Checkbox, Radio */
 .chk { position: relative; padding-left: 23px; }
 .chk + .chk { margin-left:10px; }
-.chk.single { padding-left: 16px; }
-.chk input { opacity: 0; position: absolute; top: 0; left: 0; width: 16px; height: 16px; margin: 0; }
-.chk .chk-label::before { content: ''; position: absolute; top: -2px; left: 0; width: 16px; height: 16px; border: 1px solid #dbdbdb; }
+.chk.single { padding-left: 1rem; }
+.chk input { opacity: 0; position: absolute; top: 0; left: 0; width: 1rem; height: 1rem; margin: 0; }
+.chk .chk-label::before { content: ''; position: absolute; top: -2px; left: 0; width: 1rem; height: 1rem; border: 1px solid #dbdbdb; }
 .chk.radio .chk-label::before { border-radius: 50%;}
 .chk input:checked + .chk-label::before {border:1px solid #142e7b;}
 .chk input:checked + .chk-label::after { content: ''; position: absolute; top: -1px; left: 1px; width: 10px; height: 10px; background: #142e7b; margin: 3px; border-radius: 50%; }
@@ -221,7 +236,7 @@
 .chk input:disabled + .chk-label::before { background: #e9e9e9; border-color: #e9e9e9; }
 .chk input[type="checkbox"]:focus-visible + .chk-label,
 .chk input[type="radio"]:focus + .chk-label {  border:1px solid #111; outline: 0;}
-.chk .chk-label .txt {font-size:16px;}
+.chk .chk-label .txt {font-size:1rem;}
 .chk-wrap .chk {margin: 5px 10px 0 0;}
  /* Form */
 .form-info {vertical-align: text-bottom; color:#007bff; }
@@ -230,7 +245,20 @@
 .input-default:focus-visible {border:1px solid #222; outline: 0;}
 .field .field-error {display:none;  margin-top:5px;}
 .field.error .input-default {border-color:#dc3545;}
-.field.error .field-error {display:block;}
+.field.error .field-error {position: relative; display:block; padding-left:17px; font-size:14px; text-align: left; color:#dc3545;}
+.field-error::before {
+	content:'';
+	display: block;
+	position: absolute;
+	top:-1px;
+	left:0;
+	width: 1rem;
+	height:1rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024px' height='1024px' viewBox='0 0 1024 1024' class='icon'%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z' fill='%23dc3545'/%3E%3Cpath xmlns='http://www.w3.org/2000/svg' d='M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z' fill='%23dc3545'/%3E%3C/svg%3E");
+	background-size: 100%; 
+	background-position: calc(100%) center; 
+	background-repeat: no-repeat;
+}
 .input-default::placeholder {color:#888;}
 .input-default.textarea { resize: vertical; height: auto; min-height: 100px; padding: 10px; line-height:1.4;}
 .input-default:disabled { background-color: #ccc; border-color: #ccc; color: #737373; opacity: 1; }
@@ -239,7 +267,7 @@
 .input-select select option {
     color: #222;
     padding: 8px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .frm-file {
     position: relative;
@@ -261,7 +289,7 @@ input[type="file"] + label {
     padding: 0 10px;
     background-color: #666666;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
     cursor: pointer;
 }
@@ -473,7 +501,7 @@ input[type="file"]:focus + label {
 /* badge */
 .badge {
     display: inline-block;
-    min-width: 9px;
+    min-width: 78px;
     height: 24px;
     padding: 0 13px;
     text-align: center;
@@ -490,7 +518,7 @@ input[type="file"]:focus + label {
 .tbl {margin-top:40px;}
 .tbl table { width: 100%; border-top:2px solid #222; table-layout: fixed; }
 .tbl table th,
-.tbl table td { padding: 20px 30px; font-size: 18px; text-align: center; border-bottom: 1px solid #dbdbdb; }
+.tbl table td { padding: 20px 30px; font-size: 1rem; text-align: center; border-bottom: 1px solid #dbdbdb; }
 .tbl table th { font-weight:500;}
 .tbl table td > span {font-size:15px; color:#888;}
 .tbl table td a {display: block; width: 100%; line-height:1.4; text-align: left;}
@@ -596,13 +624,13 @@ input[type="file"]:focus + label {
 .popup .pop-body .pop-txt {margin-top:10px;font-size:1rem; line-height:1.4;}
 .popup .pop-body .search-area {justify-content: center;}
 .popup .pop-body .search-result {margin:58px 20px 0 0; border-top:1px solid #222;}
-.popup .pop-body .search-result .empty {padding:50px; font-size:18px; text-align: center;}
+.popup .pop-body .search-result .empty {padding:50px; font-size:1rem; text-align: center;}
 .popup .pop-body .search-result ul {overflow-y: auto; max-height:200px;}
 .popup .pop-body .search-result li {padding:23px 50px; border-bottom:1px solid #eee;}
-.popup .pop-body .search-result li a {display: block; font-size:18px; color:#222;}
-.popup .pop-body .join-wrap .sub-txt {text-align: center;  line-height:1.4; color:#666; font-size:18px;}
+.popup .pop-body .search-result li a {display: block; font-size:1rem; color:#222;}
+.popup .pop-body .join-wrap .sub-txt {text-align: center;  line-height:1.4; color:#666; font-size:1rem;}
 .popup .pop-body .join-wrap .field-box {margin-top:10px; max-height:400px; overflow-y: auto;}
-.popup .pop-body .info-txt {margin-top:39px; font-size:16px; line-height:1.4; text-align:center; color:#666;}
+.popup .pop-body .info-txt {margin-top:39px; font-size:1rem; line-height:1.4; text-align:center; color:#666;}
 .popup .pop-body .info-txt > strong {color:#142e7b;}
 .popup .pop-footer {padding:0 0 60px;}
 .popup .pop-close:before, 
@@ -656,7 +684,7 @@ input[type="file"]:focus + label {
         padding:15px 0;
     }
     .search-box .input_search {
-        font-size:16px;
+        font-size:1rem;
     }
     .tbl table {
         display: block;
@@ -729,10 +757,10 @@ input[type="file"]:focus + label {
     /* badge */
     .badge {
         min-width: 50px;
-        height: 16px;
+        height: 1rem;
         padding: 0 6px;
         font-size: 11px !important;
-        line-height: 16px;
+        line-height: 1rem;
     }
 
     .paging.add-btn { margin:20px 0 8px; flex-wrap: wrap;}

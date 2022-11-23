@@ -24,27 +24,38 @@
 
 <!-- [s]Content area-->
 <section id="wrapCont">
-	<div class="top-area support">
+	<div class="top-small">
+        <h2 class="sec-tit">고객지원</h2>
         <ul class="lnb">
             <li>HOME</li>
             <li>고객성공센터</li>
             <li>고객지원</li>
         </ul>
-        <h2 class="sec-tit">고객지원</h2>
     </div>
     <article class="content">
         <div class="wrap notice">
-            <div class="notice-top">
-                <div class="search-area">
-                    <div class="search-box">
-                        <fieldset>
-                            <legend class="txt-hide">검색</legend>
-                            <input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오.">
-                            <button type="button" class="btn_search"><span class="txt-hide">검색</span></button>
-                        </fieldset>
-                    </div> 
+            <div class="top-util">
+                <h3 class="top-tit">고객지원</h3>
+                <div class="flex-box">
+                    <div class="flex-cont">
+                        <div class="search-area">
+                            <div class="search-box">
+                                <fieldset>
+                                    <legend class="txt-hide">검색</legend>
+                                    <input type="text" class="input_search" id="input_search" title="검색어를 입력하십시오." placeholder="검색어를 입력하십시오.">
+                                    <!-- <button type="button" class="btn_search"><span class="txt-hide">검색</span></button> -->
+                                </fieldset>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="flex-cont">
+                        <div class="btn-wrap">
+                            <a href="#none" class="btn btn-import rd lg">문의하기</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
             <div class="tbl">
                 <table>
                     <caption>No, 제목, 등록일로 구성된 공지사항</caption>
@@ -123,7 +134,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="paging add-btn">
+                <div class="paging">
                     <ul class="pagination">
                         <li class="paginate_button page-item first">
                             <button class="page-link" disabled><span class="hidden">first page</span></button>
@@ -156,9 +167,6 @@
                             <button class="page-link"><span class="hidden">last page</span></button>
                         </li>
                     </ul>
-                    <div class="btn-wrap">
-                        <a href="#none" class="btn btn-import lg">문의하기</a>
-                    </div>
                 </div>
             </div>
         </div>
