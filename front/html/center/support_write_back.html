@@ -41,7 +41,7 @@
                 </h3>
                 <div class="flex-box">
                     <div class="flex-cont">
-                        <div class="custom-chk">
+                        <!-- <div class="custom-chk">
                             <label class="radio-btn" for="price">
                                 <input type="radio" id="price" name="sel-radio" checked>
                                 <span>비용문의</span>
@@ -50,7 +50,7 @@
                                 <input type="radio" id="tech" name="sel-radio">
                                 <span>기술문의</span>
                             </label>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="flex-cont">
                         <p class="tbl-info-txt"><strong class="mandatory">*</strong>는 필수입력 사항입니다.</p>
@@ -66,6 +66,19 @@
                             <col width="*">
                         </colgroup>
                         <tbody>
+                            <tr>
+                                <th scope="row">문의유형 <strong class="mandatory">*</strong></th>
+                                <td>
+                                    <span class="chk radio">
+                                        <input type="radio" id="rdo01" name="rdo" /> 
+                                        <label for="rdo01" class="chk-label">비용문의</label>
+                                    </span>
+                                    <span class="chk radio">
+                                        <input type="radio" id="rdo02" name="rdo" checked /> 
+                                        <label for="rdo02" class="chk-label">기술문의</label>
+                                    </span>
+                                </td>
+                            </tr>
                             <tr>
                                 <th scope="row">제목 <strong class="mandatory">*</strong></th>
                                 <td>

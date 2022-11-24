@@ -126,6 +126,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	line-height:1.4;
 	color:#666;
 }
+.top-cont .btn-wrap {
+	margin-top:45px;
+}
 .top-cont .obj {
 	position: absolute;
 	right:0;
@@ -144,6 +147,18 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	width: 500px;
 	height:498px;
 	background-image:url('/front/img/obj_product.png');
+}
+.top-cont .obj.price {
+	top:-70px;
+	width: 492px;
+	height:435px;
+	background-image:url('/front/img/obj_price.png');
+}
+.top-cont .obj.demo {
+	top:-20px;
+	width: 492px;
+	height:435px;
+	background-image:url('/front/img/obj_demo.png');
 }
 .we-global {
 	padding:85px 0;
@@ -177,11 +192,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .we-global .global-count .icon.country {
 	background-image: url('/front/img/icon_sub_01.svg');
 }
-
 .we-global .global-count .icon.oversea {
 	background-image: url('/front/img/icon_sub_03.svg');
 }
-
 .we-global .global-count .icon.facility {
 	background-image: url('/front/img/icon_sub_04.svg');
 }
@@ -191,7 +204,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .we-global .global-count dl dt {
 	font-size:60px;
-	color:#0971ff;
+	color:#00ffff;
 	line-height:1.4;
 	font-weight:bold;
 }
@@ -200,7 +213,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	color:#fff;
 }
 .we-global .global-count dl dd {
-	margin-top:0.75rem;
+	line-height:1.4;
 	font-size: 1.125rem;
 	font-weight: 300;
 }
@@ -258,9 +271,50 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .basic-banner p {
 	margin-top:30px;
-	max-width: 45%;
 	font-size:1rem;
 	color: #666;
+}
+.basic-banner .cont-sub {
+	margin-top:5px;
+	max-width: 100%;
+}
+.basic-banner .wht-box {
+	margin:20px 0;
+	padding:80px 0;
+	text-align: center;
+	background: #fff;
+}
+.basic-banner .wht-box > h4 {
+	font-size:1.625rem;
+}
+.basic-banner .wht-box > p {
+	margin-top:10px;
+	max-width: 100%;
+	font-size:1rem;
+}
+.basic-banner .wht-box > p > a {
+	color:#077ee4;
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.basic-banner .noti-list {
+	margin:20px 0;
+}
+.basic-banner .noti-list li {
+	position: relative;
+	padding-left:18px;
+	line-height: 1.6;
+	font-size:12px;
+	color:#666;
+}
+.basic-banner .noti-list li::before {
+	content:'＊';
+	display: block;
+	position:absolute;
+	left:0;
+	top:0px;
+
 }
 
 .expect-box {
@@ -396,10 +450,41 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	top:-2px;
 	left:0;
 }
+.price-wrap {
+	padding:80px 0 100px;
+}
 
+
+.resource {
+	padding:80px;
+}
+.resource h3 {
+	margin-top: 10px;
+    margin-bottom: 36px;
+    font-size: 2rem;
+}
+.resource .flex-box {
+	flex-wrap:wrap;
+}
+.resource .flex-cont {
+	margin-bottom:40px;
+}
+.resource .flex-cont > p {
+	margin-top:20px;
+	font-size:24px;
+	line-height: 1.4;
+	font-weight: 600;
+}
+.resource .flex-cont .btn-wrap {
+	margin-top:10px;
+}
 .case-box {
-	padding:120px 0;
+	padding:80px 0;
 	background-color: #ececec;
+}
+.case-box h3 {
+    font-size: 1.875rem;
+	line-height:1.4;
 }
 .case-box small {
 	font-size: 20px;
@@ -564,6 +649,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background: url('/front/img/main/main_why.jpg') no-repeat center;
 	background-size:cover ;
 }
+.content .main-why .sec-tit small {
+	color:#00ffff;
+}
 .content > div {
 	padding:100px 0 120px;
 	box-sizing: border-box;
@@ -586,6 +674,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	line-height: 1.4;
 	font-size: 37px;
 	text-align: left;
+}
+.content .top-tit.center {
+	text-align: center;
 }
 .feature-box .flex-box {
 	margin-top:120px;
@@ -1614,7 +1705,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.more-box .flex-box .flex-cont:last-child {
 		display: none;
 	}
-
+	.top-util .top-tit {
+		padding-left:30px;
+	}
+	.top-util .flex-box {
+		padding:0 30px;
+	}
+	.top-util .flex-box .btn-wrap {
+		margin-left:10px;
+	}
 	.price-wrap {
 		padding:0 30px;
 	}
@@ -1837,6 +1936,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:45px;
 	}
 
+	.search-box {
+		margin-left:0;
+	}
 	.content .wrap.notice {
 		padding:50px 0 65px;
 	}
@@ -2017,7 +2119,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		width: 100%;
 	}
 	.we-global .global-count .icon {
-		margin:20px auto 0;
+		margin:0 auto 0;
 		width: 45px;
 		height:45px;
 	}
@@ -2205,7 +2307,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		padding:40px 30px 60px;
 	}
 	.top-cont .cont-tit {
-		font-size:36px;
+		font-size:1.875rem;;
 	}
 	.top-cont .cont-txt {
 		font-size:1rem;
@@ -2215,7 +2317,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		padding:45px 30px;
 	}
 	.we-global h3 {
-		font-size:26px;
+		font-size:1.5rem;
 	}
 	.we-global .global-count {
 		margin-top:40px;
@@ -2225,6 +2327,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		font-size:40px;
 	}
 	.we-global .global-count dl {
+		margin:20px 0;
 		width: 50%;
 	}
 	.tech-box {
@@ -2234,11 +2337,31 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:40px;
 	}
 	.tech-box .img-box .thumb-txt .thumb-tit {
-		font-size:22px;
+		font-size:1rem;
 	}
 	.tech-box .img-box .thumb-txt p {
+		margin-top:10px;
 		padding:0;
-		font-size:1rem;
+		font-size:0.875rem;
+		line-height:1.7;
+	}
+	.expect-box {
+		padding:50px 30px;
+	}
+	.video-box {
+		padding:50px 30px;
+	}
+	.video-box .flex-box .flex-cont.img {
+		margin-top:15px;
+	}
+	.Features {
+		padding:50px 30px;
+	}
+	.Features .Features-list > ul {
+		margin-top:15px;
+	}
+	.Features .Features-list > ul > li {
+		margin-top:0;
 	}
 
 	.half-banner .flex-cont p {
@@ -2256,6 +2379,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.top-small .lnb {
 		display: none;
+	}
+	.expect-box .expect-list dd {
+		margin-top:10px;
 	}
 }
 /* mobile Device  */
