@@ -121,7 +121,6 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .top-cont .cont-txt {
 	margin-top:37px;
-	max-width: 52%;
 	font-size:1.25rem;
 	line-height:1.4;
 	color:#666;
@@ -159,6 +158,18 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	width: 492px;
 	height:435px;
 	background-image:url('/front/img/obj_demo.png');
+}
+.top-cont .obj.program {
+	top:5px;
+	width: 415px;
+	height:405px;
+	background-image:url('/front/img/obj_program.png');
+}
+.top-cont .obj.edu {
+	top:5px;
+	width: 556px;
+	height:440px;
+	background-image:url('/front/img/obj_edu.png');
 }
 .we-global {
 	padding:85px 0;
@@ -1763,7 +1774,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-left:10px;
 	}
 	.price-wrap {
-		padding:0 30px;
+		padding:80px 30px;
 	}
 	.price-wrap .flex-box {
 		gap:20px;
@@ -2069,6 +2080,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 
 
+	.content .top-tit.center {
+		font-size: 24px;
+	}
 	/* faq */
 	.content .wrap.faq {
 		padding:50px 0 65px;
@@ -2306,6 +2320,22 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.tech-box .img-box .btn-wrap {
 		margin-top:30px;
 	}
+	.price-wrap {
+		padding:40px 30px;
+	} 
+	.price-wrap .faq-list {
+		margin-top:5px;
+	}
+	.basic-banner .wht-box {
+		padding:40px 30px;
+	}
+	.basic-banner .wht-box > h4 {
+		font-size:1rem;
+	}
+	.basic-banner .wht-box > p {
+		margin-top:5px;
+		font-size:14px;
+	}
 	.content .half-banner {
 		padding:0;
 	}
@@ -2328,7 +2358,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 /* mobile Device  */
 @media screen and (max-width: 720px) {
-	
+	.m-hidden {
+		display: none;
+	}
 
 	.top-util.m-block {
 		display: block;
