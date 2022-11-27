@@ -516,7 +516,7 @@ input[type="file"]:focus + label {
 .badge.done {background-color: #666;}
 
 /* Table */
-.tbl {margin-top:40px;}
+.tbl {margin-top:30px;}
 .tbl table { width: 100%; border-top:2px solid #222; table-layout: fixed; }
 .tbl table th,
 .tbl table td { padding: 20px 30px; font-size: 1rem; text-align: center; border-bottom: 1px solid #dbdbdb; }
