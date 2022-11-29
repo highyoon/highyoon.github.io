@@ -646,7 +646,29 @@ input[type="file"]:focus + label {
 .popup .pop-btn-area .btn { margin: 0 3px; width: auto; }
 .dimmed { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 150; background-color: #000; opacity: .5; }
 
-
+/* layer */
+.layer {position:absolute; z-index:999; background-color: white; max-width:100%; border:1px solid #ddd; }
+.layer  img{max-width:100%;}
+.layer-button { overflow:hidden; vertical-align: bottom; padding:0 15px; }
+.layer-button p {line-height:40px; }
+.layer-button .left{float:left; cursor:pointer;  font-size:16px;}
+.layer-button .chk .chk-label::before {top:3px}
+.layer-button .chk input:checked + .chk-label::after {top:4px}
+.layer-button .left input[type="checkbox"] + label:before{content:''; position:absolute; left:0px; top:-2px; width:20px; height:20px; border:2px solid #ddd; background:#fff; border-radius:50%;}
+.layer-button .left input[type="checkbox"]:checked + label:after{content:'\e929'; position:absolute; left:2px; top:0px; width:20px; height:20px; line-height:20px; text-align:center; color:#ddd; font-size:20px; font-family: 'xeicon';}
+.layer-button .right{float:right;  font-size:24px;}
+.layer-button .right{float:right;  font-size:24px;}
+.layer .layer-close {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color:#222;
+}
+.layer .layer-close:after,
+.layer .layer-close:before { position: absolute; left: 15px; top: 5px; content: ' '; height: 20px; width: 2px; background-color: #222; }
+.layer .layer-close:before { transform: rotate(45deg); }
+.layer .layer-close:after { transform: rotate(-45deg); }
 
 
 @media screen and (max-width:1024px) {

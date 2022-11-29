@@ -337,7 +337,7 @@ $tabsLink.on('click', function(e){
 
 // accodian menu
 var acco_menu = function() {
-    $(".faq-list a").click(function (j) {
+    $(".faq-list li > a").click(function (j) {
         var dropDown = $(this).closest("li").find(".expand-box");
         $(this).closest(".faq-list").find(".expand-box").not(dropDown).slideUp();
 
