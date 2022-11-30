@@ -111,7 +111,7 @@
                             </h3>
                             <p>
                                 언제 어디서나 편리하게 사용가능하고,<br class="m-hidden">
-                                낮은 초기 비용 투자와 운영 부담없이 제조 환경과 니즈에 맞게 확장 가능한 Nexplant MESplus CE로<br class="m-hidden">
+                                낮은 초기 비용 투자와 운영 부담없이 제조 환경과 <br class="m-hidden">니즈에 맞게 확장 가능한 Nexplant MESplus CE로<br class="m-hidden">
                                 제조 혁신을 경험해 보시기 바랍니다.
                             </p>
                             <div class="btn-wrap">
@@ -119,7 +119,16 @@
                             </div>
                         </div>
                         <div class="flex-cont img">
-                            <img src="/front/img/solution_cloudlink_img.jpg" alt="">
+                            <a href="#youtube-nex" class="pop-open" title="동영상 링크">
+                                <img src="/front/img/solution_cloudlink_img.jpg" class="for-pc" alt="">
+                                <img src="/front/img/solution_cloudlink_img_m.jpg" class="for-mobile" alt="">
+                                <span class="hidden">동영상 열기</span>
+                                <div class="img-dim"></div>
+                                <div class="img-btn">
+                                    <span class="line"><span class="hidden">영상재생</span></span>
+                                </div>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -142,7 +151,7 @@
                             </li>
                             <li>
                                 <div class="tit">
-                                    <div class="ico easy"></div>
+                                    <div class="ico fast"></div>
                                     유지보수 및 관리의 용의성
                                 </div>
                                 <ul>
@@ -152,7 +161,7 @@
                             </li>
                             <li>
                                 <div class="tit">
-                                    <div class="ico fast"></div>
+                                    <div class="ico easy"></div>
                                     신속한 배포
                                 </div>
                                 <ul>
@@ -202,6 +211,16 @@
 <!-- [s]include : Footer -->
 <div class="footer-include"></div>
 <!-- [e]include : Footer -->
+<div class="popup" id="youtube-nex" tabindex="0">
+    <a href="#" class="pop-close">
+        <span class="hidden">팝업 닫기</span>
+    </a>
+    <div class="pop-body video">
+        <div class="pop-video">
+            <iframe id="player" class="test3" src="https://www.youtube.com/embed/7cXgwEVM-74" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 <div class="dim"></div>
 <script>
     $('.header-include').load('/front/include/header.html', function() {

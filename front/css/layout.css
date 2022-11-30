@@ -240,7 +240,7 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 }
 #wrap-top .menu-box .sub-box .depth li a {
 	display: block;
-	color:#666;
+	color:#222;
 	font-size: 0.9375rem;
 	font-weight: 300;
 	line-height: 2;

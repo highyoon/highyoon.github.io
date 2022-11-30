@@ -51,9 +51,9 @@ function scroll_chk() {
         } else {
             reveals[i].classList.remove("active");
         }
-        console.log('height' + windowHeight);
-        console.log('now' + elementTop);
-        console.log('height' + windowHeight);
+        // console.log('height' + windowHeight);
+        // console.log('now' + elementTop);
+        // console.log('height' + windowHeight);
     }
 }
 

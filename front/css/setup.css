@@ -11,6 +11,9 @@
 .flex-box.half .flex-cont {
 	width:50%;
 }
+.for-mobile {
+	display:none;
+}
 
 .section {
     margin-top:95px;
@@ -33,6 +36,16 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background: url('/front/img/main/main_visual.jpg') no-repeat;
 	background-size: cover;
 	box-sizing: border-box;
+	background-size: 100% 100%;
+	animation: bgzoomin 5s alternate;
+}
+@keyframes bgzoomin {
+	0% {
+		background-size: 110% 110%;
+	}
+	100% {
+		background-size: 100% 100%;
+	}
 }
 .topArea .top-tit {
 	max-width: 715px;
@@ -60,6 +73,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	border-radius: 48px;
 	color:var(--txt-wht);
 	border:1px solid #9ea2a8;
+}
+.topArea .btn:hover .btn-text,
+.topArea .btn:focus .btn-text {
+	color:#222;
 }
 /* 추가 작업 */
 .top-small {
@@ -104,9 +121,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 /* 미라콤이 다른 이유 추가 */
 .small-tit {
-	font-size:1.375rem;
+	font-size:1rem;
 	font-weight: 500;
-	color:#666;
+	color:#222;
 }
 .content .introduce {
 	padding:20px 0;
@@ -180,7 +197,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .we-global h3 {
 	color:#fff;
-	font-size:1.875rem;
+	font-size:2.75rem;
 	text-align: center;
 }
 .we-global .global-count {
@@ -268,7 +285,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	padding-right:60px;
 	font-size:1.125rem;
 	font-weight: 300;
-	color:#666;
+	color:#222;
 }
 .tech-box .img-box .btn-wrap {
 	margin-top:50px;
@@ -293,7 +310,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .basic-banner .wht-box {
 	margin:20px 0;
-	padding:80px 0;
+	padding:40px 0;
 	text-align: center;
 	background: #fff;
 }
@@ -313,6 +330,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .basic-banner .noti-list {
 	margin:20px 0;
+}
+.basic-banner .noti-list + h3 {
+	margin-top:40px;
 }
 .basic-banner .noti-list li {
 	position: relative;
@@ -365,10 +385,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
     font-weight: 600;
 }
 .expect-box .expect-list dd {
-	margin-top:30px;
+	margin-top:15px;
     font-size: 1.125rem;
     font-weight: 300;
-    color: #666;
+    color: #222;
 
 }
 
@@ -386,15 +406,93 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .video-box .flex-box .flex-cont p {
 	padding-right: 50px;
-	margin-top:50px;
+	margin-top:30px;
 	font-size:1rem;
 	color:#666;
 }
 .video-box .flex-box .flex-cont.img {
 	width: 45%;
+	max-height: 321px;
+	overflow: hidden;
 }
-.video-box .flex-box .flex-cont img {
+.video-box .flex-box .flex-cont.img a {
+	position: relative;
+	display: block;
+}
+.video-box .flex-box .flex-cont.img a .img-dim {
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
 	width: 100%;
+	height: 100%;
+	transition: all 0.4s;
+	opacity: 0;
+	background: rgba(0,0,0,0.3);
+}
+.video-box .flex-box .flex-cont.img a:hover .img-dim {
+	display: block;
+	opacity: 1;
+}
+.video-box .flex-box .flex-cont.img a .img-btn {
+	position: absolute;
+	display: block;
+	left: 50%;
+    top: 50%;
+    width: 84px;
+    height: 84px;
+    transform: translate(-50%,-50%);
+	border-radius: 50%;
+	overflow:hidden;
+	outline: none;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.video-box .flex-box .flex-cont.img a .img-btn::before {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2189ff;
+    border-radius: 50%;
+    transform: translateX(-100%);
+    content: "";
+    transition: all 0.3s;
+}
+.video-box .flex-box .flex-cont.img a .img-btn::after {
+	position: absolute; 
+	left: 50%; 
+	top: 50%; 
+	width: 0; 
+	height: 0; 
+	border-width: 13px 0 13px 21px; 
+	border-style: solid; 
+	border-color: transparent; 
+	border-left-color: #fff; 
+	content: ""; 
+	transform: translate(-34%, -45%); 
+	transition: all 0.4s;
+}
+.video-box .flex-box .flex-cont.img a .img-btn .line {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.video-box .flex-box .flex-cont.img a:hover .img-btn::before, .video-box .flex-box .flex-cont.img a:focus .img-btn::before { transform: translateX(0); }
+.video-box .flex-box .flex-cont.img a .img-btn:hover .line, .video-box .flex-box .flex-cont.img a .img-btn:focus .line { border-color: #2189ff; }
+
+.video-box .flex-box .flex-cont img {
+	transition: transform linear 0.3s;
+	width: 100%;
+}
+.video-box .flex-box .flex-cont:hover img {
+	transform: scale(1.1);
 }
 .video-box .flex-box .flex-cont .btn-wrap {
 	margin-top:22px;
@@ -478,7 +576,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	left:0;
 }
 .price-wrap {
-	padding:80px 0 100px;
+	padding:80px 0 140px;
 }
 
 
@@ -498,7 +596,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .resource .flex-cont > p {
 	margin-top:20px;
-	font-size:24px;
+	font-size:22px;
 	line-height: 1.4;
 	font-weight: 600;
 }
@@ -520,8 +618,8 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .case-box .case-slide {
 	margin-top:20px;
 }
-.case-box .case-list {
-
+.case-box .case-list img {
+	width:100%;
 }
 .case-box .case-list .slide-cont dl {
 	margin-top:40px;
@@ -533,13 +631,13 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .case-box .case-list .slide-cont dt {
 	display: inline-block;
-	width: 30%;
+	width: 20%;
 	font-size:27px;
 	font-weight: 600;
 }
 .case-box .case-list .slide-cont dd {
 	display: inline-block;
-	width: 69%;
+	width: 79%;
 	font-size:18px;
 	
 }
@@ -558,7 +656,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background-color: #ececec;
 }
 .single-banner {
-	padding:80px 0;
+	padding:80px 0 140px;
 }
 .single-banner h3 {
 	font-size:24px;
@@ -589,28 +687,28 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 
 /* 슬라이드 모션 */
 .topArea .top-tit {
-	-webkit-animation:fadeInDown .5s both .5s;
-	animation:fadeInDown .5s both .5s;
+	-webkit-animation:fadeInLeft 2s both 1s;
+	animation:fadeInLeft 2s both 1s;
 }
 .topArea .top-txt {
-	-webkit-animation:fadeInDown .8s both .8s;
-	animation:fadeInDown .8s both .8s;
+	-webkit-animation:fadeInLeft 2.3s both 1s;
+	animation:fadeInLeft 2.3s both 1s;
 }
 .topArea .btn-wrap {
-	-webkit-animation:fadeInDown 1s both 1s;
-	animation:fadeInDown 1s both 1s;
+	-webkit-animation:fadein 1s both 1.5s;
+	animation:fadein 1s both 1.5s;
 }
 
 .feature-box .sec-tit,
 .main-why .sec-tit,
-.more-box.active .flex-box > div:nth-child(1),
-.more-box.active .flex-box > div:nth-child(2)  {
+.more-box.active .flex-box > div:nth-child(1) {
 	opacity: 0;
 }
 .feature-box.active .sec-tit {
 	-webkit-animation:fadeInUp 0.8s both 0.8s;
 	animation:fadeInUp 1s both 0.8s;
 }
+/*
 .feature-box.active .flex-box > div:nth-child(1) {
 	-webkit-animation:slideIn 0.5s both 0.5s;
 	animation:slideIn 0.5s both 0.5s;
@@ -622,24 +720,37 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .feature-box.active .flex-box > div:nth-child(3) {
 	-webkit-animation:slideIn 1s both 1s;
 	animation:slideIn 1s both 1s;
-}
+} */
 .main-why.active .sec-tit {
 	-webkit-animation:fadeInDown .5s both .5s;
 	animation:fadeInDown .5s both .5s;
 }
 .main-why.active .circle-box {
-	-webkit-animation:zoomIn .9s both .9s;
-	animation:zoomIn .9s both .9s;
+	-webkit-animation:zoomIn 1.5s both .9s;
+	animation:zoomIn 1.5s both .9s;
 }
 .more-box.active .flex-box > div:nth-child(1) {
-	-webkit-animation: fadeInLeft .7s both .7s;
-    animation: fadeInLeft .7s both .7s;
-}
-.more-box.active .flex-box > div:nth-child(2) {
-    -webkit-animation: fadeInRight .9s both .9s;
-    animation: fadeInRight .9s both .9s;
+	-webkit-animation: fadeInLeft 1.2s both .9s;
+    animation: fadeInLeft 1.2s both .9s;
 }
 
+/* .more-box.active .flex-box > div:nth-child(2) {
+    -webkit-animation: fadeInRight .9s both .9s;
+    animation: fadeInRight .9s both .9s;
+} */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes fadeInDown {
 	0% {
 		opacity: 0;
@@ -726,6 +837,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .content > div {
 	padding:100px 0 120px;
 	box-sizing: border-box;
+}
+.content .more-box,
+.content .faq {
+	padding-bottom:160px;
 }
 .content .sec-tit {
 	color:#222;
@@ -928,6 +1043,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
     border-radius: 48px;
     border:1px solid #707070;
 }
+.more-box .btn-wrap .btn:hover .btn-text,
+.more-box .btn-wrap .btn:focus .btn-text {
+	color:#fff;
+}
 .more-box .radius-box {
 	border-radius: 10px;
 	border:1px solid #dbdbdb;
@@ -962,6 +1081,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background-image: url('/front/img/main/ico_notice.svg');
 }
 .more-box .radius-box li .ico.faq {
+	padding-bottom:0;
 	background-image: url('/front/img/main/ico_faq.svg');
 }
 .more-box .radius-box li .ico.edu {
@@ -971,7 +1091,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .bottom-banner {
 	display: flex;
 	align-items: center;
-	height:392px;
+	height:332px;
 	text-align: center;
 	font-size: 38px;
 	line-height: 1.2;
@@ -996,6 +1116,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	font-weight:200;
 	border-radius: 48px;
     border: 1px solid #9ea2a8;
+}
+.bottom-banner .btn-wrap .btn:hover .btn-text,
+.bottom-banner .btn-wrap .btn:focus .btn-text {
+	color:#222;
 }
 
 	/* 로그인 */
@@ -1499,7 +1623,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	margin-top: 23px;
     font-size: 1.125rem;
     font-weight: 300;
-    color: #666;
+    color: #222;
 }
 
 /* 공지사항 */
@@ -1544,7 +1668,6 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 .file-box li a {
 	position: relative;
-	display:block;
 	padding-left:25px;
 }
 .file-box li a::before {
@@ -1736,13 +1859,13 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .support-view .view-cont-box li .comment-box .file-box {
 	margin-top:20px;
 	padding:0;
-	border-width: 1px 1px 0 1px;
+	border-width: 0;
 	border-style: solid;
 	border-color:#dbdbdb;
-	background-color:#f7f7f7 ;
 }
 .support-view .view-cont-box li .comment-box .file-box li {
 	padding:5px 10px;
+	border-bottom:0 none;
 }
 .support-view .btn-wrap {
 	margin-top:30px;
@@ -1778,7 +1901,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
-	background: #142e7b;
+	background: #077ee4;
 }
 .faq-cont #faq-detail {
 	width: calc(100% - 235px);
@@ -1808,15 +1931,17 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .faq-cont .faq-list li .file-box {
 	margin-top:20px;
 	padding:0;
-	border-width: 1px 1px 0 1px;
+	border-width: 0;
 	border-style: solid;
 	border-color:#dbdbdb;
-	background-color: #fff;
 }
 .faq-cont .faq-list li .file-box a {
+	display: inline-block;
 	padding:5px 40px;
 	font-size:1rem;
 	font-weight: 300;
+	
+	border-bottom:0 none;
 }
 .faq-cont .faq-list li .file-box a::before {
 	left:15px;
@@ -2097,6 +2222,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 
 @media screen and (max-width: 768px) {
+	.for-pc {
+		display: none;
+	}
+	.for-mobile {
+		display: block;
+	}
     #wrap-top {
         height:50px;
     }
@@ -2449,6 +2580,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:30px;
 		font-size:14px;
 	}
+	.basic-banner .noti-list + h3 {
+		margin-top:30px;
+	}
 	.expect-box .expect-list {
 		padding-left:0;
 	}
@@ -2501,6 +2635,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:30px;
 		font-size: 0.875rem;
 		color:#111;
+	}
+	.video-box .flex-box .flex-cont.img {
+		max-height: 100%;
 	}
 	.resource {
 		padding:40px 30px 10px;
