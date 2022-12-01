@@ -1429,10 +1429,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .custom-chk {
 	display: flex;
 	justify-content: space-between;
-	gap:20px;
+	gap:10px;
 }
 .custom-chk .radio-btn {
-	width: 100%;
+	flex-grow:1;
 	height: 36px;
 	cursor: pointer;
     position: relative;
@@ -1450,9 +1450,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	position: absolute;
 	top:0;
 	left:0;
-	padding:10px 40px;
+	padding:10px 10px 10px 40px;
 	width: 100%;
-	font-size:1.125rem;
+	font-size:1rem;
 	color:#666;
 	border:1px solid #dbdbdb;
 	box-sizing: border-box;
@@ -2977,6 +2977,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		font: 12px;
 		letter-spacing: -2px;
 		overflow: hidden;
+	}
+	.custom-chk {
+		flex-wrap: wrap;
+		gap:0;
+	}
+	.custom-chk .radio-btn {
+		margin-top:5px;
+		width:calc(50% - 2px);
+		flex-grow: 0;
 	}
 }
 /* mobile Device  */

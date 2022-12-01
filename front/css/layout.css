@@ -329,11 +329,16 @@ audio[controls], canvas, video {display:inline-block; *display:inline; *zoom: 1;
 	padding:40px 0;
 	border-bottom:1px solid #2b2d33;
 }
-#wrap-footer .info-box .info-txt {
+/* #wrap-footer .info-box .info-txt {
 	color:var(--txt-sub);
 	line-height:1.75;
 	font-weight: 400;
 	font-size:1rem;
+} */
+#wrap-footer .info-box .foot-logo {
+	width: 163px;
+	height:26px;
+	background: url('/front/img/footer_logo.png') no-repeat center;
 }
 #wrap-footer .info-box dl {
 	margin-top:20px;
