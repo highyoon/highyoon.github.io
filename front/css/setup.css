@@ -72,11 +72,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	line-height:48px;
 	border-radius: 48px;
 	color:var(--txt-wht);
-	border:1px solid #9ea2a8;
 }
-.topArea .btn:hover .btn-text,
-.topArea .btn:focus .btn-text {
-	color:#222;
+.topArea .btn:hover {
+	border-color:#077ee4;
 }
 /* 추가 작업 */
 .top-small {
@@ -1041,11 +1039,11 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .more-box .btn-wrap .btn {
     min-width: 220px;
     border-radius: 48px;
-    border:1px solid #707070;
+    border:1px solid #077ee4;
 }
 .more-box .btn-wrap .btn:hover .btn-text,
 .more-box .btn-wrap .btn:focus .btn-text {
-	color:#fff;
+	color:#222;
 }
 .more-box .radius-box {
 	border-radius: 10px;
@@ -1117,9 +1115,8 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	border-radius: 48px;
     border: 1px solid #9ea2a8;
 }
-.bottom-banner .btn-wrap .btn:hover .btn-text,
-.bottom-banner .btn-wrap .btn:focus .btn-text {
-	color:#222;
+.bottom-banner .btn-wrap .btn:hover {
+	border-color:#077ee4;
 }
 
 	/* 로그인 */

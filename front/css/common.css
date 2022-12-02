@@ -174,10 +174,13 @@
     border-color: rgba(255,255,255,0.4);
     background-color: transparent;
 }
+.btn-normal.rd .btn-text  {
+    color:#fff;
+}
 .btn-normal.rd:focus::before,
 .btn-normal.rd:hover::before {
-    color:#222;
-    background-color: #fff;
+    color:#fff;
+    background-color: #077ee4;
 }
 
 .btn-primary.rd {
@@ -667,7 +670,7 @@ input[type="file"]:focus + label {
 .popup .pop-body .join-wrap .field-box {margin-top:10px; max-height:400px; overflow-y: auto;}
 .popup .pop-body .info-txt {margin-top:39px; font-size:1rem; line-height:1.4; text-align:center; color:#666;}
 .popup .pop-body .info-txt > strong {color:#142e7b;}
-.popup .pop-body .pop-video {position:relative;padding:20%; overflow:hidden; box-sizing: border-box;}
+.popup .pop-body .pop-video {position:relative;padding:28.1% 20%; overflow:hidden; box-sizing: border-box;}
 .popup .pop-body .pop-video iframe,
 .popup .pop-body .pop-video object,
 .popup .pop-body .pop-video embed {
@@ -848,7 +851,7 @@ input[type="file"]:focus + label {
     .popup .pop-body .search-result li a {font-size:14px;}
     .popup .pop-body .join-wrap .sub-txt {font-size: 14px;}
     .popup .pop-body .join-wrap .field-box {max-height:250px;}
-    .popup .pop-body .pop-video {padding:50%;}
+    .popup .pop-body .pop-video {padding:28.3% 25%;}
 }
 
 @media screen and (max-width: 475px) {
