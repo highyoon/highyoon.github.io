@@ -20,7 +20,7 @@
 .tabs .active .tabs-link { font-weight: 600; background: #fff; border-color: #142e7b; color: #142e7b; }
 .tabs .tabs-item:first-child .tabs-link { border-left: 1px solid #dfdfdf; }
 .tabs .tabs-item:first-child.active .tabs-link { padding: 11px 10px 10px 11px; margin-left: -1px; border-left: 1px solid #145b8b; }
-.tabs-content .tabs-content-item { display: none; padding: 15px;}
+.tabs-content .tabs-content-item { display: none; padding: 15px 0;}
 .tabs-content .tabs-content-item.active { display: block; }
 
 /* Search */
@@ -315,7 +315,10 @@ input[type="file"] + label {
 input[type="file"]:focus + label {
     outline: auto !important;
 }
-
+.sel-history {
+    max-width: 50%;
+    text-align: right;
+}
 /* custom select */
 .sel.disable,
 .sel.disable:hover {
@@ -718,13 +721,13 @@ input[type="file"]:focus + label {
 
 @media screen and (max-width:1024px) {
     /* Popup */
-    .popup {min-width:90%;}
+    .popup {min-width:90%; border-radius: 1.2rem;}
     .popup .pop-header { height: 50px; line-height: 50px; padding: 45px 30px 0; font-size: 28px; text-align: center; font-weight: 500; color: #222; }
     .popup .pop-body { padding: 30px 10px 20px 30px; }
     .popup .pop-body .pop-tit {font-size:2rem;}
     .popup .pop-body .pop-txt {margin-top:10px;font-size:1rem; line-height:1.4;}
     .popup .pop-body .join-wrap .sub-txt {margin-top:-20px}
-    .popup .pop-footer {padding:0 0 60px;}
+    .popup .pop-footer {padding:0 0 30px;}
     .popup .pop-close:before, 
     .popup .pop-close { position: absolute; width: 30px; height: 30px; right: 25px; top: 10px; }
     .popup .pop-close:after,
@@ -737,7 +740,9 @@ input[type="file"]:focus + label {
 
 @media screen and (max-width: 768px) {
     .chk .chk-label .txt {font-size:14px; line-height:1.2;}
-
+    .popup .pop-body .privacy-wrap {
+        padding:0;
+    }
     
     .btn.md {
         padding:0 20px;
@@ -817,12 +822,13 @@ input[type="file"]:focus + label {
     .tbl.tbl-row table th {
         display: block;
         padding-left:0;
+        padding-bottom:8px;
         font-size:14px;
         border:0 none;
         background-color: transparent;
     }
     .search-area {
-		justify-content: center;
+		justify-content: flex-start;
 	}
     /* badge */
     .badge {
@@ -842,6 +848,7 @@ input[type="file"]:focus + label {
         font-size:0.875rem;
     }
     .popup .pop-header  {
+        padding:15px 30px 0;
         font-size:20px;
     }
     .popup.sm {min-width: 90%;}
@@ -857,6 +864,12 @@ input[type="file"]:focus + label {
 @media screen and (max-width: 475px) {
     .search-box {
         width: 85%;
+    }
+    .form-row.g20 {
+        gap:5px;
+    }
+    .input-select select {
+        padding:5px 27px 5px 10px;
     }
 }
 @media screen and (max-width: 375px) {

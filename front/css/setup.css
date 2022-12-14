@@ -353,13 +353,13 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	line-height:1.4;
 }
 .expect-box small {
-	font-size:20px;
+	font-size:1rem;
 	font-weight: 500;
 }
 .expect-box h3 {
 	margin-top:10px;
 	margin-bottom:36px;
-	font-size:2rem;
+	font-size:1.875rem;
 }
 .expect-box img {
 	width: 100%;
@@ -497,10 +497,10 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 
 .Features {
-	padding:80px 0;
+	padding:80px 0 20px;
 }
 .Features small {
-	font-size: 20px;
+	font-size:1.875rem;
     font-weight: 500;
 }
 .Features .Features-list {
@@ -584,7 +584,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .resource h3 {
 	margin-top: 10px;
     margin-bottom: 36px;
-    font-size: 2rem;
+    font-size:1.875rem;
 }
 .resource .flex-box {
 	flex-wrap:wrap;
@@ -654,7 +654,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	background-color: #ececec;
 }
 .single-banner {
-	padding:80px 0 140px;
+	padding:80px 0;
 }
 .single-banner h3 {
 	font-size:24px;
@@ -696,17 +696,31 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	-webkit-animation:fadein 1s both 1.5s;
 	animation:fadein 1s both 1.5s;
 }
-
-.feature-box .sec-tit,
+.top-cont .cont-tit {
+	-webkit-animation:fadeInUp .5s both .2s;
+	animation:fadeInUp .5s both .2s;
+}
+.top-cont .cont-txt {
+	-webkit-animation:fadeInUp .7s both .3s;
+	animation:fadeInUp .7s both .3s;
+}
+.top-cont .obj {
+	-webkit-animation:fadeInDown .5s both .5s;
+	animation:fadeInDown .5s both .5s;
+}
+.top-cont .cont-tit,
+.top-cont .cont-txt,
+.top-cont .obj,
 .main-why .sec-tit,
 .more-box.active .flex-box > div:nth-child(1) {
 	opacity: 0;
 }
+/*
 .feature-box.active .sec-tit {
 	-webkit-animation:fadeInUp 0.8s both 0.8s;
 	animation:fadeInUp 1s both 0.8s;
 }
-/*
+
 .feature-box.active .flex-box > div:nth-child(1) {
 	-webkit-animation:slideIn 0.5s both 0.5s;
 	animation:slideIn 0.5s both 0.5s;
@@ -752,7 +766,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 @keyframes fadeInDown {
 	0% {
 		opacity: 0;
-		transform: translateY(40px);
+		transform: translateY(-40px);
 	}
 	100% {
 		opacity: 1;
@@ -1991,7 +2005,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 /* mypage */
 .mypage .top-tit {
-	margin-bottom:35px;
+	margin-bottom:15px;
 }
 .mypage .top-tit .top-sub-txt {
 	display: block;
@@ -2045,8 +2059,19 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 }
 
 /* popup 약관영역 */
+.slimScrollDiv {
+	padding-bottom:20px;
+}
 .privacy-wrap {
 	padding:20px 20px 40px;
+}
+.privacy-wrap h2 {
+	line-height: 1.4;
+}
+.privacy-wrap .sec-head {
+	margin-top:40px;
+	display: block;
+	font-size:22px;
 }
 .privacy-wrap .section {
 	margin-top:50px;
@@ -2054,12 +2079,83 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 .privacy-wrap p,
 .privacy-wrap .section > p,
 .privacy-wrap .section > ol,
-.privacy-wrap .section > ul {
+.privacy-wrap .section > ul,
+.privacy-wrap .section > dl,
+.privacy-wrap .quick-link li {
 	margin-top:15px;
 	font-size:1rem;
 	color:#666;
 	line-height:1.6;
 	font-weight: 200;
+}
+.privacy-wrap .section li li {
+	margin-top:5px;
+	padding-left:15px;
+	font-size:14px;
+}
+.privacy-wrap .quick-link {
+	margin-top:20px;
+}
+.privacy-wrap .quick-link li {
+	line-height: 1;
+}
+.privacy-wrap a,
+.privacy-wrap .quick-link a {
+}
+.privacy-wrap a:hover,
+.privacy-wrap .quick-link a:hover {
+	color:#077ee4;
+	text-decoration: underline;
+}
+/* 개인정보 처리방침 라벨링 */
+.privacy-wrap .img-label {
+	margin-left:10px;
+	width:30px;
+}
+.privacy-wrap .labeling {
+	display:block;
+	margin:10px 0;
+	font-size: 1rem;
+	text-align: center;
+}
+.privacy-wrap .labelBox {
+	padding:19px 0;
+	border:1px solid #e6e6e6;
+}
+.privacy-wrap .labelBox li {
+	display:inline-block;
+	padding:20px 0;
+	text-align:center;
+	width: calc(33.333% - 4px);
+	border-left:1px dashed #e6e6e6;
+}
+.privacy-wrap .labelBox li:first-child {
+
+}
+.privacy-wrap .lineBox {
+	margin:10px 0;
+	border:1px solid #e6e6e6;
+}
+.privacy-wrap .lineBox > div {
+	display: inline-block;
+	padding:30px;
+	width: calc(50% - 2px);
+	vertical-align: top;
+	box-sizing: border-box;
+}
+.privacy-wrap .lineBox .leftBox {
+	border-left:0 none;
+}
+.privacy-wrap .lineBox > div li {
+	margin:20px 0 0;
+	font-size:16px;
+}
+.privacy-wrap .lineBox > div li:first-child {
+	margin-top:0;
+}
+.privacy-wrap .p-labeling {
+	margin-left:5px;
+	vertical-align: middle;
 }
 
 /* media query */
@@ -2149,7 +2245,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		padding:120px 30px;
 	}
 	.Features {
-		padding:120px 30px;
+		padding:80px 30px 10px;
 	}
 	.resource {
 		padding:80px 30px;
@@ -2231,6 +2327,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.section {
 		margin-top:50px;
 	}
+	.topArea .btn {
+		min-width:118px;
+	}
 	.main-slide {
 		padding:50px 20px 50px 50px;
 	}
@@ -2262,7 +2361,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		line-height: 1.4;
 	}
 	.login-box .login {
-		margin-top:-70px;
+		margin-top:10px;
 		padding:30px 30px 35px;
 		min-width: 100%;
 		background-color: #fff;
@@ -2310,7 +2409,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.join-wrap .sub-tit {
 		font-size:25px;
-		line-height: 3.75rem;
+		line-height: 2.75rem;
 	}
 	.join-wrap .sub-txt {
 		font-size:0.75rem;
@@ -2336,6 +2435,12 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	}
 	.join-wrap .agree-box ul li {
 		padding:15px 0;
+	}
+	.join-wrap .agree-box ul li.full .chk {
+		max-width: 100%;
+	}
+	.join-wrap .agree-box ul li.full .chk .chk {
+		line-height:1.4;
 	}
 	.join-wrap .agree-box ul li .txt-link span {
 		position: relative;
@@ -2514,6 +2619,9 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	.mypage .top-tit .top-sub-txt {
 		margin-top:9px;
 		font-size:0.75rem;
+	}
+	.mypage .flex-cont.right {
+		margin-right:30px;
 	}
 	.detail-box .amount-used .service-name {
 		margin-right:17px;
@@ -2765,7 +2873,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 	/* .custom-chk {padding-left:30px;} */
 	.custom-chk .radio-btn > span {padding-left:30px; font-size:14px;}
 	.topArea {
-		padding:160px 50px;
+		padding:140px 50px 180px;
 		height:auto;
 	}
 	.topArea .top-tit {
@@ -2936,7 +3044,7 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:5px;
 	}
 	.Features {
-		padding:50px 30px;
+		padding:50px 30px 10px;
 	}
 	.Features .Features-list > ul {
 		margin-top:15px;
@@ -2983,6 +3091,15 @@ a.btn_ico, button.btn_ico, span.btn_ico {display:inline-block; overflow:hidden; 
 		margin-top:5px;
 		width:calc(50% - 2px);
 		flex-grow: 0;
+	}
+	.privacy-wrap .section {
+		margin-top:25px;
+	}
+	.privacy-wrap p, .privacy-wrap .section > p, .privacy-wrap .section > ol, .privacy-wrap .section > ul, .privacy-wrap .section > dl, .privacy-wrap .quick-link li {
+		font-size:0.875rem;
+	}
+	.privacy-wrap .labelBox li {
+		width:calc(50% - 4px);
 	}
 }
 /* mobile Device  */

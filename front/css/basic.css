@@ -60,4 +60,15 @@
 .block {
     display: block;
 }
+.zoom {
+    width:100%;
+    overflow:hidden;
+}
+.zoom img {
+    transition: transform linear 0.3s;
+	width: 100%;
+}
+.zoom:hover img {
+	transform: scale(1.1);
+}
 .mandatory {color:#ff5432;}
