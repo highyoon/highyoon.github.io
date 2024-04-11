@@ -104,8 +104,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
               e.stopPropagation();
               return false;
             });
-            console.log('origin' + direction);
-            swiper.mousewheel.disable();
+            if ($('.section').hasClass('active')) $.fn.fullpage.setAllowScrolling(true);
+            //swiper.mousewheel.disable();
             if (origin == 1 && direction == 'down') {
               $('#fp-nav ul li:eq(1)').addClass('on');
             }
@@ -124,6 +124,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
             }
             if (origin == 6 && direction == 'down') {
               $('#fp-nav ul li:eq(4)').removeClass('on');
+              console.log(direction);
             }
             if (origin == 7 && direction == 'up') {
               $('#fp-nav ul li:eq(4)').addClass('on');
@@ -138,6 +139,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
             if (!$('.fp-completely .swiper-wrapper').length > 0) $('#fullpage_wrap').off('touchmove'); // 모바일분기
             if (swiper) swiper.mousewheel.enable();
             //if (!$('.n5').hasClass('active')) $.fn.fullpage.setAllowScrolling(true);
+            if ($('.section').hasClass('active')) $.fn.fullpage.setAllowScrolling(true);
 
             if (index == 1) {
               setTimeout(function () {
@@ -183,7 +185,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         on: {
           slideChange: function () {
             const idx = this.activeIndex;
-            const lastIndex = length - 1;
             if (this.activeIndex != 0 && idx != length) $.fn.fullpage.setAllowScrolling(false);
             if (length == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false);
           },
